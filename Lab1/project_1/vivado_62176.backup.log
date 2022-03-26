@@ -1,0 +1,650 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Mar 21 23:09:57 2022
+# Process ID: 62176
+# Current directory: D:/Code Try/CODExperiment/Lab1/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent70052 D:\Code Try\CODExperiment\Lab1\project_1\project_1.xpr
+# Log file: D:/Code Try/CODExperiment/Lab1/project_1/vivado.log
+# Journal file: D:/Code Try/CODExperiment/Lab1/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 21 23:10:25 2022...
+: peak = 675.410 ; gain = 69.488
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: alu2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1144.957 ; gain = 175.297
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alu2' [D:/Code Try/CODExperiment/Lab1/ALU2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Code Try/CODExperiment/Lab1/ALU.v:14]
+WARNING: [Synth 8-639] system function call 'sign' not supported [D:/Code Try/CODExperiment/Lab1/ALU.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (1#1) [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu2' (2#1) [D:/Code Try/CODExperiment/Lab1/ALU2.v:1]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[12]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[11]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[10]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[9]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[8]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[7]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[6]
+WARNING: [Synth 8-3331] design alu2 has unconnected port SW[12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1179.859 ; gain = 210.199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1179.859 ; gain = 210.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1179.859 ; gain = 210.199
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1300.168 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1338.066 ; gain = 368.406
+9 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1338.066 ; gain = 615.422
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1372.441 ; gain = 20.949
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alu2' [D:/Code Try/CODExperiment/Lab1/ALU2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Code Try/CODExperiment/Lab1/ALU.v:14]
+WARNING: [Synth 8-639] system function call 'sign' not supported [D:/Code Try/CODExperiment/Lab1/ALU.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (1#1) [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu2' (2#1) [D:/Code Try/CODExperiment/Lab1/ALU2.v:1]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[12]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[11]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[10]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[9]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[8]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[7]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[6]
+WARNING: [Synth 8-3331] design alu2 has unconnected port SW[12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.684 ; gain = 50.191
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1412.668 ; gain = 61.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1412.668 ; gain = 61.176
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1412.668 ; gain = 61.176
+close_project
+open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: alu2
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1522.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alu2' [D:/Code Try/CODExperiment/Lab1/ALU2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Code Try/CODExperiment/Lab1/ALU.v:14]
+WARNING: [Synth 8-639] system function call 'sign' not supported [D:/Code Try/CODExperiment/Lab1/ALU.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (1#1) [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu2' (2#1) [D:/Code Try/CODExperiment/Lab1/ALU2.v:1]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[12]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[11]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[10]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[9]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[8]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[7]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[6]
+WARNING: [Synth 8-3331] design alu2 has unconnected port SW[12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1522.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1522.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1522.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1560.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1560.859 ; gain = 38.199
+8 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1560.859 ; gain = 38.199
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Mon Mar 21 23:37:47 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+close_project
+open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: alu2
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1560.859 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alu2' [D:/Code Try/CODExperiment/Lab1/ALU2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Code Try/CODExperiment/Lab1/ALU.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (1#1) [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu2' (2#1) [D:/Code Try/CODExperiment/Lab1/ALU2.v:1]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[12]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[11]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[10]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[9]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[8]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[7]
+WARNING: [Synth 8-3331] design alu2 has unconnected port LED[6]
+WARNING: [Synth 8-3331] design alu2 has unconnected port SW[12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1560.859 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1560.859 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1560.859 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1580.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1580.188 ; gain = 19.328
+8 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1580.188 ; gain = 19.328
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 21 23:43:23 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 21 23:43:24 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1982.988 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1982.988 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1982.988 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 2049.324 ; gain = 469.137
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2137.230 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2192.359 ; gain = 105.547
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+set_property top fls2 [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Mar 22 00:06:48 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/synth_1/runme.log
+[Tue Mar 22 00:06:48 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/impl_1/runme.log
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_3
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization -name utilization_2
+current_design impl_1
+report_utilization -name utilization_2
+current_design synth_1
+set_property top alu2 [current_fileset]
+update_compile_order -fileset sources_1
+refresh_design
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2447.938 ; gain = 17.055
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Tue Mar 22 00:20:08 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/synth_1/runme.log
+close_design
+close_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2722.758 ; gain = 0.000
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Tue Mar 22 00:20:41 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2722.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2722.758 ; gain = 0.000
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+set_property top alu3 [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Mar 22 00:27:03 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/synth_1/runme.log
+[Tue Mar 22 00:27:03 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: alu3
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/Code Try/CODExperiment/Lab1/ALU3_32bits.v:74]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2722.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alu3' [D:/Code Try/CODExperiment/Lab1/ALU3_32bits.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IP' [D:/Code Try/CODExperiment/Lab1/InputProcessing.v:29]
+INFO: [Synth 8-6157] synthesizing module 'jitter_clr' [D:/Code Try/CODExperiment/Lab1/InputProcessing.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'jitter_clr' (1#1) [D:/Code Try/CODExperiment/Lab1/InputProcessing.v:1]
+INFO: [Synth 8-6157] synthesizing module 'signal_edge' [D:/Code Try/CODExperiment/Lab1/InputProcessing.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'signal_edge' (2#1) [D:/Code Try/CODExperiment/Lab1/InputProcessing.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'IP' (3#1) [D:/Code Try/CODExperiment/Lab1/InputProcessing.v:29]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Code Try/CODExperiment/Lab1/ALU.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (4#1) [D:/Code Try/CODExperiment/Lab1/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu3' (5#1) [D:/Code Try/CODExperiment/Lab1/ALU3_32bits.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2722.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2722.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2722.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2743.691 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 2743.691 ; gain = 20.934
+14 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 2743.691 ; gain = 20.934
+current_design synth_1
+report_utilization -name utilization_2
+refresh_design
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/ALU.xdc]
+Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab1/FSL.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 2743.691 ; gain = 0.000
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+open_hw_target: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3826.988 ; gain = 1083.297
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab1/project_1/project_1.runs/impl_1/alu3.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab1/bits/alu2.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab1/bits/fls2.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab1/bits/alu3.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+close_hw
+file mkdir D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new
+can't create directory "D:/Code": file already exists
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new
+can't create directory "D:/Code": file already exists
+file mkdir {D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new}
+close [ open {D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/ALUtb.v} w ]
+add_files -fileset sim_1 {{D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/ALUtb.v}}
+update_compile_order -fileset sim_1
+set_property top ALUtb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALUtb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALUtb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/ALUtb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUtb
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 8712c10db89540a68d4ee367ff9e0cff --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALUtb_behav xil_defaultlib.ALUtb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 8712c10db89540a68d4ee367ff9e0cff --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALUtb_behav xil_defaultlib.ALUtb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab1/ALU.v" Line 1. Module alu(WIDTH=6) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu(WIDTH=6)
+Compiling module xil_defaultlib.ALUtb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ALUtb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Code -notrace
+invalid command name "%"
+    while executing
+"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+    (file "D:/Code" line 1)
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 22 01:02:49 2022...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 3888.211 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALUtb_behav -key {Behavioral:sim_1:Functional:ALUtb} -tclbatch {ALUtb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source ALUtb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$stop called at time : 320 ns : File "D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/ALUtb.v" Line 27
+xsim: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3899.039 ; gain = 10.527
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALUtb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 3899.039 ; gain = 10.828
+close_sim
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:01:39 . Memory (MB): peak = 3904.590 ; gain = 5.551
+INFO: [Common 17-344] 'close_sim' was cancelled
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALUtb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALUtb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/ALUtb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUtb
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'get_property' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 3904.590 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALUtb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALUtb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim'
+ERROR: [Common 17-180] Spawn failed: Broken pipe
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s) while executing 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim/elaborate.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 22 01:06:41 2022...

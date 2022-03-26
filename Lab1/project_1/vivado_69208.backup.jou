@@ -1,0 +1,196 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Mar 22 01:06:48 2022
+# Process ID: 69208
+# Current directory: D:/Code Try/CODExperiment/Lab1/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent73028 D:\Code Try\CODExperiment\Lab1\project_1\project_1.xpr
+# Log file: D:/Code Try/CODExperiment/Lab1/project_1/vivado.log
+# Journal file: D:/Code Try/CODExperiment/Lab1/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr}
+launch_simulation
+source ALUtb.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+launch_simulation
+source ALUtb.tcl
+close_sim
+launch_simulation
+source ALUtb.tcl
+close_sim
+launch_simulation
+source ALUtb.tcl
+synth_design -rtl -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top alu2 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+refresh_design
+close_design
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+synth_design -rtl -name rtl_1
+current_design synth_1
+report_utilization -name utilization_2
+refresh_design
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+current_design rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top alu3 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top alu2 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fls2 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top alu3 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+refresh_design
+update_compile_order -fileset sources_1
+refresh_design
+close_sim
+close_project
+open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+close_design
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+report_utilization -name utilization_2
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+close_design
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_project
+open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+close_design
+synth_design -rtl -name rtl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:\Code Try\CODExperiment\Lab1\bits\alu3.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab1/bits/alu2.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab1/bits/fls2.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab1/bits/alu3.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/FSLTB.v} w ]
+add_files -fileset sim_1 {{D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/FSLTB.v}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top FSLTB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source FSLTB.tcl
+export_ip_user_files -of_objects  [get_files {{D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/ALUtb.v}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/ALUtb.v}}
+file delete -force {D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/ALUtb.v}
+close_sim
+launch_simulation
+source FSLTB.tcl
+close_sim
+launch_simulation
+source FSLTB.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top FSLTB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source FSLTB.tcl
+close_sim
+launch_simulation
+source FSLTB.tcl
+close_sim
+launch_simulation
+source FSLTB.tcl
+close_sim
+launch_simulation
+source FSLTB.tcl
+close_sim
+launch_simulation
+source FSLTB.tcl
+close_sim
+launch_simulation
+source FSLTB.tcl
+close_sim
+launch_simulation
+source FSLTB.tcl
+close_sim

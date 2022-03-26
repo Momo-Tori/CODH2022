@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Code Try/CODExperiment/Lab1/ALU.v,1647927338,verilog,,D:/Code Try/CODExperiment/Lab1/FSL.v,,alu,,,,,,,,
+D:/Code Try/CODExperiment/Lab1/ALUtest.v,1647746633,verilog,,,,tb,,,,,,,,
+D:/Code Try/CODExperiment/Lab1/FSL.v,1647777816,verilog,,D:/Code Try/CODExperiment/Lab1/FSL2.v,,fls,,,,,,,,
+D:/Code Try/CODExperiment/Lab1/FSL2.v,1647778268,verilog,,D:/Code Try/CODExperiment/Lab1/InputProcessing.v,,fls2,,,,,,,,
+D:/Code Try/CODExperiment/Lab1/InputProcessing.v,1647779779,verilog,,D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/FSLTB.v,,IP;jitter_clr;signal_edge,,,,,,,,
+D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/FSLTB.v,1647959258,verilog,,,,FSLTB,,,,,,,,

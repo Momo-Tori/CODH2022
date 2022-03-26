@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/FSL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/FSL2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fls2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/InputProcessing.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module jitter_clr
+INFO: [VRFC 10-311] analyzing module signal_edge
+INFO: [VRFC 10-311] analyzing module IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/project_1/project_1.srcs/sim_1/new/FSLTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSLTB
