@@ -314,3 +314,13 @@ source sortSim.tcl
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'sortSim_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1696.047 ; gain = 0.000
+add_files -norecurse {{D:/Code Try/CODExperiment/Lab2/sort.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 00:03:53 2022...

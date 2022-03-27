@@ -23,5 +23,4 @@ always @(*) begin
     default seg=0;
     endcase
 end
-
 endmodule

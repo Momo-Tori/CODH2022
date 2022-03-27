@@ -44,3 +44,10 @@ refresh_design
 close_sim
 launch_simulation
 source sortSim.tcl
+add_files -norecurse {{D:/Code Try/CODExperiment/Lab2/sort.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim

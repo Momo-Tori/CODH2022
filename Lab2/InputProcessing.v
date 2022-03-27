@@ -23,7 +23,19 @@ always@(posedge clk)
 button_r1 <= button;
 always@(posedge clk)
 button_r2 <= button_r1;
-assign button_edge = button_r1 & (~button_r2);
+assign button_edge = button_r1 & (~button_r2);//取上升沿
+endmodule
+
+module signal_both_edge(
+input clk,
+input button,
+output button_edge);
+reg button_r1,button_r2;
+always@(posedge clk)
+button_r1 <= button;
+always@(posedge clk)
+button_r2 <= button_r1;
+assign button_edge = button_r1 ^ button_r2;//取变化的边缘
 endmodule
 
 module IP(//Input Processing
@@ -33,4 +45,13 @@ output button_edge);
 wire temp;
 jitter_clr jitter_clr(clk,button,temp);
 signal_edge signal_edge(clk,temp,button_edge);
+endmodule
+
+module IP_BothEdge(//Input Processing
+input clk,
+input button,
+output button_edge);
+wire temp;
+jitter_clr jitter_clr(clk,button,temp);
+signal_both_edge signal_both_edge(clk,temp,button_edge);
 endmodule
