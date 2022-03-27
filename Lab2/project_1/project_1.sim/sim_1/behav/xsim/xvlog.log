@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder_16bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/SortSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sortSim

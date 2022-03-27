@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Mar 27 16:15:26 2022
+# Process ID: 7660
+# Current directory: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log register_file.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source register_file.tcl
+# Log file: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/register_file.vds
+# Journal file: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source register_file.tcl -notrace

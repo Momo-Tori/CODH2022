@@ -1,0 +1,459 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Mar 27 16:15:51 2022
+# Process ID: 32336
+# Current directory: D:/Code Try/CODExperiment/Lab2/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6216 D:\Code Try\CODExperiment\Lab2\project_1\project_1.xpr
+# Log file: D:/Code Try/CODExperiment/Lab2/project_1/vivado.log
+# Journal file: D:/Code Try/CODExperiment/Lab2/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Code Try/CODExperiment/Lab2/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: register_file
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1149.605 ; gain = 175.285
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/Code Try/CODExperiment/Lab2/register_32_32.v:1]
+	Parameter AW bound to: 5 - type: integer 
+	Parameter DW bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (1#1) [D:/Code Try/CODExperiment/Lab2/register_32_32.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1188.285 ; gain = 213.965
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1188.285 ; gain = 213.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1188.285 ; gain = 213.965
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1321.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1323.000 ; gain = 348.680
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 1323.000 ; gain = 586.137
+close_project
+open_project {D:/Code Try/CODExperiment/Lab2/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: register_file
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1330.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/Code Try/CODExperiment/Lab2/register_32_32.v:1]
+	Parameter AW bound to: 5 - type: integer 
+	Parameter DW bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (1#1) [D:/Code Try/CODExperiment/Lab2/register_32_32.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1330.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1330.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1330.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1401.148 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1401.148 ; gain = 71.109
+5 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1401.148 ; gain = 71.109
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{D:/Code Try/CODExperiment/Lab2/registerSim.v}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'registerSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj registerSim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/registerSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module registerSim
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot registerSim_behav xil_defaultlib.registerSim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot registerSim_behav xil_defaultlib.registerSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/register_32_32.v" Line 1. Module register_file doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.registerSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot registerSim_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Code -notrace
+invalid command name "%"
+    while executing
+"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+    (file "D:/Code" line 1)
+INFO: [Common 17-206] Exiting Webtalk at Sun Mar 27 16:44:13 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "registerSim_behav -key {Behavioral:sim_1:Functional:registerSim} -tclbatch {registerSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source registerSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'registerSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1401.148 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'registerSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj registerSim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/registerSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module registerSim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot registerSim_behav xil_defaultlib.registerSim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot registerSim_behav xil_defaultlib.registerSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/register_32_32.v" Line 1. Module register_file doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.registerSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot registerSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "registerSim_behav -key {Behavioral:sim_1:Functional:registerSim} -tclbatch {registerSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source registerSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'registerSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1738.949 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'registerSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj registerSim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/registerSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module registerSim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot registerSim_behav xil_defaultlib.registerSim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot registerSim_behav xil_defaultlib.registerSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/register_32_32.v" Line 1. Module register_file doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.registerSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot registerSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "registerSim_behav -key {Behavioral:sim_1:Functional:registerSim} -tclbatch {registerSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source registerSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'registerSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1738.949 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'registerSim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj registerSim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/registerSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module registerSim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot registerSim_behav xil_defaultlib.registerSim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot registerSim_behav xil_defaultlib.registerSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/register_32_32.v" Line 1. Module register_file doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.registerSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot registerSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "registerSim_behav -key {Behavioral:sim_1:Functional:registerSim} -tclbatch {registerSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source registerSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'registerSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1738.949 ; gain = 0.000
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name dist_mem_256_16 -dir {d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip}
+set_property -dict [list CONFIG.depth {256} CONFIG.Component_Name {dist_mem_256_16}] [get_ips dist_mem_256_16]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'dist_mem_256_16' to 'dist_mem_256_16' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'dist_mem_256_16'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dist_mem_256_16'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dist_mem_256_16'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'dist_mem_256_16'...
+catch { config_ip_cache -export [get_ips -all dist_mem_256_16] }
+export_ip_user_files -of_objects [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}]
+launch_runs -jobs 6 dist_mem_256_16_synth_1
+[Sun Mar 27 17:24:33 2022] Launched dist_mem_256_16_synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/dist_mem_256_16_synth_1/runme.log
+export_simulation -of_objects [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir {d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Write_Depth_A {256} CONFIG.Register_PortA_Output_of_Memory_Primitives {false}] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] -no_script -reset -force -quiet
+remove_files  {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+file delete -force {d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0}
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_256_16 -dir {d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_256_16} CONFIG.Write_Depth_A {256} CONFIG.Register_PortA_Output_of_Memory_Primitives {false}] [get_ips blk_mem_256_16]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_256_16' to 'blk_mem_256_16' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_256_16/blk_mem_256_16.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_256_16'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_256_16/blk_mem_256_16.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_256_16'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_256_16'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_256_16'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_256_16'...
+catch { config_ip_cache -export [get_ips -all blk_mem_256_16] }
+export_ip_user_files -of_objects [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_256_16/blk_mem_256_16.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_256_16/blk_mem_256_16.xci}}]
+launch_runs -jobs 6 blk_mem_256_16_synth_1
+[Sun Mar 27 17:33:37 2022] Launched blk_mem_256_16_synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/blk_mem_256_16_synth_1/runme.log
+export_simulation -of_objects [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_256_16/blk_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_256_16_RF -dir {d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_gen_256_16_RF} CONFIG.Write_Depth_A {256} CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Register_PortA_Output_of_Memory_Primitives {false}] [get_ips blk_mem_gen_256_16_RF]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_gen_256_16_RF' to 'blk_mem_gen_256_16_RF' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_256_16_RF/blk_mem_gen_256_16_RF.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_256_16_RF'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_256_16_RF/blk_mem_gen_256_16_RF.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_256_16_RF'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_256_16_RF'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_256_16_RF'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_256_16_RF'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_256_16_RF] }
+export_ip_user_files -of_objects [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_256_16_RF/blk_mem_gen_256_16_RF.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_256_16_RF/blk_mem_gen_256_16_RF.xci}}]
+launch_runs -jobs 6 blk_mem_gen_256_16_RF_synth_1
+[Sun Mar 27 17:38:49 2022] Launched blk_mem_gen_256_16_RF_synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/blk_mem_gen_256_16_RF_synth_1/runme.log
+export_simulation -of_objects [get_files {{d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_256_16_RF/blk_mem_gen_256_16_RF.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{D:/Code Try/CODExperiment/Lab2/IPSource_256_16_Sim.v}}
+update_compile_order -fileset sim_1
+set_property top IPSource_256_16_Sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 27 17:53:04 2022...

@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Mar 27 19:57:56 2022
+# Process ID: 36376
+# Current directory: D:/Code Try/CODExperiment/Lab2/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37120 D:\Code Try\CODExperiment\Lab2\project_1\project_1.xpr
+# Log file: D:/Code Try/CODExperiment/Lab2/project_1/vivado.log
+# Journal file: D:/Code Try/CODExperiment/Lab2/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Code Try/CODExperiment/Lab2/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+add_files -norecurse {{D:/Code Try/CODExperiment/Lab2/InputProcessing.v} {D:/Code Try/CODExperiment/Lab2/encoder.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top encoder_16bits [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+synth_design -rtl -name rtl_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{D:/Code Try/CODExperiment/Lab2/SortSim.v}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sortSim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source sortSim.tcl
+refresh_design
+close_sim
+launch_simulation
+source sortSim.tcl
