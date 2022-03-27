@@ -9,7 +9,7 @@
     <Object name="xc7a100t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="D:/Code Try/CODExperiment/Lab1/bits/fls2.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="D:/Code Try/CODExperiment/Lab1/bits/alu3.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>

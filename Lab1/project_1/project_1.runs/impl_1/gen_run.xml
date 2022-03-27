@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1647928479">
+  <File Type="BITSTR-BMM" Name="alu3_bd.bmm"/>
   <File Type="ROUTE-PWR" Name="alu3_power_routed.rpt"/>
   <File Type="PA-TCL" Name="alu3.tcl"/>
-  <File Type="BITSTR-BMM" Name="alu3_bd.bmm"/>
+  <File Type="OPT-DCP" Name="alu3_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="alu3_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="alu3_reports.tcl"/>
-  <File Type="OPT-DCP" Name="alu3_opt.dcp"/>
   <File Type="OPT-DRC" Name="alu3_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="alu3.hwdef"/>
   <File Type="PWROPT-DCP" Name="alu3_pwropt.dcp"/>
@@ -25,19 +25,20 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="alu3_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="alu3_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="alu3_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="alu3_drc_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="alu3.ltx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="alu3_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="alu3_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="alu3.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="alu3_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="alu3_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="alu3_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="alu3.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="alu3_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="alu3_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="alu3_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="alu3_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="alu3_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="alu3_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="alu3_timing_summary_routed.rpx"/>
+  <File Type="RDI-RDI" Name="alu3.vdi"/>
   <File Type="ROUTE-CLK" Name="alu3_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="alu3_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="alu3_bus_skew_routed.pb"/>
@@ -48,7 +49,6 @@
   <File Type="BITSTR-RBT" Name="alu3.rbt"/>
   <File Type="BITSTR-NKY" Name="alu3.nky"/>
   <File Type="BG-DRC" Name="alu3.drc"/>
-  <File Type="RDI-RDI" Name="alu3.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

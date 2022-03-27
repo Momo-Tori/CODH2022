@@ -1,0 +1,132 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 11492
+License: Customer
+
+Current time: 	Sun Mar 27 01:19:50 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 123
+Available screens: 1
+Available disk space: 8 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ÑîÌÎ
+User home directory: C:/Users/ÑîÌÎ
+User working directory: D:/Code Try/CODExperiment/Lab1/project_1
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2019.1
+RDI_DATADIR: D:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/ÑîÌÎ/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/ÑîÌÎ/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/ÑîÌÎ/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Code Try/CODExperiment/Lab1/project_1/vivado.log
+Vivado journal file location: 	D:/Code Try/CODExperiment/Lab1/project_1/vivado.jou
+Engine tmp dir: 	D:/Code Try/CODExperiment/Lab1/project_1/.Xil/Vivado-11492-Yun
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2019.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 582 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\Code Try\CODExperiment\Lab1\project_1\project_1.xpr. Version: Vivado v2019.1 
+// by (cl):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr} 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 70 MB (+71290kb) [00:00:19]
+// [Engine Memory]: 602 MB (+479910kb) [00:00:19]
+// [GUI Memory]: 87 MB (+14111kb) [00:00:20]
+// [GUI Memory]: 109 MB (+18462kb) [00:00:21]
+// [Engine Memory]: 637 MB (+4436kb) [00:00:21]
+// [Engine Memory]: 681 MB (+13690kb) [00:00:23]
+// WARNING: HEventQueue.dispatchEvent() is taking  6664 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 699 MB. GUI used memory: 55 MB. Current time: 3/27/22, 1:19:58 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1128 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 730.762 ; gain = 113.801 
+// Project name: project_1; location: D:/Code Try/CODExperiment/Lab1/project_1; part: xc7a100tcsg324-1
+// [Engine Memory]: 717 MB (+1407kb) [00:00:26]
+dismissDialog("Open Project"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 5); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 6); // B (F, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cl):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/ALU.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module alu INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab1/ALUtest.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module tb 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab1/project_1/project_1.sim/sim_1/behav/xsim' 

@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Mar 27 01:12:35 2022
+# Process ID: 11720
+# Current directory: D:/Code Try/CODExperiment/Lab1/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5832 D:\Code Try\CODExperiment\Lab1\project_1\project_1.xpr
+# Log file: D:/Code Try/CODExperiment/Lab1/project_1/vivado.log
+# Journal file: D:/Code Try/CODExperiment/Lab1/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Code Try/CODExperiment/Lab1/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source FSLTB.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+close_sim

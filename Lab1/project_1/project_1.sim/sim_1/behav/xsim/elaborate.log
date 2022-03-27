@@ -1,24 +1,7 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 8712c10db89540a68d4ee367ff9e0cff --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot FSLTB_behav xil_defaultlib.FSLTB xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 8712c10db89540a68d4ee367ff9e0cff --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab1/FSL2.v" Line 1. Module fls2 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab1/InputProcessing.v" Line 29. Module IP doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab1/InputProcessing.v" Line 1. Module jitter_clr doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab1/InputProcessing.v" Line 17. Module signal_edge doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab1/FSL.v" Line 1. Module fls doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab1/ALU.v" Line 1. Module alu(WIDTH=16) doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.jitter_clr
-Compiling module xil_defaultlib.signal_edge
-Compiling module xil_defaultlib.IP
-Compiling module xil_defaultlib.alu(WIDTH=16)
-Compiling module xil_defaultlib.fls
-Compiling module xil_defaultlib.fls2
-Compiling module xil_defaultlib.FSLTB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot FSLTB_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
