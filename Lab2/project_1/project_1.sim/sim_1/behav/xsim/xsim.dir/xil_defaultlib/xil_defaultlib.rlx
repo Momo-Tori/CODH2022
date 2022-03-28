@@ -2,10 +2,11 @@
 2019.1
 May 24 2019
 15:06:07
-D:/Code Try/CODExperiment/Lab2/HexToSeg.v,1648444393,verilog,,D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v,,HexToSeg,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/SortSim.v,1648440028,verilog,,,,sortSim,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/HexToSeg.v,1648444393,verilog,,D:/Code Try/CODExperiment/Lab2/InputProcessing.v,,HexToSeg,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/InputProcessing.v,1648450740,verilog,,D:/Code Try/CODExperiment/Lab2/encoder.v,,IP;IP_BothEdge;jitter_clr;signal_both_edge;signal_edge,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/SortSim.v,1648468774,verilog,,,,sortSim,,,,,,,,
 D:/Code Try/CODExperiment/Lab2/encoder.v,1648384082,verilog,,D:/Code Try/CODExperiment/Lab2/sort.v,,encoder_16bits,,,,,,,,
 D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v,1648441114,verilog,,,,temp,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v,1648464794,verilog,,,,temp,,,,,,,,
 D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/sim/dist_mem_256_16.v,1648438407,verilog,,D:/Code Try/CODExperiment/Lab2/encoder.v,,dist_mem_256_16,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/sort.v,1648439450,verilog,,D:/Code Try/CODExperiment/Lab2/SortSim.v,,sort,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/sort.v,1648469276,verilog,,D:/Code Try/CODExperiment/Lab2/SortSim.v,,sort,,,,,,,,

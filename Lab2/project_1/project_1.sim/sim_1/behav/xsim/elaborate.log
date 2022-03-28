@@ -1,19 +1,16 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.HexToSeg
-Compiling module xil_defaultlib.temp
+Compiling module xil_defaultlib.encoder_16bits
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_256_16
+Compiling module xil_defaultlib.sort
+Compiling module xil_defaultlib.sortSim
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot temp_behav
+Built simulation snapshot sortSim_behav
