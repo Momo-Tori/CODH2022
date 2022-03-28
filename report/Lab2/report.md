@@ -2,7 +2,7 @@
  * @Author: MomoTori
  * @Date: 2022-03-27 01:02:45
  * @LastEditors: MomoTori
- * @LastEditTime: 2022-03-28 14:39:28
+ * @LastEditTime: 2022-03-28 20:15:53
  * @FilePath: \Lab2d:\Code Try\CODExperiment\report\Lab2\report.md
  * @Description: 
  * Copyright (c) 2022 by MomoTori, All Rights Reserved. 
@@ -434,3 +434,57 @@ AN<={AN,1}//错误
 通过本实验复习了verilog的写法，并能够设计ALU，使用ALU设计一些小应用
 
 并且复习了端口的复用以及信号的处理
+
+
+```verilog
+//状态对应数据通路
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(rstn)
+    if(status!=Init)
+    begin
+    cnt<=cnt+1;
+    case (status)
+        PreSort:begin
+            busy<=1;
+            cnt<=0;
+            i<=15;
+            j<=0;
+            Address<=0;
+            en<=0;
+        end
+        SmallLoopPreRead:begin
+            en<=0;
+            if(j==0)max<=spo;//第一次初始化
+            Address<=j+1;
+        end
+        SmallLoopRead:begin
+            if(max<spo)begin
+                max<=spo;
+                temp<=max;
+            end
+            else temp<=spo;
+        end
+        SmallLoopPreWrite:begin
+            D<=temp;
+            Address<=j;
+            en<=1;
+        end
+        SmallLoopWrite:begin
+            j<=j+1;
+            Address<=j+1;
+            D<=max;
+            en<=1;
+        end
+        SmallLoopFin:begin
+            en<=0;
+            Address<=0;
+            j<=0;
+            i<=i-1;
+        end
+        ReadyToFin:begin
+            busy<=0;
+        end
+    endcase
+    end
+end
+```
