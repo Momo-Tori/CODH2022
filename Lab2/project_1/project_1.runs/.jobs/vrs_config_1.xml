@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
-	<Run Id="synth_1" LaunchDir="D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dist_mem_256_16_synth_1" LaunchDir="D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/dist_mem_256_16_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
 	</Parameters>

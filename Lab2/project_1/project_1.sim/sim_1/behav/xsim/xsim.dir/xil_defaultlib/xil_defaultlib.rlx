@@ -2,12 +2,10 @@
 2019.1
 May 24 2019
 15:06:07
-D:/Code Try/CODExperiment/Lab2/IPSource_256_16_Sim.v,1648375414,verilog,,,,IPSource_256_16_Sim,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/SortSim.v,1648383725,verilog,,,,sortSim,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/encoder.v,1648384009,verilog,,D:/Code Try/CODExperiment/Lab2/SortSim.v,,encoder_16bits,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/HexToSeg.v,1648444393,verilog,,D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v,,HexToSeg,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/SortSim.v,1648440028,verilog,,,,sortSim,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/encoder.v,1648384082,verilog,,D:/Code Try/CODExperiment/Lab2/sort.v,,encoder_16bits,,,,,,,,
 D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_256_16/sim/blk_mem_256_16.v,1648373616,verilog,,D:/Code Try/CODExperiment/Lab2/IPSource_256_16_Sim.v,,blk_mem_256_16,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_256_16_RF/sim/blk_mem_gen_256_16_RF.v,1648373929,verilog,,D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_256_16/sim/blk_mem_256_16.v,,blk_mem_gen_256_16_RF,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/sim/dist_mem_256_16.v,1648373072,verilog,,D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_256_16_RF/sim/blk_mem_gen_256_16_RF.v,,dist_mem_256_16,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/registerSim.v,1648372236,verilog,,,,registerSim,,,,,,,,
-D:/Code Try/CODExperiment/Lab2/register_32_32.v,1648369218,verilog,,D:/Code Try/CODExperiment/Lab2/registerSim.v,,register_file,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v,1648441114,verilog,,,,temp,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/sim/dist_mem_256_16.v,1648438407,verilog,,D:/Code Try/CODExperiment/Lab2/encoder.v,,dist_mem_256_16,,,,,,,,
+D:/Code Try/CODExperiment/Lab2/sort.v,1648439450,verilog,,D:/Code Try/CODExperiment/Lab2/SortSim.v,,sort,,,,,,,,

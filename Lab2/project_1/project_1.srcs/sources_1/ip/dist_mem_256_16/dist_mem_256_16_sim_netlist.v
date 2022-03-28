@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sun Mar 27 17:25:06 2022
+// Date        : Mon Mar 28 11:34:04 2022
 // Host        : Yun running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {d:/Code
 //               Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16_sim_netlist.v}
@@ -59,11 +59,11 @@ module dist_mem_256_16
   (* c_has_qspo_rst = "0" *) 
   (* c_has_qspo_srst = "0" *) 
   (* c_has_spo = "1" *) 
-  (* c_mem_init_file = "no_coe_file_loaded" *) 
+  (* c_mem_init_file = "dist_mem_256_16.mif" *) 
   (* c_parser_type = "1" *) 
   (* c_pipeline_stages = "0" *) 
   (* c_qualify_we = "0" *) 
-  (* c_read_mif = "0" *) 
+  (* c_read_mif = "1" *) 
   (* c_reg_a_d_inputs = "0" *) 
   (* c_sync_enable = "1" *) 
   (* c_width = "16" *) 
@@ -94,9 +94,9 @@ endmodule
 (* C_HAS_QDPO_CLK = "0" *) (* C_HAS_QDPO_RST = "0" *) (* C_HAS_QDPO_SRST = "0" *) 
 (* C_HAS_QSPO = "0" *) (* C_HAS_QSPO_CE = "0" *) (* C_HAS_QSPO_RST = "0" *) 
 (* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "1" *) (* C_HAS_WE = "1" *) 
-(* C_MEM_INIT_FILE = "no_coe_file_loaded" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
+(* C_MEM_INIT_FILE = "dist_mem_256_16.mif" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
-(* C_READ_MIF = "0" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
+(* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
 (* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
 module dist_mem_256_16_dist_mem_gen_v8_0_13
    (a,
@@ -407,7 +407,7 @@ module dist_mem_256_16_spram
         .Q(qspo_int[9]),
         .R(1'b0));
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)) 
     ram_reg_0_255_0_0
        (.A(a),
         .D(d[0]),
@@ -463,7 +463,7 @@ module dist_mem_256_16_spram
         .WCLK(clk),
         .WE(we));
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'hCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC)) 
     ram_reg_0_255_1_1
        (.A(a),
         .D(d[1]),
@@ -471,7 +471,7 @@ module dist_mem_256_16_spram
         .WCLK(clk),
         .WE(we));
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'hF0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0)) 
     ram_reg_0_255_2_2
        (.A(a),
         .D(d[2]),
@@ -479,7 +479,7 @@ module dist_mem_256_16_spram
         .WCLK(clk),
         .WE(we));
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'hFF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00)) 
     ram_reg_0_255_3_3
        (.A(a),
         .D(d[3]),
@@ -487,7 +487,7 @@ module dist_mem_256_16_spram
         .WCLK(clk),
         .WE(we));
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'hFFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000)) 
     ram_reg_0_255_4_4
        (.A(a),
         .D(d[4]),
@@ -495,7 +495,7 @@ module dist_mem_256_16_spram
         .WCLK(clk),
         .WE(we));
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'hFFFFFFFF00000000FFFFFFFF00000000FFFFFFFF00000000FFFFFFFF00000000)) 
     ram_reg_0_255_5_5
        (.A(a),
         .D(d[5]),
@@ -503,7 +503,7 @@ module dist_mem_256_16_spram
         .WCLK(clk),
         .WE(we));
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'hFFFFFFFFFFFFFFFF0000000000000000FFFFFFFFFFFFFFFF0000000000000000)) 
     ram_reg_0_255_6_6
        (.A(a),
         .D(d[6]),
@@ -511,7 +511,7 @@ module dist_mem_256_16_spram
         .WCLK(clk),
         .WE(we));
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000)) 
     ram_reg_0_255_7_7
        (.A(a),
         .D(d[7]),

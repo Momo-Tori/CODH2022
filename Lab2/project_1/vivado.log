@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Mar 27 19:57:56 2022
-# Process ID: 36376
+# Start of session at: Mon Mar 28 12:11:10 2022
+# Process ID: 8016
 # Current directory: D:/Code Try/CODExperiment/Lab2/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37120 D:\Code Try\CODExperiment\Lab2\project_1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent52376 D:\Code Try\CODExperiment\Lab2\project_1\project_1.xpr
 # Log file: D:/Code Try/CODExperiment/Lab2/project_1/vivado.log
 # Journal file: D:/Code Try/CODExperiment/Lab2/project_1\vivado.jou
 #-----------------------------------------------------------
@@ -16,180 +16,78 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
-update_compile_order -fileset sources_1
-add_files -norecurse {{D:/Code Try/CODExperiment/Lab2/InputProcessing.v} {D:/Code Try/CODExperiment/Lab2/encoder.v}}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-set_property top encoder_16bits [current_fileset]
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7a100tcsg324-1
-Top: encoder_16bits
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-2 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 979.750 ; gain = 250.051
-INFO: [Common 17-344] 'synth_design' was cancelled
-update_compile_order -fileset sources_1
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7a100tcsg324-1
-Top: encoder_16bits
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1151.520 ; gain = 171.770
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'encoder_16bits' [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'encoder_16bits' (1#1) [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1191.582 ; gain = 211.832
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1191.582 ; gain = 211.832
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1191.582 ; gain = 211.832
----------------------------------------------------------------------------------
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1310.723 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1335.086 ; gain = 355.336
-5 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 1335.086 ; gain = 355.336
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-refresh_design
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1366.285 ; gain = 31.199
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'encoder_16bits' [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
-WARNING: [Synth 8-153] case item 16'b1xxxxxxxxxxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b01xxxxxxxxxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b001xxxxxxxxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b0001xxxxxxxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b00001xxxxxxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b000001xxxxxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b0000001xxxxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b00000001xxxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b000000001xxxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b0000000001xxxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b00000000001xxxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b000000000001xxxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b0000000000001xxx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b00000000000001xx will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-WARNING: [Synth 8-153] case item 16'b000000000000001x will never be executed [D:/Code Try/CODExperiment/Lab2/encoder.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'encoder_16bits' (1#1) [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
-WARNING: [Synth 8-3330] design encoder_16bits has an empty top module
-WARNING: [Synth 8-3917] design encoder_16bits has port out[3] driven by constant 0
-WARNING: [Synth 8-3917] design encoder_16bits has port out[2] driven by constant 0
-WARNING: [Synth 8-3917] design encoder_16bits has port out[1] driven by constant 0
-WARNING: [Synth 8-3917] design encoder_16bits has port out[0] driven by constant 0
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[15]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[14]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[13]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[12]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[11]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[10]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[9]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[8]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[7]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[6]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[5]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[4]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[3]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[2]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[1]
-WARNING: [Synth 8-3331] design encoder_16bits has unconnected port in[0]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1397.363 ; gain = 62.277
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1420.227 ; gain = 85.141
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1420.227 ; gain = 85.141
----------------------------------------------------------------------------------
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-141] Inserted 4 OBUFs to IO ports without IO buffers.
-
-Processing XDC Constraints
-Initializing timing engine
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1420.227 ; gain = 85.141
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse {{D:/Code Try/CODExperiment/Lab2/SortSim.v}}
-update_compile_order -fileset sim_1
-set_property top sortSim [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
 launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [USF-XSim-7] Finding pre-compiled libraries...
 INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'sortSim' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'temp' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj sortSim_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/encoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module encoder_16bits
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/SortSim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sortSim
+"xvlog --incr --relax -prj temp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temp
+ERROR: [VRFC 10-2989] 'Segout' is not declared [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v:47]
+ERROR: [VRFC 10-2989] 'Segout' is not declared [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v:48]
+ERROR: [VRFC 10-2989] 'Segout' is not declared [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v:49]
+ERROR: [VRFC 10-2989] 'Segout' is not declared [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v:50]
+ERROR: [VRFC 10-2989] 'Segout' is not declared [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v:53]
+ERROR: [VRFC 10-2989] 'Segout' is not declared [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v:54]
+ERROR: [VRFC 10-2865] module 'temp' ignored due to previous errors [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'temp' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj temp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HexToSeg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temp
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
-"xelab -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log"
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/encoder.v" Line 1. Module encoder_16bits doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.encoder_16bits
-Compiling module xil_defaultlib.sortSim
+Compiling module xil_defaultlib.HexToSeg
+Compiling module xil_defaultlib.temp
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot sortSim_behav
+Built simulation snapshot temp_behav
 
 ****** Webtalk v2019.1 (64-bit)
   **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
@@ -201,16 +99,16 @@ invalid command name "%"
     while executing
 "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
     (file "D:/Code" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Sun Mar 27 20:22:25 2022...
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar 28 12:14:51 2022...
 INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "sortSim_behav -key {Behavioral:sim_1:Functional:sortSim} -tclbatch {sortSim.tcl} -log {simulate.log}"
+   with args "temp_behav -key {Behavioral:sim_1:Functional:temp} -tclbatch {temp.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2019.1
 Time resolution is 1 ps
-source sortSim.tcl
+source temp.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -221,17 +119,486 @@ source sortSim.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'sortSim_behav' loaded.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:01:06 ; elapsed = 00:01:02 . Memory (MB): peak = 769.387 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:01:14 ; elapsed = 00:01:07 . Memory (MB): peak = 769.387 ; gain = 30.539
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:01:15 ; elapsed = 00:01:12 . Memory (MB): peak = 769.387 ; gain = 30.539
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'temp' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj temp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HexToSeg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.HexToSeg
+Compiling module xil_defaultlib.temp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot temp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "temp_behav -key {Behavioral:sim_1:Functional:temp} -tclbatch {temp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source temp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'temp_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1533.188 ; gain = 8.844
-refresh_design
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 769.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'temp' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj temp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HexToSeg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.HexToSeg
+Compiling module xil_defaultlib.temp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot temp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "temp_behav -key {Behavioral:sim_1:Functional:temp} -tclbatch {temp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source temp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'temp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1080.316 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'temp' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj temp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HexToSeg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.HexToSeg
+Compiling module xil_defaultlib.temp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot temp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "temp_behav -key {Behavioral:sim_1:Functional:temp} -tclbatch {temp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source temp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'temp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1080.316 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 12:23:10 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 12:23:10 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'temp' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj temp_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "temp_behav -key {Behavioral:sim_1:Functional:temp} -tclbatch {temp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source temp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'temp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2049.633 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 13:12:12 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 13:12:12 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 13:13:02 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 13:13:02 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 13:15:53 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 13:15:53 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Nexys A7 -100T-210292ABF974A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 13:20:01 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 13:20:01 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'temp' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj temp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HexToSeg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot temp_behav xil_defaultlib.temp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" Line 1. Module HexToSeg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.HexToSeg
+Compiling module xil_defaultlib.temp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot temp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "temp_behav -key {Behavioral:sim_1:Functional:temp} -tclbatch {temp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source temp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'temp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2079.918 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: sortDownload
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/Code Try/CODExperiment/Lab2/sortDownload.v:74]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1560.902 ; gain = 27.715
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2499.117 ; gain = 185.785
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sortDownload' [D:/Code Try/CODExperiment/Lab2/sortDownload.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IP_BothEdge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:50]
+INFO: [Synth 8-6157] synthesizing module 'jitter_clr' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'jitter_clr' (1#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:1]
+INFO: [Synth 8-6157] synthesizing module 'signal_both_edge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'signal_both_edge' (2#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'IP_BothEdge' (3#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:50]
+INFO: [Synth 8-6157] synthesizing module 'IP' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:41]
+INFO: [Synth 8-6157] synthesizing module 'signal_edge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'signal_edge' (4#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'IP' (5#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:41]
+INFO: [Synth 8-6157] synthesizing module 'HexToSeg' [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:1]
+INFO: [Synth 8-226] default block is never used [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'HexToSeg' (6#1) [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sort' [D:/Code Try/CODExperiment/Lab2/sort.v:1]
+	Parameter BEFORE bound to: 0 - type: integer 
+	Parameter RUNNING bound to: 1 - type: integer 
+	Parameter AFTER bound to: 2 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'encoder_16bits' [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'encoder_16bits' (1#1) [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_16bits' (7#1) [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_256_16' [D:/Code Try/CODExperiment/Lab2/project_1/.Xil/Vivado-8016-Yun/realtime/dist_mem_256_16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_256_16' (8#1) [D:/Code Try/CODExperiment/Lab2/project_1/.Xil/Vivado-8016-Yun/realtime/dist_mem_256_16_stub.v:6]
+WARNING: [Synth 8-3848] Net FIN in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:70]
+WARNING: [Synth 8-3848] Net busy in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:11]
+WARNING: [Synth 8-3848] Net cnt in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'sort' (9#1) [D:/Code Try/CODExperiment/Lab2/sort.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sortDownload' (10#1) [D:/Code Try/CODExperiment/Lab2/sortDownload.v:1]
+WARNING: [Synth 8-3331] design sort has unconnected port busy
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[15]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[14]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[13]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[12]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[11]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[10]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[9]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[8]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[7]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[6]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[5]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[4]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[3]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[2]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[1]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1587.566 ; gain = 54.379
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2533.219 ; gain = 219.887
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -244,83 +611,402 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1611.414 ; gain = 78.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2553.117 ; gain = 239.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1611.414 ; gain = 78.227
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2553.117 ; gain = 239.785
 ---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.dcp' for cell 'sort/dist_mem_256_16'
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1611.414 ; gain = 78.227
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2682.664 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 16 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 2726.930 ; gain = 413.598
+30 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 2726.930 ; gain = 647.012
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 13:29:51 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 13:29:51 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 3334.086 ; gain = 0.000
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3334.086 ; gain = 598.316
+INFO: [Common 17-344] 'open_run' was cancelled
+refresh_design
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/Code Try/CODExperiment/Lab2/sortDownload.v:76]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3334.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sortDownload' [D:/Code Try/CODExperiment/Lab2/sortDownload.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IP_BothEdge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:50]
+INFO: [Synth 8-6157] synthesizing module 'jitter_clr' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'jitter_clr' (1#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:1]
+INFO: [Synth 8-6157] synthesizing module 'signal_both_edge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'signal_both_edge' (2#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'IP_BothEdge' (3#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:50]
+INFO: [Synth 8-6157] synthesizing module 'IP' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:41]
+INFO: [Synth 8-6157] synthesizing module 'signal_edge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'signal_edge' (4#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'IP' (5#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:41]
+INFO: [Synth 8-6157] synthesizing module 'HexToSeg' [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:1]
+INFO: [Synth 8-226] default block is never used [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'HexToSeg' (6#1) [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sort' [D:/Code Try/CODExperiment/Lab2/sort.v:1]
+	Parameter BEFORE bound to: 0 - type: integer 
+	Parameter RUNNING bound to: 1 - type: integer 
+	Parameter AFTER bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'encoder_16bits' [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_16bits' (7#1) [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_256_16' [D:/Code Try/CODExperiment/Lab2/project_1/.Xil/Vivado-8016-Yun/realtime/dist_mem_256_16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_256_16' (8#1) [D:/Code Try/CODExperiment/Lab2/project_1/.Xil/Vivado-8016-Yun/realtime/dist_mem_256_16_stub.v:6]
+WARNING: [Synth 8-3848] Net FIN in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:70]
+WARNING: [Synth 8-3848] Net busy in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:11]
+WARNING: [Synth 8-3848] Net cnt in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'sort' (9#1) [D:/Code Try/CODExperiment/Lab2/sort.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sortDownload' (10#1) [D:/Code Try/CODExperiment/Lab2/sortDownload.v:1]
+WARNING: [Synth 8-3331] design sort has unconnected port busy
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[15]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[14]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[13]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[12]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[11]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[10]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[9]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[8]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[7]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[6]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[5]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[4]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[3]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[2]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[1]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3334.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3334.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3334.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.dcp' for cell 'sort/dist_mem_256_16'
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 3356.891 ; gain = 22.805
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+close_hw
+file mkdir D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new
+can't create directory "D:/Code": file already exists
+file mkdir D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new
+can't create directory "D:/Code": file already exists
+file mkdir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new}
+close [ open {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new/test.v} w ]
+add_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/new/test.v}}
+update_compile_order -fileset sources_1
+set_property top test [current_fileset]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 14:13:12 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 14:13:12 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/test.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 14:19:31 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 14:19:31 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/test.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 14:27:03 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 14:27:03 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/test.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+set_property top sortDownload [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 14:30:06 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 14:30:06 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 14:37:10 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 14:37:10 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'sortSim' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj sortSim_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/encoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module encoder_16bits
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/SortSim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sortSim
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
-"xelab -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e46ab2d4e2854902b386bd009de1f6b1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Code Try/CODExperiment/Lab2/encoder.v" Line 1. Module encoder_16bits doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.encoder_16bits
-Compiling module xil_defaultlib.sortSim
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot sortSim_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "sortSim_behav -key {Behavioral:sim_1:Functional:sortSim} -tclbatch {sortSim.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-source sortSim.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'sortSim_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1696.047 ; gain = 0.000
-add_files -norecurse {{D:/Code Try/CODExperiment/Lab2/sort.v}}
+close_project
+open_project {D:/Code Try/CODExperiment/Lab2/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 14:47:10 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Mar 28 14:54:49 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 14:54:49 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'd:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.dcp' for cell 'sort/dist_mem_256_16'
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3573.676 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 16 instances
+
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Mon Mar 28 15:02:01 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 15:02:01 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Mon Mar 28 15:05:35 2022] Launched synth_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/runme.log
+[Mon Mar 28 15:05:35 2022] Launched impl_1...
+Run output will be captured here: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/impl_1/sortDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF974A
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 00:03:53 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 15:12:22 2022...

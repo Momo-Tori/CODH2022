@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log register_file.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source register_file.tcl
+    with args -log sortDownload.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sortDownload.tcl
 
 
 ****** Vivado v2019.1 (64-bit)
@@ -8,36 +8,119 @@
   **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source register_file.tcl -notrace
-Command: synth_design -top register_file -part xc7a100tcsg324-1
+source sortDownload.tcl -notrace
+Command: synth_design -top sortDownload -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 32748 
+INFO: Helper process launched with PID 34740 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 443.652 ; gain = 152.328
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 701.090 ; gain = 177.891
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/Code Try/CODExperiment/Lab2/register_32_32.v:1]
-	Parameter AW bound to: 5 - type: integer 
-	Parameter DW bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'register_file' (1#1) [D:/Code Try/CODExperiment/Lab2/register_32_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sortDownload' [D:/Code Try/CODExperiment/Lab2/sortDownload.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IP_BothEdge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:50]
+INFO: [Synth 8-6157] synthesizing module 'jitter_clr' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'jitter_clr' (1#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:1]
+INFO: [Synth 8-6157] synthesizing module 'signal_both_edge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'signal_both_edge' (2#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'IP_BothEdge' (3#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:50]
+INFO: [Synth 8-6157] synthesizing module 'IP' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:41]
+INFO: [Synth 8-6157] synthesizing module 'signal_edge' [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'signal_edge' (4#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'IP' (5#1) [D:/Code Try/CODExperiment/Lab2/InputProcessing.v:41]
+INFO: [Synth 8-6157] synthesizing module 'HexToSeg' [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:1]
+INFO: [Synth 8-226] default block is never used [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'HexToSeg' (6#1) [D:/Code Try/CODExperiment/Lab2/HexToSeg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sort' [D:/Code Try/CODExperiment/Lab2/sort.v:1]
+	Parameter BEFORE bound to: 0 - type: integer 
+	Parameter RUNNING bound to: 1 - type: integer 
+	Parameter AFTER bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'encoder_16bits' [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_16bits' (7#1) [D:/Code Try/CODExperiment/Lab2/encoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_256_16' [D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-49564-Yun/realtime/dist_mem_256_16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_256_16' (8#1) [D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/.Xil/Vivado-49564-Yun/realtime/dist_mem_256_16_stub.v:6]
+WARNING: [Synth 8-3848] Net FIN in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:70]
+WARNING: [Synth 8-3848] Net busy in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:11]
+WARNING: [Synth 8-3848] Net cnt in module/entity sort does not have driver. [D:/Code Try/CODExperiment/Lab2/sort.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'sort' (9#1) [D:/Code Try/CODExperiment/Lab2/sort.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sortDownload' (10#1) [D:/Code Try/CODExperiment/Lab2/sortDownload.v:1]
+WARNING: [Synth 8-3331] design sort has unconnected port busy
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[15]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[14]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[13]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[12]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[11]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[10]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[9]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[8]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[7]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[6]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[5]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[4]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[3]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[2]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[1]
+WARNING: [Synth 8-3331] design sort has unconnected port cnt[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 506.090 ; gain = 214.766
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 765.055 ; gain = 241.855
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 506.090 ; gain = 214.766
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 765.055 ; gain = 241.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 765.055 ; gain = 241.855
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16/dist_mem_256_16_in_context.xdc] for cell 'sort/dist_mem_256_16'
+Finished Parsing XDC File [d:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16/dist_mem_256_16_in_context.xdc] for cell 'sort/dist_mem_256_16'
+Parsing XDC File [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]
+Finished Parsing XDC File [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Code Try/CODExperiment/Lab2/Nexys4DDR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sortDownload_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sortDownload_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 884.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 884.734 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'sort/dist_mem_256_16' at clock pin 'clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 894.211 ; gain = 371.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 506.090 ; gain = 214.766
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 894.211 ; gain = 371.012
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 506.090 ; gain = 214.766
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for sort/dist_mem_256_16. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 894.211 ; gain = 371.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'AN_reg' in module 'sortDownload'
+INFO: [Synth 8-5546] ROM "AN" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 894.211 ; gain = 371.012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -45,15 +128,28 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 23    
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
 +---Registers : 
-	               32 Bit    Registers := 32    
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 22    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 43    
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 31    
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -61,12 +157,46 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module register_file 
+Module sortDownload 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input      8 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 7     
+Module jitter_clr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+Module signal_edge 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 32    
+	                1 Bit    Registers := 2     
+Module encoder_16bits 
+Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 31    
+	  17 Input      4 Bit        Muxes := 1     
+Module sort 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 1     
+Module signal_both_edge 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                1 Bit    Registers := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -79,45 +209,30 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][0]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][1]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][2]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][3]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][4]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][5]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][6]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][7]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][8]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][9]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][10]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][11]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][12]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][13]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][14]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][15]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][16]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][17]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][18]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][19]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][20]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][21]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][22]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][23]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][24]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][25]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][26]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][27]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][28]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][29]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3886] merging instance 'rf_reg[0][30]' (FDRE) to 'rf_reg[0][31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rf_reg[0][31] )
+INFO: [Synth 8-5546] ROM "AN" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[15]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[14]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[13]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[12]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[11]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[10]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[9]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[8]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[7]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[6]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[5]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[4]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[3]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[2]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[1]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED[0]
+WARNING: [Synth 8-3331] design sortDownload has unconnected port LED16_R
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 677.098 ; gain = 385.773
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 894.211 ; gain = 371.012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -125,12 +240,17 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 894.211 ; gain = 371.012
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 910.504 ; gain = 387.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -142,7 +262,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 911.527 ; gain = 388.328
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -166,7 +286,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 913.332 ; gain = 390.133
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -179,7 +299,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 913.332 ; gain = 390.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -191,78 +311,149 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 913.332 ; gain = 390.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 913.332 ; gain = 390.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 913.332 ; gain = 390.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 913.332 ; gain = 390.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |dist_mem_256_16 |         1|
++------+----------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |BUFG  |     1|
-|2     |LUT5  |    64|
-|3     |LUT6  |   543|
-|4     |MUXF7 |   256|
-|5     |FDRE  |   992|
-|6     |IBUF  |    49|
-|7     |OBUF  |    64|
-+------+------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |dist_mem_256_16 |     1|
+|2     |BUFG            |     1|
+|3     |CARRY4          |     4|
+|4     |LUT1            |    65|
+|5     |LUT2            |    75|
+|6     |LUT3            |    47|
+|7     |LUT4            |    39|
+|8     |LUT5            |    58|
+|9     |LUT6            |    99|
+|10    |FDCE            |    26|
+|11    |FDRE            |   234|
+|12    |IBUF            |    23|
+|13    |OBUF            |    15|
+|14    |OBUFT           |    17|
++------+----------------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |  1969|
-+------+---------+-------+------+
++------+-----------------------+--------------------+------+
+|      |Instance               |Module              |Cells |
++------+-----------------------+--------------------+------+
+|1     |top                    |                    |   719|
+|2     |  \DP[0].IP_BothEdge   |IP_BothEdge         |    23|
+|3     |    jitter_clr         |jitter_clr_56       |    19|
+|4     |    signal_both_edge   |signal_both_edge_57 |     4|
+|5     |  \DP[10].IP_BothEdge  |IP_BothEdge_0       |    23|
+|6     |    jitter_clr         |jitter_clr_54       |    19|
+|7     |    signal_both_edge   |signal_both_edge_55 |     4|
+|8     |  \DP[11].IP_BothEdge  |IP_BothEdge_1       |    22|
+|9     |    jitter_clr         |jitter_clr_52       |    19|
+|10    |    signal_both_edge   |signal_both_edge_53 |     3|
+|11    |  \DP[12].IP_BothEdge  |IP_BothEdge_2       |    23|
+|12    |    jitter_clr         |jitter_clr_50       |    19|
+|13    |    signal_both_edge   |signal_both_edge_51 |     4|
+|14    |  \DP[13].IP_BothEdge  |IP_BothEdge_3       |    24|
+|15    |    jitter_clr         |jitter_clr_48       |    19|
+|16    |    signal_both_edge   |signal_both_edge_49 |     5|
+|17    |  \DP[14].IP_BothEdge  |IP_BothEdge_4       |    23|
+|18    |    jitter_clr         |jitter_clr_46       |    19|
+|19    |    signal_both_edge   |signal_both_edge_47 |     4|
+|20    |  \DP[15].IP_BothEdge  |IP_BothEdge_5       |    22|
+|21    |    jitter_clr         |jitter_clr_44       |    19|
+|22    |    signal_both_edge   |signal_both_edge_45 |     3|
+|23    |  \DP[1].IP_BothEdge   |IP_BothEdge_6       |    22|
+|24    |    jitter_clr         |jitter_clr_42       |    19|
+|25    |    signal_both_edge   |signal_both_edge_43 |     3|
+|26    |  \DP[2].IP_BothEdge   |IP_BothEdge_7       |    22|
+|27    |    jitter_clr         |jitter_clr_40       |    19|
+|28    |    signal_both_edge   |signal_both_edge_41 |     3|
+|29    |  \DP[3].IP_BothEdge   |IP_BothEdge_8       |    22|
+|30    |    jitter_clr         |jitter_clr_38       |    19|
+|31    |    signal_both_edge   |signal_both_edge_39 |     3|
+|32    |  \DP[4].IP_BothEdge   |IP_BothEdge_9       |    22|
+|33    |    jitter_clr         |jitter_clr_36       |    19|
+|34    |    signal_both_edge   |signal_both_edge_37 |     3|
+|35    |  \DP[5].IP_BothEdge   |IP_BothEdge_10      |    23|
+|36    |    jitter_clr         |jitter_clr_34       |    19|
+|37    |    signal_both_edge   |signal_both_edge_35 |     4|
+|38    |  \DP[6].IP_BothEdge   |IP_BothEdge_11      |    23|
+|39    |    jitter_clr         |jitter_clr_32       |    19|
+|40    |    signal_both_edge   |signal_both_edge_33 |     4|
+|41    |  \DP[7].IP_BothEdge   |IP_BothEdge_12      |    22|
+|42    |    jitter_clr         |jitter_clr_30       |    19|
+|43    |    signal_both_edge   |signal_both_edge_31 |     3|
+|44    |  \DP[8].IP_BothEdge   |IP_BothEdge_13      |    23|
+|45    |    jitter_clr         |jitter_clr_28       |    19|
+|46    |    signal_both_edge   |signal_both_edge_29 |     4|
+|47    |  \DP[9].IP_BothEdge   |IP_BothEdge_14      |    22|
+|48    |    jitter_clr         |jitter_clr_27       |    19|
+|49    |    signal_both_edge   |signal_both_edge    |     3|
+|50    |  IP1                  |IP                  |    24|
+|51    |    jitter_clr         |jitter_clr_25       |    19|
+|52    |    signal_edge        |signal_edge_26      |     5|
+|53    |  IP2                  |IP_15               |    23|
+|54    |    jitter_clr         |jitter_clr_23       |    19|
+|55    |    signal_edge        |signal_edge_24      |     4|
+|56    |  IP3                  |IP_16               |    24|
+|57    |    jitter_clr         |jitter_clr_21       |    19|
+|58    |    signal_edge        |signal_edge_22      |     5|
+|59    |  IP4                  |IP_17               |    22|
+|60    |    jitter_clr         |jitter_clr_19       |    19|
+|61    |    signal_edge        |signal_edge_20      |     3|
+|62    |  IP5                  |IP_18               |    22|
+|63    |    jitter_clr         |jitter_clr          |    19|
+|64    |    signal_edge        |signal_edge         |     3|
+|65    |  sort                 |sort                |   134|
++------+-----------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 913.332 ; gain = 390.133
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 685.973 ; gain = 394.648
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 913.332 ; gain = 260.977
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 913.332 ; gain = 390.133
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 256 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'register_file' is not ideal for floorplanning, since the cellview 'register_file' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 784.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 915.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 784.527 ; gain = 493.203
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 784.527 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 915.305 ; gain = 623.691
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 915.305 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/register_file.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file register_file_utilization_synth.rpt -pb register_file_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 27 16:15:46 2022...
+INFO: [Common 17-1381] The checkpoint 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/sortDownload.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sortDownload_utilization_synth.rpt -pb sortDownload_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 15:06:11 2022...

@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/encoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module encoder_16bits
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/SortSim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sortSim
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/HexToSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HexToSeg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module temp
