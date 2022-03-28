@@ -19,6 +19,7 @@ module test (
     input BTND
 );
 
+
 //输出部分
 reg  [23:0]SegD;//六个数码管的十六进制形式
 wire [7:0]Segout[5:0];//六个数码管的十六进制转化为Seg对应灯管亮起的信号

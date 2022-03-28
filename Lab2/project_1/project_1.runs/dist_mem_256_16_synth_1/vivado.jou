@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Mar 28 11:33:30 2022
-# Process ID: 49788
+# Start of session at: Mon Mar 28 23:36:44 2022
+# Process ID: 61420
 # Current directory: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/dist_mem_256_16_synth_1
 # Command line: vivado.exe -log dist_mem_256_16.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dist_mem_256_16.tcl
 # Log file: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/dist_mem_256_16_synth_1/dist_mem_256_16.vds

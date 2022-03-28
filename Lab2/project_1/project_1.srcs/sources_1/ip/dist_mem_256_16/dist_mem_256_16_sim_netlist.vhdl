@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Mon Mar 28 11:34:04 2022
 -- Host        : Yun running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {d:/Code
---               Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top dist_mem_256_16 -prefix
+--               dist_mem_256_16_ dist_mem_256_16_sim_netlist.vhdl
 -- Design      : dist_mem_256_16
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,8 +22,6 @@ entity dist_mem_256_16_spram is
     we : in STD_LOGIC;
     a : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dist_mem_256_16_spram : entity is "spram";
 end dist_mem_256_16_spram;
 
 architecture STRUCTURE of dist_mem_256_16_spram is
@@ -432,8 +430,6 @@ entity dist_mem_256_16_dist_mem_gen_v8_0_13_synth is
     we : in STD_LOGIC;
     a : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dist_mem_256_16_dist_mem_gen_v8_0_13_synth : entity is "dist_mem_gen_v8_0_13_synth";
 end dist_mem_256_16_dist_mem_gen_v8_0_13_synth;
 
 architecture STRUCTURE of dist_mem_256_16_dist_mem_gen_v8_0_13_synth is
@@ -535,8 +531,6 @@ entity dist_mem_256_16_dist_mem_gen_v8_0_13 is
   attribute C_SYNC_ENABLE of dist_mem_256_16_dist_mem_gen_v8_0_13 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of dist_mem_256_16_dist_mem_gen_v8_0_13 : entity is 16;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of dist_mem_256_16_dist_mem_gen_v8_0_13 : entity is "dist_mem_gen_v8_0_13";
 end dist_mem_256_16_dist_mem_gen_v8_0_13;
 
 architecture STRUCTURE of dist_mem_256_16_dist_mem_gen_v8_0_13 is

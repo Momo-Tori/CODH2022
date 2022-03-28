@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Mon Mar 28 11:34:04 2022
 // Host        : Yun running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub {d:/Code
-//               Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16_stub.v}
+// Command     : write_verilog -force -mode synth_stub -rename_top dist_mem_256_16 -prefix
+//               dist_mem_256_16_ dist_mem_256_16_stub.v
 // Design      : dist_mem_256_16
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

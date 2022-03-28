@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Mon Mar 28 11:34:04 2022
 // Host        : Yun running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {d:/Code
-//               Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim -rename_top dist_mem_256_16 -prefix
+//               dist_mem_256_16_ dist_mem_256_16_sim_netlist.v
 // Design      : dist_mem_256_16
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -97,7 +97,7 @@ endmodule
 (* C_MEM_INIT_FILE = "dist_mem_256_16.mif" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) 
 module dist_mem_256_16_dist_mem_gen_v8_0_13
    (a,
     d,
@@ -199,7 +199,6 @@ module dist_mem_256_16_dist_mem_gen_v8_0_13
         .we(we));
 endmodule
 
-(* ORIG_REF_NAME = "dist_mem_gen_v8_0_13_synth" *) 
 module dist_mem_256_16_dist_mem_gen_v8_0_13_synth
    (spo,
     clk,
@@ -226,7 +225,6 @@ module dist_mem_256_16_dist_mem_gen_v8_0_13_synth
         .we(we));
 endmodule
 
-(* ORIG_REF_NAME = "spram" *) 
 module dist_mem_256_16_spram
    (spo,
     clk,

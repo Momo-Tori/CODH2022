@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Mar 28 20:11:40 2022
-# Process ID: 61120
+# Start of session at: Mon Mar 28 23:36:51 2022
+# Process ID: 64232
 # Current directory: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log sortDownload.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sortDownload.tcl
 # Log file: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/synth_1/sortDownload.vds
