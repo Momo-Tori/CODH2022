@@ -1,0 +1,821 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Mar 29 13:28:10 2022
+# Process ID: 71832
+# Current directory: D:/Code Try/CODExperiment/Lab2/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent71112 D:\Code Try\CODExperiment\Lab2\project_1\project_1.xpr
+# Log file: D:/Code Try/CODExperiment/Lab2/project_1/vivado.log
+# Journal file: D:/Code Try/CODExperiment/Lab2/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Code Try/CODExperiment/Lab2/project_1/project_1.xpr}
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/fas.v} w ]
+add_files -fileset sim_1 {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/fas.v}}
+update_compile_order -fileset sim_1
+set_property top fas [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fas' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fas_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sort
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/fas.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fas
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'SegData' is not permitted [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/fas.v:49]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fas' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fas_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/sim/dist_mem_256_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_256_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder_16bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sort
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/fas.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fas
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encoder_16bits
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_256_16
+Compiling module xil_defaultlib.sort
+Compiling module xil_defaultlib.fas
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fas_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Code -notrace
+invalid command name "%"
+    while executing
+"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+    (file "D:/Code" line 1)
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 29 13:34:15 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fas_behav -key {Behavioral:sim_1:Functional:fas} -tclbatch {fas.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source fas.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+xsim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 892.812 ; gain = 104.281
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fas_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 892.812 ; gain = 104.281
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fas' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fas_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/sim/dist_mem_256_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_256_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder_16bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sort
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/fas.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fas
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encoder_16bits
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_256_16
+Compiling module xil_defaultlib.sort
+Compiling module xil_defaultlib.fas
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fas_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fas_behav -key {Behavioral:sim_1:Functional:fas} -tclbatch {fas.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source fas.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fas_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1011.953 ; gain = 23.004
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fas' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fas_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/sim/dist_mem_256_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_256_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder_16bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sort
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/fas.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fas
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encoder_16bits
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_256_16
+Compiling module xil_defaultlib.sort
+Compiling module xil_defaultlib.fas
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fas_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fas_behav -key {Behavioral:sim_1:Functional:fas} -tclbatch {fas.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source fas.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fas_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1280.090 ; gain = 239.062
+set_property top sortSim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sim_1
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project {D:/Code Try/CODExperiment/Lab2/project_1/project_1.xpr}
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'sortSim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sortSim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encoder_16bits
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_256_16
+Compiling module xil_defaultlib.sort
+Compiling module xil_defaultlib.sortSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sortSim_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Code -notrace
+invalid command name "%"
+    while executing
+"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
+    (file "D:/Code" line 1)
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 29 13:37:33 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sortSim_behav -key {Behavioral:sim_1:Functional:sortSim} -tclbatch {sortSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source sortSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sortSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1280.090 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'sortSim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sortSim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/sim/dist_mem_256_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_256_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder_16bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sort
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Code Try/CODExperiment/Lab2/SortSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sortSim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sortSim_behav xil_defaultlib.sortSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encoder_16bits
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_256_16
+Compiling module xil_defaultlib.sort
+Compiling module xil_defaultlib.sortSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sortSim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sortSim_behav -key {Behavioral:sim_1:Functional:sortSim} -tclbatch {sortSim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source sortSim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sortSim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1280.090 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'sortSim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sortSim_vlog.prj"
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:01:02 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:01:02 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'sortSim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sortSim_vlog.prj"
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:32 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:32 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property top asd [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'asd' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj asd_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot asd_behav xil_defaultlib.asd xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot asd_behav xil_defaultlib.asd xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'a' [D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/asd.v:80]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encoder_16bits
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_gen_0
+Compiling module xil_defaultlib.asd
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot asd_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "asd_behav -key {Behavioral:sim_1:Functional:asd} -tclbatch {asd.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source asd.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: Too many words specified in data file dist_mem_gen_0.mif
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'asd_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1481.781 ; gain = 0.000
+update_compile_order -fileset sim_1
+set_property top fas [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/simulate.log"
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project {D:/Code Try/CODExperiment/Lab2/project_1/project_1.xpr}
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fas' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fas_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9e4de33ea685422e93e8555a9b84a134 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fas_behav xil_defaultlib.fas xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encoder_16bits
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_256_16
+Compiling module xil_defaultlib.sort
+Compiling module xil_defaultlib.fas
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fas_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fas_behav -key {Behavioral:sim_1:Functional:fas} -tclbatch {fas.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source fas.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fas_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1481.781 ; gain = 0.000
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fas' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fas_vlog.prj"
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_project
+open_project {D:/Code Try/CODExperiment/Lab2/project_1/project_1.xpr}
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sim_1/new/temp.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fas' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fas_vlog.prj"
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:58 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:58 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+generate_target Simulation [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}]
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_ip_user_files -of_objects [get_files {D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}] -no_script -sync -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/Code'
+WARNING: [Vivado 12-818] No files matched 'Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci'
+export_simulation -of_objects [get_files {{D:/Code Try/CODExperiment/Lab2/project_1/project_1.srcs/sources_1/ip/dist_mem_256_16/dist_mem_256_16.xci}}] -directory {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/Code Try/CODExperiment/Lab2/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Code Try/CODExperiment/Lab2/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fas' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_256_16.mif'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/DistMemCoe.coe'
+INFO: [SIM-utils-43] Exported 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Code Try/CODExperiment/Lab2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fas_vlog.prj"
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:01:06 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:01:06 . Memory (MB): peak = 1481.781 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 29 13:54:00 2022...

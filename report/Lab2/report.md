@@ -2,7 +2,7 @@
  * @Author: MomoTori
  * @Date: 2022-03-27 01:02:45
  * @LastEditors: MomoTori
- * @LastEditTime: 2022-03-28 20:15:53
+ * @LastEditTime: 2022-03-29 21:07:01
  * @FilePath: \Lab2d:\Code Try\CODExperiment\report\Lab2\report.md
  * @Description: 
  * Copyright (c) 2022 by MomoTori, All Rights Reserved. 
@@ -38,6 +38,12 @@
       - [RTL电路图](#rtl电路图-1)
       - [电路资源报告](#电路资源报告-1)
       - [时间性能报告](#时间性能报告-1)
+  - [问题解决](#问题解决)
+    - [CPU_RESETN无需IP操作](#cpu_resetn无需ip操作)
+    - [AN和SEG是低电平有效](#an和seg是低电平有效)
+    - [AN的状态变化不能使用移位](#an的状态变化不能使用移位)
+    - [模块寄存器特别是状态相关应初始化](#模块寄存器特别是状态相关应初始化)
+    - [特别注意非阻塞赋值时的冲突问题](#特别注意非阻塞赋值时的冲突问题)
   - [实验总结](#实验总结)
 
 <!-- /code_chunk_output -->
@@ -429,6 +435,15 @@ AN<={AN,1}//错误
 
 使用case循环与定义初始化较好
 
+### 模块寄存器特别是状态相关应初始化
+
+### 特别注意非阻塞赋值时的冲突问题
+
+### 一定要按照格式
+
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn)
+
 ## 实验总结
 
 通过本实验复习了verilog的写法，并能够设计ALU，使用ALU设计一些小应用
@@ -439,52 +454,79 @@ AN<={AN,1}//错误
 ```verilog
 //状态对应数据通路
 always @(posedge CLK100MHZ or negedge rstn) begin
-    if(rstn)
-    if(status!=Init)
+    if(~rstn)begin 
+        cnt<=0;
+        busy<=0;
+    end
+    else if(status!=Init)
     begin
-    cnt<=cnt+1;
     case (status)
         PreSort:begin
-            busy<=1;
+            busy<=0;
             cnt<=0;
-            i<=15;
+            i<=256;
             j<=0;
+            en<=0;
             Address<=0;
-            en<=0;
         end
-        SmallLoopPreRead:begin
+        SmallLoop1:begin
+            max<=spo;
             en<=0;
-            if(j==0)max<=spo;//第一次初始化
+            cnt<=cnt+1;
+        end
+        SmallLoop2:begin
+            en<=0;
             Address<=j+1;
+            cnt<=cnt+1;
         end
-        SmallLoopRead:begin
+        SmallLoop3:begin
             if(max<spo)begin
                 max<=spo;
                 temp<=max;
             end
             else temp<=spo;
+            cnt<=cnt+1;
         end
-        SmallLoopPreWrite:begin
+        SmallLoop4:begin
             D<=temp;
             Address<=j;
             en<=1;
+            cnt<=cnt+1;
         end
-        SmallLoopWrite:begin
+        SmallLoop5:begin
             j<=j+1;
-            Address<=j+1;
+            cnt<=cnt+1;
+        end
+        SmallLoop6:begin
+            Address<=j;
             D<=max;
-            en<=1;
+            cnt<=cnt+1;
         end
         SmallLoopFin:begin
             en<=0;
             Address<=0;
             j<=0;
             i<=i-1;
-        end
-        ReadyToFin:begin
-            busy<=0;
+            cnt<=cnt+1;
+            if(ifLoopFin) busy<=0;
         end
     endcase
     end
 end
+```
+
+```dot
+digraph G{
+   Init->Presort[label=run];
+   Presort->SmallLoop1
+   SmallLoop1->SmallLoop2
+   SmallLoop2->SmallLoop3
+   SmallLoop3->SmallLoop4
+   SmallLoop4->SmallLoop5
+   SmallLoop5->SmallLoop2[label="else"];
+   SmallLoop5->SmallLoop6[label="j+1==i"];
+   SmallLoop6->SmallLoopFin
+   SmallLoopFin->SmallLoop1[label="else"];
+   SmallLoopFin->Init[label="i==1"];
+}
 ```

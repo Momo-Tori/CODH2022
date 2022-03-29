@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Mar 29 21:45:08 2022
+# Process ID: 81612
+# Current directory: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/DRAM_4096_16_synth_1
+# Command line: vivado.exe -log DRAM_4096_16.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DRAM_4096_16.tcl
+# Log file: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/DRAM_4096_16_synth_1/DRAM_4096_16.vds
+# Journal file: D:/Code Try/CODExperiment/Lab2/project_1/project_1.runs/DRAM_4096_16_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DRAM_4096_16.tcl -notrace

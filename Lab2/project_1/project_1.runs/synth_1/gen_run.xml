@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1648481800">
-  <File Type="PA-TCL" Name="sortDownload.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="sortDownload_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="sortDownload_reports.tcl"/>
-  <File Type="RDS-RDS" Name="sortDownload.vds"/>
-  <File Type="RDS-UTIL" Name="sortDownload_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="sortDownload_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="sortDownload.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="sortDownload_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="sortDownload_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1648562054">
+  <File Type="PA-TCL" Name="sort_D4096.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="sort_D4096_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="sort_D4096_reports.tcl"/>
+  <File Type="RDS-RDS" Name="sort_D4096.vds"/>
+  <File Type="RDS-UTIL" Name="sort_D4096_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="sort_D4096_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="sort_D4096.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="sort_D4096_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="sort_D4096_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../HexToSeg.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../InputProcessing.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../encoder.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -32,8 +18,40 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../sort_4096_16_DRAM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../sort_4096_16_BRAM.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../HexToSeg.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../InputProcessing.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../sort.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -41,6 +59,7 @@
     </File>
     <File Path="$PPRDIR/../sortDownload.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -68,9 +87,17 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/dist_mem_gen_1/dist_mem_gen_1.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="sortDownload"/>
+      <Option Name="TopModule" Val="sort_D4096"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -95,5 +122,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="dist_mem_256_16"/>
+  <BlockFileSet Type="BlockSrcs" Name="DRAM_4096_16"/>
 </GenRun>

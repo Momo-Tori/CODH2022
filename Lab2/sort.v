@@ -22,8 +22,6 @@ parameter SmallLoop5=6;
 parameter SmallLoop6=7;
 parameter SmallLoopFin=8;
 
-
-
 //输入处理
 wire ifInput;//SW是否有输入
 wire [3:0] code;//编码
@@ -43,8 +41,8 @@ wire ifSmallLoopFin;
 wire ifLoopFin;
 reg [15:0]max;
 reg [15:0]temp;
-reg [7:0]i;//大循环
-reg [7:0]j;//小循环
+reg [15:0]i;//大循环
+reg [15:0]j;//小循环
 assign ifLoopFin=(i==1);
 assign ifSmallLoopFin=(j+1==i);
 
@@ -120,11 +118,13 @@ end
 
 //sort部分
 
+initial status=Init;
 //状态
 always @(posedge CLK100MHZ or negedge rstn) begin
     if(~rstn) status<=Init;//初始态
     else case (status)
         Init:if(run) status<=PreSort;//处在初始态，run信号到来时开始排序
+        else status<=status;
         PreSort:status<=SmallLoop1;
         SmallLoop1:status<=SmallLoop2;
         SmallLoop2:status<=SmallLoop3;
@@ -132,7 +132,8 @@ always @(posedge CLK100MHZ or negedge rstn) begin
         SmallLoop4:status<=SmallLoop5;
         SmallLoop5:if(ifSmallLoopFin)status<=SmallLoop6;else status<=SmallLoop2;
         SmallLoop6:status<=SmallLoopFin;
-        SmallLoopFin:if(ifLoopFin)begin status<=Init;busy<=0;end else status<=SmallLoop1;
+        SmallLoopFin:if(ifLoopFin)status<=Init;
+        else status<=SmallLoop1;
         endcase
 end
 
@@ -140,15 +141,18 @@ initial busy=0;
 
 //状态对应数据通路
 always @(posedge CLK100MHZ or negedge rstn) begin
-    if(rstn)
-    if(status!=Init)
+    if(~rstn)begin 
+        cnt<=0;
+        busy<=0;
+    end
+    else if(status!=Init)
     begin
     cnt<=cnt+1;
     case (status)
         PreSort:begin
             busy<=1;
             cnt<=0;
-            i<=15;
+            i<=256;
             j<=0;
         end
         SmallLoop1:begin
@@ -167,6 +171,7 @@ always @(posedge CLK100MHZ or negedge rstn) begin
         SmallLoopFin:begin
             j<=0;
             i<=i-1;
+            if(ifLoopFin) busy<=0;
         end
     endcase
     end
