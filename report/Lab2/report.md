@@ -2,8 +2,8 @@
  * @Author: MomoTori
  * @Date: 2022-03-27 01:02:45
  * @LastEditors: MomoTori
- * @LastEditTime: 2022-03-29 21:07:01
- * @FilePath: \Lab2d:\Code Try\CODExperiment\report\Lab2\report.md
+ * @LastEditTime: 2022-03-31 21:49:23
+ * @FilePath: \undefinedd:\CodeTry\CODExperiment\report\Lab2\report.md
  * @Description: 
  * Copyright (c) 2022 by MomoTori, All Rights Reserved. 
 -->
@@ -327,6 +327,8 @@ endmodule
 
 ### 下载
 
+
+
 前两张照片输入1,2，之后运行三次如图所示
 
 ![](pic/FLS%20(4).jpg)
@@ -529,4 +531,62 @@ digraph G{
    SmallLoopFin->SmallLoop1[label="else"];
    SmallLoopFin->Init[label="i==1"];
 }
+```
+
+
+
+
+
+
+```verilog
+//状态对应数据通路
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn)begin 
+        cnt<=0;
+        busy<=0;
+    end
+    else if(status!=Init)
+    begin
+    cnt<=cnt+1;
+    case (status)
+        PreSort:begin
+            busy<=0;
+            i<=256;
+            j<=0;
+            en<=0;
+            Address<=0;
+            DAdd<=0;
+            max<=0;
+        end
+        SmallLoop1:begin
+            max<=spo;
+            en<=0;
+            Address<=j+1;
+        end
+        SmallLoop2:begin
+            if(max<spo)begin
+                max<=spo;
+                D<=max
+            end
+            else D<=spo;
+            DAdd<=j;
+            en<=1;
+            Address<=j+2;
+            j<=j+1;
+        end
+        SmallLoop3:begin
+            DAdd<=j;
+            D<=max;
+        end
+        SmallLoopFin:begin
+            en<=0;
+            Address<=0;
+            D<=0;
+            j<=0;
+            i<=i-1;
+            if(ifLoopFin) busy<=0;
+        end
+    endcase
+    end
+end
 ```

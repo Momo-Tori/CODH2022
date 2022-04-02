@@ -1,0 +1,114 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Mar 31 21:39:08 2022
+| Host         : Yun running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Sort_Twoport_control_sets_placed.rpt
+| Design       : Sort_Twoport
+| Device       : xc7a100t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    36 |
+|    Minimum number of control sets                        |    36 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    16 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    36 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |    24 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              59 |           20 |
+| No           | No                    | Yes                    |               5 |            4 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              24 |            7 |
+| Yes          | No                    | Yes                    |              49 |           23 |
+| Yes          | Yes                   | No                     |             199 |           52 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|     Clock Signal     |                                              Enable Signal                                             |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++----------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|  CLK100MHZ_IBUF_BUFG | sort/busy0_out                                                                                         | sort/FSM_sequential_status[2]_i_2_n_0            |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG |                                                                                                        | sort/FSM_sequential_status[2]_i_2_n_0            |                4 |              5 |
+|  CLK100MHZ_IBUF_BUFG | DP[11].IP_BothEdge/jitter_clr/cnt[7]_i_2__15_n_0                                                       | DP[11].IP_BothEdge/jitter_clr/cnt[7]_i_1__15_n_0 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | AN[7]_i_1_n_0                                                                                          |                                                  |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | sort/Address_0                                                                                         | sort/FSM_sequential_status[2]_i_2_n_0            |                4 |              8 |
+|  CLK100MHZ_IBUF_BUFG | sort/DAdd                                                                                              | sort/FSM_sequential_status[2]_i_2_n_0            |                5 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[5].IP_BothEdge/jitter_clr/cnt[7]_i_2__9_n_0                                                         | DP[5].IP_BothEdge/jitter_clr/cnt[7]_i_1__9_n_0   |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[6].IP_BothEdge/jitter_clr/cnt[7]_i_2__10_n_0                                                        | DP[6].IP_BothEdge/jitter_clr/cnt[7]_i_1__10_n_0  |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[7].IP_BothEdge/jitter_clr/cnt[7]_i_2__11_n_0                                                        | DP[7].IP_BothEdge/jitter_clr/cnt[7]_i_1__11_n_0  |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[8].IP_BothEdge/jitter_clr/cnt[7]_i_2__12_n_0                                                        | DP[8].IP_BothEdge/jitter_clr/cnt[7]_i_1__12_n_0  |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[9].IP_BothEdge/jitter_clr/cnt[7]_i_2__13_n_0                                                        | DP[9].IP_BothEdge/jitter_clr/cnt[7]_i_1__13_n_0  |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[12].IP_BothEdge/jitter_clr/cnt[7]_i_2__16_n_0                                                       | DP[12].IP_BothEdge/jitter_clr/cnt[7]_i_1__16_n_0 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[4].IP_BothEdge/jitter_clr/cnt[7]_i_2__8_n_0                                                         | DP[4].IP_BothEdge/jitter_clr/cnt[7]_i_1__8_n_0   |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[13].IP_BothEdge/jitter_clr/cnt[7]_i_2__17_n_0                                                       | DP[13].IP_BothEdge/jitter_clr/cnt[7]_i_1__17_n_0 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[14].IP_BothEdge/jitter_clr/cnt[7]_i_2__18_n_0                                                       | DP[14].IP_BothEdge/jitter_clr/cnt[7]_i_1__18_n_0 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[15].IP_BothEdge/jitter_clr/cnt[7]_i_2__19_n_0                                                       | DP[15].IP_BothEdge/jitter_clr/cnt[7]_i_1__19_n_0 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[1].IP_BothEdge/jitter_clr/cnt[7]_i_2__5_n_0                                                         | DP[1].IP_BothEdge/jitter_clr/cnt[7]_i_1__5_n_0   |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[2].IP_BothEdge/jitter_clr/cnt[7]_i_2__6_n_0                                                         | DP[2].IP_BothEdge/jitter_clr/cnt[7]_i_1__6_n_0   |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[3].IP_BothEdge/jitter_clr/cnt[7]_i_2__7_n_0                                                         | DP[3].IP_BothEdge/jitter_clr/cnt[7]_i_1__7_n_0   |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | IP1/jitter_clr/sel                                                                                     | IP1/jitter_clr/clear                             |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | IP2/jitter_clr/cnt[7]_i_2__0_n_0                                                                       | IP2/jitter_clr/cnt[7]_i_1__0_n_0                 |                3 |              8 |
+|  CLK100MHZ_IBUF_BUFG | IP3/jitter_clr/cnt[7]_i_2__1_n_0                                                                       | IP3/jitter_clr/cnt[7]_i_1__1_n_0                 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | IP4/jitter_clr/cnt[7]_i_2__2_n_0                                                                       | IP4/jitter_clr/cnt[7]_i_1__2_n_0                 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | IP5/jitter_clr/cnt[7]_i_2__3_n_0                                                                       | IP5/jitter_clr/cnt[7]_i_1__3_n_0                 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[0].IP_BothEdge/jitter_clr/cnt[7]_i_2__4_n_0                                                         | DP[0].IP_BothEdge/jitter_clr/cnt[7]_i_1__4_n_0   |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | DP[10].IP_BothEdge/jitter_clr/cnt[7]_i_2__14_n_0                                                       | DP[10].IP_BothEdge/jitter_clr/cnt[7]_i_1__14_n_0 |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | sort/i[15]_i_2_n_0                                                                                     | sort/i[15]_i_1_n_0                               |                4 |             15 |
+|  CLK100MHZ_IBUF_BUFG | sort/max[15]_i_1_n_0                                                                                   |                                                  |                5 |             16 |
+|  CLK100MHZ_IBUF_BUFG | sort/cnt[0]_i_1_n_0                                                                                    | sort/FSM_sequential_status[2]_i_2_n_0            |                4 |             16 |
+|  CLK100MHZ_IBUF_BUFG | sort/D                                                                                                 | sort/FSM_sequential_status[2]_i_2_n_0            |                9 |             16 |
+|  CLK100MHZ_IBUF_BUFG | sort/j[15]_i_2_n_0                                                                                     | sort/j[15]_i_1_n_0                               |                5 |             16 |
+|  CLK100MHZ_IBUF_BUFG | sort/dist_mem_gen_2/U0/synth_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/ram_reg_128_191_0_2_i_1_n_0 |                                                  |                6 |             22 |
+|  CLK100MHZ_IBUF_BUFG | sort/dist_mem_gen_2/U0/synth_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/ram_reg_0_63_0_2_i_1_n_0    |                                                  |                6 |             22 |
+|  CLK100MHZ_IBUF_BUFG | sort/dist_mem_gen_2/U0/synth_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/ram_reg_64_127_0_2_i_1_n_0  |                                                  |                6 |             22 |
+|  CLK100MHZ_IBUF_BUFG | sort/dist_mem_gen_2/U0/synth_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/ram_reg_192_255_0_2_i_1_n_0 |                                                  |                6 |             22 |
+|  CLK100MHZ_IBUF_BUFG |                                                                                                        |                                                  |               20 |             59 |
++----------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+
+

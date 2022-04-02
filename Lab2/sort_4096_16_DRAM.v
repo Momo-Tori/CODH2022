@@ -7,7 +7,7 @@ module  sort_D4096 (
   input  data,		//修改数据
   input chk,		//查看下一�?
   input run,		//启动排序
-  output reg [23:0]  SegData,
+  output reg [31:0]  SegData,
   output reg busy,		//1—正在排序，0—排序结�?
   output reg [15:0]  cnt	//排序耗费时钟周期�?
 );
@@ -31,7 +31,7 @@ encoder_16bits encoder_16bits(DPsw,code);//编码
 //核心代码
 reg [3:0]status;
 reg [15:0] D;//暂时数据
-reg [7:0] Address;//当前地址
+reg [15:0] Address;//当前地址
 reg s;//用于判断输出
 wire [15:0] spo;
 reg en;
@@ -88,7 +88,7 @@ always @(posedge CLK100MHZ or negedge rstn) begin
         Init:begin
         if(chk) Address<=Address+1;
         else if(en&&status==Init) Address<=Address+1;
-        else if(addr) Address<=D[7:0];
+        else if(addr) Address<=D[15:0];
         end
         PreSort:Address<=0;
         SmallLoop2:Address<=j+1;
@@ -111,7 +111,7 @@ always @(posedge CLK100MHZ or negedge rstn) begin
 end
 
 always @(*) begin
-    {SegData[23:20],SegData[19:16]}=Address;
+    {SegData[31:28],SegData[27:24],SegData[23:20],SegData[19:16]}=Address;
     if(s) {SegData[15:12],SegData[11:8],SegData[7:4],SegData[3:0]}=D;
     else {SegData[15:12],SegData[11:8],SegData[7:4],SegData[3:0]}=spo;
 end

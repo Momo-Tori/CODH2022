@@ -43,41 +43,40 @@ module  asd (
    initial
    begin
    CLK100MHZ=0;
-  forever #0.1 CLK100MHZ=~CLK100MHZ;
+  forever #0.01 CLK100MHZ=~CLK100MHZ;
   end
-//??????
+  
+  
 parameter Init=0;
 parameter PreSort=1;
 parameter SmallLoop1=2;
 parameter SmallLoop2=3;
 parameter SmallLoop3=4;
-parameter SmallLoop4=5;
-parameter SmallLoop5=6;
-parameter SmallLoop6=7;
-parameter SmallLoopFin=8;
+parameter SmallLoopFin=5;
+
+//输入处理
+wire ifInput;//SW是否有输�?
+wire [3:0] code;//编码
+assign ifInput=|DPsw;//十六位取或，若为1则有输入
+encoder_16bits encoder_16bits(DPsw,code);//编码
+
+//核心代码
+reg [2:0]status;
+reg [15:0] D;//暂时数据
+reg [7:0] Address;//当前地址
+reg [7:0] DAdd;
+reg s;//用于判断输出
+wire [15:0] spo;
+reg en;
+dist_mem_gen_2 dist_mem_gen_2(.a(DAdd),.d(D),.dpra(Address),.clk(CLK100MHZ),.we(en),.dpo(spo));
 
 wire ifSmallLoopFin;
 wire ifLoopFin;
-reg [15:0]max=0;
-reg [15:0]temp=0;
-reg [7:0]i=0;//?????
-reg [7:0]j=0;//��???
+reg [15:0]max;
+reg [15:0]i;//大循�?
+reg [15:0]j;//小循�?
 assign ifLoopFin=(i==1);
 assign ifSmallLoopFin=(j+1==i);
-//??????
-wire ifInput;//SW?????????
-wire [3:0] code;//????
-assign ifInput=|DPsw;//???��??????1????????
-encoder_16bits encoder_16bits(DPsw,code);//????
-
-//???????
-reg [3:0]status=0;
-reg [15:0] D=0;//???????
-reg [7:0] Address=0;//??????
-reg s=0;//?????��????
-wire [15:0] spo;
-reg en=0;
-dist_mem_gen_0 dist_mem_gen_0(Address,D,CLK100MHZ,en,spo);
 
 always @(posedge CLK100MHZ or negedge rstn) begin
     if(~rstn) en<=0;
@@ -89,14 +88,13 @@ always @(posedge CLK100MHZ or negedge rstn) begin
         end
         PreSort:en<=0;
         SmallLoop1:en<=0;
-        SmallLoop2:en<=0;
-        SmallLoop4:en<=1;
+        SmallLoop2:en<=1;
         SmallLoopFin:en<=0;
     endcase
 end
 
 
-//D????
+//D部分
 initial D=0;
 always @(posedge CLK100MHZ or negedge rstn) begin
     if(~rstn) D<=0;
@@ -107,31 +105,50 @@ always @(posedge CLK100MHZ or negedge rstn) begin
         if(del) D<=D[15:4];
         if(en | addr) D<=0;
         end
-        SmallLoop4:D<=temp;
-        SmallLoop6:D<=max;
+        SmallLoop2:if(max<spo)D<=max;else D<=spo;
+        SmallLoop3:D<=max;
+        SmallLoopFin:D<=0;
     endcase
 end
 
-//Address????
+
+
+//Address部分
 initial Address=0;
 always @(posedge CLK100MHZ or negedge rstn) begin
-    if(~rstn) Address<=0;
+    if(~rstn) Address<=1;
     else
     case (status)
         Init:begin
         if(chk) Address<=Address+1;
-        else if(en&&status==Init) Address<=Address+1;
+        else if(en) Address<=Address+1;
         else if(addr) Address<=D[7:0];
         end
         PreSort:Address<=0;
-        SmallLoop2:Address<=j+1;
-        SmallLoop4:Address<=j;
-        SmallLoop6:Address<=j;
+        SmallLoop1:Address<=j+1;
+        SmallLoop2:Address<=j+2;
         SmallLoopFin:Address<=0;
     endcase
 end
 
-//s????
+initial DAdd=0;
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn) DAdd<=0;
+    else
+    case (status)
+        Init:begin
+        if(chk) DAdd<=Address+1;
+        else if(en) DAdd<=Address+1;
+        else if(addr) DAdd<=D[7:0];
+        end
+        PreSort:DAdd<=0;
+        SmallLoop2:DAdd<=j;
+        SmallLoop3:DAdd<=j;
+        SmallLoopFin:DAdd<=0;
+    endcase
+end
+
+//s部分
 initial s=0;
 always @(posedge CLK100MHZ or negedge rstn) begin
     if(~rstn) s<=0;
@@ -149,65 +166,57 @@ always @(*) begin
     else {SegData[15:12],SegData[11:8],SegData[7:4],SegData[3:0]}=spo;
 end
 
-//sort????
+//sort部分
 
-
-//??
+initial status=Init;
+//状�??
 always @(posedge CLK100MHZ or negedge rstn) begin
-    if(~rstn) status<=Init;//????
+    if(~rstn) status<=Init;//初始�?
     else case (status)
-        Init:if(run) status<=PreSort;//?????????run??????????????
+        Init:if(run) status<=PreSort;//处在初始态，run信号到来时开始排�?
+        else status<=status;
         PreSort:status<=SmallLoop1;
         SmallLoop1:status<=SmallLoop2;
-        SmallLoop2:status<=SmallLoop3;
-        SmallLoop3:status<=SmallLoop4;
-        SmallLoop4:status<=SmallLoop5;
-        SmallLoop5:if(ifSmallLoopFin)status<=SmallLoop6;else status<=SmallLoop2;
-        SmallLoop6:status<=SmallLoopFin;
-        SmallLoopFin:if(ifLoopFin)begin status<=Init;busy<=1;end else status<=SmallLoop1;
+        SmallLoop2:if(ifSmallLoopFin)status<=SmallLoop3;else status<=SmallLoop2;
+        SmallLoop3:status<=SmallLoopFin;
+        SmallLoopFin:if(ifLoopFin)status<=Init;
+        else status<=SmallLoop1;
         endcase
 end
 
-initial busy=1;
+initial busy=0;
 
-//??????????��
+//状�?�对应数据�?�路
 always @(posedge CLK100MHZ or negedge rstn) begin
-    if(rstn)
-    if(status!=Init)
+    if(~rstn)begin 
+        cnt<=0;
+        busy<=0;
+        max<=0;
+    end
+    else if(status!=Init)
     begin
     cnt<=cnt+1;
     case (status)
         PreSort:begin
-            busy<=0;
-            cnt<=0;
-            i<=15;
+            busy<=1;
+            i<=256;
             j<=0;
         end
-        SmallLoop1:begin
-            max<=spo;
-        end
-        SmallLoop3:begin
-            if(max<spo)begin
-                max<=spo;
-                temp<=max;
-            end
-            else temp<=spo;
-        end
-        SmallLoop5:begin
-            j<=j+1;
+        SmallLoop1:max<=spo;
+        SmallLoop2:begin if(max<spo)max<=spo;
+        j<=j+1;
         end
         SmallLoopFin:begin
             j<=0;
             i<=i-1;
+            if(ifLoopFin) busy<=0;
         end
     endcase
     end
 end
 
-initial
-begin
-#110 chk<=1;
-#10 chk<=0;
-end
+
+
+
 
 endmodule

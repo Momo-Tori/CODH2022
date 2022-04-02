@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log sort_D4096.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sort_D4096.tcl" );
+         "-log Sort_Twoport.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Sort_Twoport.tcl" );
 
 
 

@@ -10,7 +10,7 @@ module  register_file  #(
     input we			//写使能
 );
 reg [DW-1:0]  rf [0: (1<<AW)-1]; 	//寄存器堆
-assign rd0 = rf[ra0], rd1 = rf[ra1];	//读操作
+assign rd0 =(we==1&&ra0==wa)?wd: rf[ra0], rd1 =(we==1&&ra1==wa)?wd: rf[ra1];	//读操作
 always  @(posedge  clk)begin
     if (we)  rf[wa]  =  wd;		//写操作
     rf[0]=0;
