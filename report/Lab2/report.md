@@ -2,8 +2,8 @@
  * @Author: MomoTori
  * @Date: 2022-03-27 01:02:45
  * @LastEditors: MomoTori
- * @LastEditTime: 2022-03-31 21:49:23
- * @FilePath: \undefinedd:\CodeTry\CODExperiment\report\Lab2\report.md
+ * @LastEditTime: 2022-04-05 11:49:50
+ * @FilePath: \CODExperiment\report\Lab2\report.md
  * @Description: 
  * Copyright (c) 2022 by MomoTori, All Rights Reserved. 
 -->
@@ -18,32 +18,25 @@
 - [实验一  运算器及其应用](#实验一-运算器及其应用)
   - [目录](#目录)
   - [附录文件一览](#附录文件一览)
-  - [ALU模块](#alu模块)
+  - [寄存器堆](#寄存器堆)
     - [设计](#设计)
     - [仿真](#仿真)
+  - [分布式和块式RAM对比](#分布式和块式ram对比)
+    - [IP核仿真](#ip核仿真)
+  - [排序电路](#排序电路)
+    - [非排序部分](#非排序部分)
+    - [排序部分v0](#排序部分v0)
+    - [排序部分v1](#排序部分v1)
     - [下载](#下载)
+  - [分布式与块式RAM比较](#分布式与块式ram比较)
     - [RTL、资源、时间报告](#rtl-资源-时间报告)
-      - [RTL电路图](#rtl电路图)
       - [电路资源报告](#电路资源报告)
       - [时间性能报告](#时间性能报告)
-  - [FLS模块](#fls模块)
-    - [设计](#设计-1)
-    - [下载文件设计](#下载文件设计)
-    - [仿真](#仿真-1)
-    - [下载](#下载-1)
-  - [32位ALU](#32位alu)
-    - [设计](#设计-2)
-    - [下载](#下载-2)
-    - [RTL、资源、时间报告](#rtl-资源-时间报告-1)
-      - [RTL电路图](#rtl电路图-1)
-      - [电路资源报告](#电路资源报告-1)
-      - [时间性能报告](#时间性能报告-1)
+      - [分析](#分析)
   - [问题解决](#问题解决)
-    - [CPU_RESETN无需IP操作](#cpu_resetn无需ip操作)
+    - [CPU_RESETN无需整流操作](#cpu_resetn无需整流操作)
     - [AN和SEG是低电平有效](#an和seg是低电平有效)
-    - [AN的状态变化不能使用移位](#an的状态变化不能使用移位)
-    - [模块寄存器特别是状态相关应初始化](#模块寄存器特别是状态相关应初始化)
-    - [特别注意非阻塞赋值时的冲突问题](#特别注意非阻塞赋值时的冲突问题)
+    - [寄存器应初始化且应按照格式](#寄存器应初始化且应按照格式)
   - [实验总结](#实验总结)
 
 <!-- /code_chunk_output -->
@@ -51,409 +44,276 @@
 ## 附录文件一览
 
 .  
-├── ALU.v //ALU设计文件  
-├── ALU2.v //6位ALU实现文件  
-├── ALU3_32bits.v //32位ALU实现文件  
-├── FSL.v //FSL设计文件  
-├── FSL2.v //FSL下载设计文件  
-└── InputProcessing.v //输入处理模块设计文件
+├── HexToSeg.v //由十六进制信号转变为共阳极八段管信号  
+├── InputProcessing.v //输入处理  
+├── Nexys4DDR.xdc //xdc文件  
+├── encoder.v  
+├── register_32_32.v //32x32寄存器  
+├── sort.v //256位单端口DRAM排序  
+├── sortDownload.v //256位单端口DRAM排序下载至板  
+├── sortTwoPart.v //256位伪双端口DRAM排序  
+├── sort_4096_16_BRAM.v //4096位单端口BRAM排序  
+└── sort_4096_16_DRAM.v //4096位单端口DRAM排序  
 
-## ALU模块
+## 寄存器堆
 
 ### 设计
 
-ALU核心模块代码如下：
+寄存器堆核心模块代码如下：
 
-该部分为运算结果输出，使用case进行输出。其中算数左移判断b的位数，若b超过数据宽度，则结果每一位均为a的符号位
-
-```v
-reg [WIDTH-1:0]rtemp;
-assign y=rtemp;
-always @(*) begin
-    case(s) 
-    3'b000:rtemp=a-b;
-    3'b001:rtemp=a+b;
-    3'b010:rtemp=a&b;
-    3'b011:rtemp=a|b;
-    3'b100:rtemp=a^b;
-    3'b101:rtemp=a>>b;
-    3'b110:rtemp=a<<b;
-    3'b111:begin
-        if(b<WIDTH)
-            rtemp={{(WIDTH){a[WIDTH-1]}},a}>>b;
-        else
-            rtemp={(WIDTH){a[WIDTH-1]}};
-    end
-    default :rtemp<=0;
-    endcase
-end
-```
-
-该部分为标志位，其中符号小于$<_s$的实现使用溢出标志辅助判断
-
-当a,b异号且a与a-b异号时，发生溢出。而溢出标志位和a-b的符号位异或得到符号小于$<_s$
+其中使用阻塞赋值得到`rf[0]`始终为0，并使用三元运算符判断地址与写使能信号得到写操作优先于读操作的特性
 
 ```v
-reg [2:0] rf;
-assign f=rf;
-wire OF;//判断是否溢出
-assign OF=(a[WIDTH-1]^b[WIDTH-1])&(a[WIDTH-1]^rtemp[WIDTH-1]);
-always @(*) begin
-    if(s==0)
-    begin
-        if(rtemp==0)
-            rf[0]=1;
-        else 
-            rf[0]=0;
-        if(OF^rtemp[WIDTH-1])
-            rf[1]=1;
-        else 
-            rf[1]=0;
-        if(a<b)
-            rf[2]=1;
-        else 
-            rf[2]=0;
-    end
-    else
-        rf=0;
-end
-```
-
-### 仿真
-
-仿真值尽量挑选具有代表性的值，得到仿真图如下
-
-![](pic/SimALU.png)
-
-### 下载
-
-六位ALU的数据通路如下
-
-![](pic/ALU_6_datapath.png)
-
-实现代码如下
-
-```v
-module alu2(
-input CLK100MHZ,
-input [15:0] SW,
-input CPU_RESETN,
-input BTNC,
-output [15:0]LED
+module  register_file  #(
+    parameter AW = 5,		//地址宽度
+    parameter DW = 32		//数据宽度
+)(
+    input  clk,			//时钟
+    input [AW-1:0]  ra0, ra1,	//读地址
+    output [DW-1:0]  rd0, rd1,	//读数据
+    input [AW-1:0]  wa,		//写地址
+    input [DW-1:0]  wd,		//写数据
+    input we			//写使能
 );
-reg [5:0]a=0;
-reg [5:0]b=0;
-reg [2:0]s=0;
-reg [2:0]f=0;
-reg [5:0]y=0;
-wire [2:0]fo;
-wire [5:0]yo;
-assign LED[15:13]=f;
-assign LED[5:0]=y;
-
-
-always @(posedge CLK100MHZ or negedge CPU_RESETN) begin
-    if(~CPU_RESETN)
-        s<=0;
-    else if(BTNC)
-        s<=SW[15:13];
-    else s<=s;
+reg [DW-1:0]  rf [0: (1<<AW)-1]; 	//寄存器堆
+assign rd0 =(we==1&&ra0==wa)?wd: rf[ra0], rd1 =(we==1&&ra1==wa)?wd: rf[ra1];	//读操作
+always  @(posedge  clk)begin
+    if (we)  rf[wa]  =  wd;		//写操作
+    rf[0]=0;
 end
-
-always @(posedge CLK100MHZ or negedge CPU_RESETN) begin
-    if(~CPU_RESETN)
-        a<=0;
-    else if(BTNC)
-        a<=SW[11:6];
-    else a<=a;
-end
-
-always @(posedge CLK100MHZ or negedge CPU_RESETN) begin
-    if(~CPU_RESETN)
-        b<=0;
-    else if(BTNC)
-        b<=SW[5:0];
-    else b<=b;
-end
-
-always @(posedge CLK100MHZ or negedge CPU_RESETN) begin
-    if(~CPU_RESETN)
-        f<=0;
-    else 
-        f<=fo;
-end
-
-always @(posedge CLK100MHZ or negedge CPU_RESETN) begin
-    if(~CPU_RESETN)
-        y<=0;
-    else 
-        y<=yo;
-end
-
-alu#(6) alu(a,b,s,yo,fo);
-
 endmodule
 ```
 
-下面是上板测试，其中输入为a=6'b100000,b=6'b000001,f=0
 
-输出为y=6'b011111,f=3'b010
+### 仿真
 
-![](pic/ALU_6_Download.jpg)
+![](pic/registerSim.png)
 
-### RTL、资源、时间报告
+## 分布式和块式RAM对比
 
-#### RTL电路图
-![](pic/alu1.png)
-![](pic/alu2.png)
+### IP核仿真
 
-#### 电路资源报告
-![](pic/alu3.png)
-![](pic/alu4.png)
+分别设置分布式RAM、块式写优先RAM和读优先RAM，模拟得到下面的波形图
 
-#### 时间性能报告
-![](pic/alu5.png)
-![](pic/alu6.png)
+![](pic/IPSource_256_16_Sim.png)
 
-## FLS模块
+如图，OutBlkWF是块式写优先RAM，OutBlkRF是块式读优先RAM，OutDis是分布式写优先RAM
 
-### 设计
+分析波形图可以发现，分布式RAM的读是异步的，写是和时钟同步的；而块式的读和写都是同步的，但输出上分别有读优先（输出为上一周期RAM内的数据）和写优先（输出为上一周期写入的数据）的区别
+
+
+## 排序电路
+
+### 非排序部分
 
 数据通路如下
 
-```mermaid
-flowchart LR
-    d --stutus==0,1-->b
-    b-->f
+![](pic/datapath1.png)
 
-    subgraph FLSModule
-    a & b-->ALU
-    ALU--stutus==2-->b
-    b --> a
-    subgraph reg
-    direction TB
-    a
-    b
-    end
-    end
-```
+![](pic/datapath2.png)
 
-FLS需要三个状态status设为0,1,2
-
-1. 当FLS在状态0时，当clk上升沿en成立时，将b赋值为d
-2. 当FLS在状态1时，当clk上升沿en成立时，将a赋值为b，将b赋值为d
-3. 当FLS在状态2时，当clk上升沿en成立时，将a赋值为b，将b赋值为FLS的输出、
-
-同时输出f始终为b的值，下面是FLS的状态图
-
-```dot
-digraph G{
-   0->1[label=en];
-   1->2[label=en];
-   2->2[label=en];
-   {rank=same;0,1,2}
-}
-```
-
-则根据上面的设计得到fls设计文件如下
+由上图得到每个部分的代码如下
 
 ```v
-module  fls (
-    input  clk, 
-    input  rstn, 
-    input  en,
-    input  [15:0]  d,
-    output [15:0]  f
+//输入处理
+wire ifInput;//SW是否有输入
+wire [3:0] code;//编码
+assign ifInput=|DPsw;//十六位取或，若为1则有输入
+encoder_16bits encoder_16bits(DPsw,code);//编码
+```
+```v
+
+//声明部分
+
+reg [15:0] D;//暂时数据
+reg [7:0] Address;//当前地址
+reg s;//用于判断输出
+wire [15:0] spo;
+reg en;
+dist_mem_256_16 dist_mem_256_16(Address,D,CLK100MHZ,en,spo);
+
+
+//sort部分声明，报告后面会再复制一次
+reg [3:0]status;
+wire ifSmallLoopFin;
+wire ifLoopFin;
+reg [15:0]max;
+reg [15:0]temp;
+reg [15:0]i;//大循环
+reg [15:0]j;//小循环
+assign ifLoopFin=(i==1);
+assign ifSmallLoopFin=(j+1==i);
+```
+
+```v
+//核心代码
+//en
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn) en<=0;
+    else
+    case (status)
+        Init:begin
+        if(data) en<=1;
+        else en<=0;
+        end
+        PreSort:en<=0;//sort部分
+        SmallLoop1:en<=0;
+        SmallLoop2:en<=0;
+        SmallLoop4:en<=1;
+        SmallLoopFin:en<=0;
+    endcase
+end
+```
+```v
+//D部分
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn) D<=0;
+    else 
+    case (status)
+        Init:begin
+        if(ifInput) D<={D[11:0],code};
+        if(del) D<=D[15:4];
+        if(en | addr) D<=0;
+        end
+        SmallLoop4:D<=temp;//sort部分
+        SmallLoop6:D<=max;
+    endcase
+end
+```
+```v
+//Address部分
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn) Address<=0;
+    else
+    case (status)
+        Init:begin
+        if(chk) Address<=Address+1;
+        else if(en&&status==Init) Address<=Address+1;
+        else if(addr) Address<=D[7:0];
+        end
+        PreSort:Address<=0;//sort部分
+        SmallLoop2:Address<=j+1;
+        SmallLoop4:Address<=j;
+        SmallLoop6:Address<=j;
+        SmallLoopFin:Address<=0;
+    endcase
+end
+```
+```v
+//s部分
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn) s<=0;
+    else if(status==Init)
+        if(chk) s<=0;
+        else if(ifInput) s<=1;
+        else if(del) s<=1;
+        else if(en) s<=0;
+        else if(addr) s<=0;
+end
+```
+```v
+always @(*) begin
+    {SegData[23:20],SegData[19:16]}=Address;
+    if(s) {SegData[15:12],SegData[11:8],SegData[7:4],SegData[3:0]}=D;
+    else {SegData[15:12],SegData[11:8],SegData[7:4],SegData[3:0]}=spo;
+end
+```
+
+其中编码encoder部分代码如下，为一个常见的16bits优先编码
+
+```v
+module encoder_16bits(
+    input[15:0] in,
+    output reg [3:0] out
 );
-reg [15:0]a=0;
-reg [15:0]b=0;
-reg [1:0]status=0;
-wire [15:0]out;
-
-always @(posedge clk or negedge rstn) begin
-    if(~rstn)
-        a<=0;
-    else if(en)
-        a<=b;
-    else a<=a;
+always @(*) begin
+    casex(in)
+    16'b1xxxxxxxxxxxxxxx:out=4'hF;
+    16'b01xxxxxxxxxxxxxx:out=4'hE;
+    16'b001xxxxxxxxxxxxx:out=4'hD;
+    16'b0001xxxxxxxxxxxx:out=4'hC;
+    16'b00001xxxxxxxxxxx:out=4'hB;
+    16'b000001xxxxxxxxxx:out=4'hA;
+    16'b0000001xxxxxxxxx:out=4'h9;
+    16'b00000001xxxxxxxx:out=4'h8;
+    16'b000000001xxxxxxx:out=4'h7;
+    16'b0000000001xxxxxx:out=4'h6;
+    16'b00000000001xxxxx:out=4'h5;
+    16'b000000000001xxxx:out=4'h4;
+    16'b0000000000001xxx:out=4'h3;
+    16'b00000000000001xx:out=4'h2;
+    16'b000000000000001x:out=4'h1;
+    16'b0000000000000001:out=4'h0;
+    default:out=4'bxxxx;
+    endcase
 end
-
-always @(posedge clk or negedge rstn) begin
-    if(~rstn)
-        b<=0;
-    else if(en)
-        case(status)
-        2'b00:b<=d;
-        2'b01:b<=d;
-        2'b10:b<=out;
-        default:b<=b;
-        endcase
-    else b<=b;
-end
-
-always @(posedge clk or negedge rstn) begin
-    if(~rstn)
-        status<=0;
-    else if(en)
-        if(status==2'b10)
-            status<=status;
-        else
-            status<=status+1;
-    else status<=status;
-end
-
-assign f=b;
-
-alu#(16) alu(.a(a),.b(b),.s(3'b001),.y(out));
 endmodule
 ```
 
-### 下载文件设计
+仿真图如下
 
-首先需要对输入进行处理，处理文件如下所示
-
-@import "InputProcessing.v"
-
-则下载文件例化上面的处理单元和FLS模块即可，如下所示
-
-@import "FSL2.v"
+![](pic/SortSim.png)
 
 
-### 仿真
+### 排序部分v0
 
-对FLS2仿真测试了(1,1)和(2,3)两个数据输入，以及resetn、button等功能测试
+因为对分布式RAM赋值操作不熟悉以及使用单端口分布式RAM的原因，版本v0的排序使用多个状态，效率较低
 
-![](pic/SimFLS.png)
+首先是变量声明以及排序时的状态图
 
-### 下载
-
-
-
-前两张照片输入1,2，之后运行三次如图所示
-
-![](pic/FLS%20(4).jpg)
-![](pic/FLS%20(5).jpg)
-![](pic/FLS%20(1).jpg)
-![](pic/FLS%20(2).jpg)
-![](pic/FLS%20(3).jpg)
-
-## 32位ALU
-
-### 设计
-
-数据通路如下所示
-
-```mermaid
-flowchart LR
-    subgraph REG1
-    direction TB
-    a
-    b
-    s
-    end
-    SW--status==0,1-->a
-    SW--status==2,3-->b
-    SW--status==4-->s
-    a & b & s-->ALU
-    ALU--> y & f
-    y--status==5,6-->LED
-    f--status==7-->LED
+```v
+wire ifSmallLoopFin;
+wire ifLoopFin;
+reg [15:0]max;
+reg [15:0]temp;
+reg [15:0]i;//大循环
+reg [15:0]j;//小循环
+assign ifLoopFin=(i==1);
+assign ifSmallLoopFin=(j+1==i);
 ```
-
-a,b,y分别用两个状态进行输入输出
-
-状态图如下所示，意义如下
-
-0. 输入a的低十六位
-0. 输入a的高十六位
-0. 输入b的低十六位
-0. 输入b的高十六位
-0. 输入s
-0. 输出y的低十六位
-0. 输出y的高十六位
-0. 输出f
 
 ```dot
 digraph G{
-   0->1[label=button];
-   1->2[label=button];
-   2->3[label=button];
-   3->4[label=button];
-   4->5[label=button];
-   5->6[label=button];
-   6->7[label=button];
-   7->5[label=button];
-   {rank=same;0,1,2,3,4}
+   Init->Presort[label=run];
+   Presort->SmallLoop1
+   SmallLoop1->SmallLoop2
+   SmallLoop2->SmallLoop3
+   SmallLoop3->SmallLoop4
+   SmallLoop4->SmallLoop5
+   SmallLoop5->SmallLoop2[label="else"];
+   SmallLoop5->SmallLoop6[label="j+1==i"];
+   SmallLoop6->SmallLoopFin
+   SmallLoopFin->SmallLoop1[label="else"];
+   SmallLoopFin->Init[label="i==1"];
 }
 ```
 
-根据如上设计，得到设计代码
+根据上面的状态图得到下面的状态变化
 
-@import "ALU3_32bits.v"
-
-### 下载
-
-输入按照顺序为0x0000,0x8000,0x0001,0x0000,0x0000
-
-即a=0x80000000,b=0x00000001,s=0
-
-输出如下图所示分别为0xFFFF,0x7FFF,0x0002
-
-即y=0x7FFFFFFF,f=3'b010
-
-![](pic/ALU_32%20(1).jpg)
-![](pic/ALU_32%20(2).jpg)
-![](pic/ALU_32%20(3).jpg)
-
-### RTL、资源、时间报告
-
-#### RTL电路图
-
-![](pic/alu_32_1.png)
-![](pic/alu_32_2.png)
-![](pic/alu_32_3.png)
-
-#### 电路资源报告
-
-![](pic/alu_32_4.png)
-![](pic/alu_32_5.png)
-
-#### 时间性能报告
-
-![](pic/alu_32_6.png)
-![](pic/alu_32_7.png)
-
-## 问题解决
-
-### CPU_RESETN无需IP操作
-
-否则会一直置0
-
-### AN和SEG是低电平有效
-
-### AN的状态变化不能使用移位
-
-AN<={AN,1}//错误
-
-使用case循环与定义初始化较好
-
-### 模块寄存器特别是状态相关应初始化
-
-### 特别注意非阻塞赋值时的冲突问题
-
-### 一定要按照格式
-
+```v
 always @(posedge CLK100MHZ or negedge rstn) begin
-    if(~rstn)
+    if(~rstn) status<=Init;//初始态
+    else case (status)
+        Init:if(run) status<=PreSort;//处在初始态，run信号到来时开始排序
+        else status<=status;
+        PreSort:status<=SmallLoop1;
+        SmallLoop1:status<=SmallLoop2;
+        SmallLoop2:status<=SmallLoop3;
+        SmallLoop3:status<=SmallLoop4;
+        SmallLoop4:status<=SmallLoop5;
+        SmallLoop5:if(ifSmallLoopFin)status<=SmallLoop6;else status<=SmallLoop2;
+        SmallLoop6:status<=SmallLoopFin;
+        SmallLoopFin:if(ifLoopFin)status<=Init;
+        else status<=SmallLoop1;
+        endcase
+end
+```
 
-## 实验总结
-
-通过本实验复习了verilog的写法，并能够设计ALU，使用ALU设计一些小应用
-
-并且复习了端口的复用以及信号的处理
-
+而每个周期对应的数据通路如下所示
 
 ```verilog
+
+
 //状态对应数据通路
 always @(posedge CLK100MHZ or negedge rstn) begin
     if(~rstn)begin 
@@ -517,28 +377,55 @@ always @(posedge CLK100MHZ or negedge rstn) begin
 end
 ```
 
+### 排序部分v1
+
+通过将RAM改为分布式RAM，并优化状态变化，得到下图所示状态图，其中最常见状态的小循环已经优化到一个状态的循环
+
 ```dot
 digraph G{
    Init->Presort[label=run];
    Presort->SmallLoop1
    SmallLoop1->SmallLoop2
-   SmallLoop2->SmallLoop3
-   SmallLoop3->SmallLoop4
-   SmallLoop4->SmallLoop5
-   SmallLoop5->SmallLoop2[label="else"];
-   SmallLoop5->SmallLoop6[label="j+1==i"];
-   SmallLoop6->SmallLoopFin
+   SmallLoop2->SmallLoop3[label="ifSmallLoopFin"]
+   SmallLoop2->SmallLoop2[label="else"]
+   SmallLoop3->SmallLoopFin
    SmallLoopFin->SmallLoop1[label="else"];
    SmallLoopFin->Init[label="i==1"];
 }
 ```
 
+由上面状态图不难得到下面的代码
 
+```v
+wire ifSmallLoopFin;
+wire ifLoopFin;
+assign ifLoopFin=(i==1);
+assign ifSmallLoopFin=(j+1==i);
+//状态部分
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn) status<=Init;//初始状态
+    else case (status)
+        Init:if(run) status<=PreSort;//处在初始态，run信号到来时开始排序
+        else status<=status;
+        PreSort:status<=SmallLoop1;
+        SmallLoop1:status<=SmallLoop2;
+        SmallLoop2:if(ifSmallLoopFin)status<=SmallLoop3;else status<=SmallLoop2;
+        SmallLoop3:status<=SmallLoopFin;
+        SmallLoopFin:if(ifLoopFin)status<=Init;
+        else status<=SmallLoop1;
+        endcase
+end
+```
 
-
-
+下面是变量声明和数据通路
 
 ```verilog
+
+
+reg [15:0]max;
+reg [15:0]i;//大循环
+reg [15:0]j;//小循环
+
 //状态对应数据通路
 always @(posedge CLK100MHZ or negedge rstn) begin
     if(~rstn)begin 
@@ -590,3 +477,75 @@ always @(posedge CLK100MHZ or negedge rstn) begin
     end
 end
 ```
+
+### 下载
+
+下载并排序后如图所示，所用周期为0x8381个时钟
+
+![](pic/SortDownload.jpg)
+
+
+## 分布式与块式RAM比较
+
+### RTL、资源、时间报告
+
+
+#### 电路资源报告
+
+相同内容的前后两图分别为分布式与块式
+
+![](pic/DRAM1.png)
+![](pic/BRAM1.png)
+---
+![](pic/DRAM2.png)
+![](pic/BRAM2.png)
+
+#### 时间性能报告
+
+![](pic/DRAM3.png)
+![](pic/BRAM3.png)
+
+
+#### 分析
+
+由上面的对比可知，分布式RAM使用了更多的电路资源包括LUT、一些寄存器以及Muxes，在一些LUT资源较为紧张的电路中DRAM可能并不是一个很好的选择，而应选择BRAM
+
+而根据时间报告得知DRAM的时间表现更好
+
+## 问题解决
+
+这里记录了一些实验过程发生的问题以及解决方法
+
+### CPU_RESETN无需整流操作
+
+若IP操作则异步性遭到破坏，且根据整流的实现可能会发生一直置0的情况
+
+### AN和SEG是低电平有效
+
+做试验前应仔细阅读说明书
+
+### 寄存器应初始化且应按照格式
+
+根据对vivado的观察，其会讲如下格式的代码
+```v
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(~rstn)
+        fun1;
+    else
+        fun2;
+```
+解释为设备启动时便调用fun1部分进行初始化，之后按照上面的描述运作
+
+但如果不按照这个格式，如下面的代码
+
+```v
+always @(posedge CLK100MHZ or negedge rstn) begin
+    if(rstn)
+        fun2;
+```
+
+vivado综合时可能因为找不到初始化的部分，导致最后下载到板子后出现奇怪的bug，且此bug在模拟部分是不会显现出来，必须烧进板子才能被发现，不仅隐蔽而且调试时间更长
+
+## 实验总结
+
+通过本实验学习了内存IP核的设置和使用以及能够自主设计简单的状态来进行简单的功能如排序，并通过许多未曾设想的bug增强了自己写verilog的能力，以及学会了如何写出健壮性更强的代码

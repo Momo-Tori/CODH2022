@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/ip/dist_mem_256_16/sim/dist_mem_256_16.v" \
+"../../../../../HexToSeg.v" \
+"../../../../../InputProcessing.v" \
+"../../../../../encoder.v" \
+"../../../../project_1.srcs/sources_1/new/test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

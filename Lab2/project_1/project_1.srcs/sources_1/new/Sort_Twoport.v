@@ -38,7 +38,6 @@ dist_mem_gen_2 dist_mem_gen_2(.a(DAdd),.d(D),.dpra(Address),.clk(CLK100MHZ),.we(
 wire ifSmallLoopFin;
 wire ifLoopFin;
 reg [15:0]max;
-reg [15:0]temp;
 reg [15:0]i;//大循�?
 reg [15:0]j;//小循�?
 assign ifLoopFin=(i==1);
