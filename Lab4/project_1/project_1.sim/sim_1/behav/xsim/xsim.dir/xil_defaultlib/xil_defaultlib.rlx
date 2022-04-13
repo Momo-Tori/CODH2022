@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/CodeTry/CODExperiment/Lab4/ALU.v,1647927338,verilog,,D:/CodeTry/CODExperiment/Lab4/ImmGen.v,,alu,,,,,,,,
+D:/CodeTry/CODExperiment/Lab4/ImmGen.v,1649691771,verilog,,D:/CodeTry/CODExperiment/Lab4/register_32_32.v,,ImmGen,,,,,,,,
+D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v,1649775417,verilog,,,,Sim,,,,,,,,
+D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v,1649730738,verilog,,D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v,,DataMem,,,,,,,,
+D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v,1649644029,verilog,,D:/CodeTry/CODExperiment/Lab4/ALU.v,,InstMem,,,,,,,,
+D:/CodeTry/CODExperiment/Lab4/register_32_32.v,1649778448,verilog,,D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v,,register_file,,,,,,,,

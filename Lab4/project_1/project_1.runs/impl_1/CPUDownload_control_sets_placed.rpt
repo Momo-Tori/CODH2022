@@ -1,0 +1,129 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Apr 12 23:53:22 2022
+| Host         : Yun running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CPUDownload_control_sets_placed.rpt
+| Design       : CPUDownload
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    51 |
+|    Minimum number of control sets                        |    51 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    37 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    51 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    44 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              43 |           22 |
+| No           | No                    | Yes                    |              48 |           31 |
+| No           | Yes                   | No                     |              70 |           20 |
+| Yes          | No                    | No                     |            1061 |          570 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             133 |           44 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+----------------------------------------------------------------------------------------------+-----------------------------+------------------+----------------+
+|     Clock Signal     |                                         Enable Signal                                        |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
++----------------------+----------------------------------------------------------------------------------------------+-----------------------------+------------------+----------------+
+| ~clk_pdu             |                                                                                              |                             |                1 |              1 |
+|  clk_db_BUFG         |                                                                                              |                             |                1 |              1 |
+|  clk_db_BUFG         |                                                                                              | pdu/cnt_sw_db_r[4]_i_1_n_1  |                1 |              5 |
+|  clk_db_BUFG         |                                                                                              | pdu/cnt_btn_db_r[4]_i_1_n_1 |                1 |              5 |
+|  clk_db_BUFG         | pdu/btn_db_r[4]_i_1_n_1                                                                      |                             |                2 |              5 |
+|  clk_pdu             |                                                                                              | pdu/Q[0]                    |                5 |              8 |
+|  clk_pdu             |                                                                                              |                             |                5 |              9 |
+|  clk_pdu             | cpu/E[0]                                                                                     | pdu/Q[0]                    |                6 |             16 |
+|  CLK100MHZ_IBUF_BUFG |                                                                                              | pdu/rstn_r[15]_i_1_n_1      |                3 |             16 |
+|  CLK100MHZ_IBUF_BUFG |                                                                                              | pdu/Q[0]                    |                5 |             20 |
+|  clk_pdu             | pdu/chk_addr_r                                                                               | pdu/Q[0]                    |                8 |             21 |
+|  clk_pdu             | cpu/seg_data_r                                                                               | pdu/Q[0]                    |               14 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf                                                                         |                             |               22 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[15][31]_i_1_n_1                                                         |                             |               13 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[16][31]_i_1_n_1                                                         |                             |               18 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[18][31]_i_1_n_1                                                         |                             |               18 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[21][31]_i_1_n_1                                                         |                             |               20 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[11][31]_i_1_n_1                                                         |                             |               13 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[14][31]_i_1_n_1                                                         |                             |               13 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[17][31]_i_1_n_1                                                         |                             |               17 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[10][31]_i_1_n_1                                                         |                             |               18 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[12][31]_i_1_n_1                                                         |                             |               15 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[19][31]_i_1_n_1                                                         |                             |               19 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[1][31]_i_1_n_1                                                          |                             |               17 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[20][31]_i_1_n_1                                                         |                             |               21 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[13][31]_i_1_n_1                                                         |                             |                9 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[28][31]_i_1_n_1                                                         |                             |               14 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[25][31]_i_1_n_1                                                         |                             |               12 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[27][31]_i_1_n_1                                                         |                             |               15 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[2][31]_i_1_n_1                                                          |                             |               17 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[29][31]_i_1_n_1                                                         |                             |               17 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[24][31]_i_1_n_1                                                         |                             |               10 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[22][31]_i_1_n_1                                                         |                             |               22 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[23][31]_i_1_n_1                                                         |                             |               23 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[26][31]_i_1_n_1                                                         |                             |               14 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[30][31]_i_1_n_1                                                         |                             |               21 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[8][31]_i_1_n_1                                                          |                             |               18 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[4][31]_i_1_n_1                                                          |                             |               17 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[7][31]_i_1_n_1                                                          |                             |               23 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[5][31]_i_1_n_1                                                          |                             |               24 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[9][31]_i_1_n_1                                                          |                             |               19 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[6][31]_i_1_n_1                                                          |                             |               25 |             32 |
+|  clk_cpu_BUFG        | cpu/register_file/rf[3][31]_i_1_n_1                                                          |                             |               18 |             32 |
+|  clk_pdu             | pdu/brk_addr_r_0                                                                             | pdu/Q[0]                    |                6 |             32 |
+|  clk_db_BUFG         | pdu/x_db_1r                                                                                  |                             |               12 |             32 |
+|  clk_pdu             | pdu/swx_data_r_1                                                                             |                             |               14 |             32 |
+|  clk_pdu             | pdu/tmp_r[31]_i_2_n_1                                                                        | pdu/tmp_r[31]_i_1_n_1       |               10 |             32 |
+|  n_0_1694_BUFG       |                                                                                              |                             |               15 |             32 |
+|  clk_cpu_BUFG        |                                                                                              | pdu/Q[0]                    |               36 |             64 |
+|  clk_cpu_BUFG        | cpu/DataMem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_127_0_0_i_1_n_0   |                             |               32 |            128 |
+|  clk_cpu_BUFG        | cpu/DataMem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_128_255_0_0_i_1_n_0 |                             |               32 |            128 |
++----------------------+----------------------------------------------------------------------------------------------+-----------------------------+------------------+----------------+
+
+

@@ -1,0 +1,2363 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Apr 12 20:37:11 2022
+# Process ID: 36392
+# Current directory: D:/CodeTry/CODExperiment/Lab4/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent38460 D:\CodeTry\CODExperiment\Lab4\project_1\project_1.xpr
+# Log file: D:/CodeTry/CODExperiment/Lab4/project_1/vivado.log
+# Journal file: D:/CodeTry/CODExperiment/Lab4/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/CodeTry/CODExperiment/Lab4/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 698.109 ; gain = 79.293
+update_compile_order -fileset sources_1
+file mkdir D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v w ]
+add_files -fileset sim_1 D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v
+update_compile_order -fileset sim_1
+set_property top Sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:141]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:142]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:148]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Apr 12 20:42:47 2022. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr 12 20:42:47 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 790.387 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                31000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                61000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v: file does not exist.
+run: Time (s): cpu = 00:03:08 ; elapsed = 00:02:34 . Memory (MB): peak = 818.992 ; gain = 24.438
+xsim: Time (s): cpu = 00:03:14 ; elapsed = 00:02:38 . Memory (MB): peak = 818.992 ; gain = 27.828
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:03:16 ; elapsed = 00:02:50 . Memory (MB): peak = 818.992 ; gain = 48.023
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 818.992 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:141]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:142]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:148]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                31000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                61000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v: file does not exist.
+run: Time (s): cpu = 00:05:11 ; elapsed = 00:04:17 . Memory (MB): peak = 895.711 ; gain = 76.719
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:05:15 ; elapsed = 00:04:21 . Memory (MB): peak = 895.711 ; gain = 76.719
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:05:15 ; elapsed = 00:04:24 . Memory (MB): peak = 895.711 ; gain = 76.719
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:141]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:142]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:148]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                31000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                61000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:04:15 ; elapsed = 00:04:10 . Memory (MB): peak = 895.711 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:04:19 ; elapsed = 00:04:13 . Memory (MB): peak = 895.711 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:04:20 ; elapsed = 00:04:17 . Memory (MB): peak = 895.711 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+add_bp {D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v} 137
+remove_bps -file {D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v} -line 137
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:141]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:142]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:148]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                31000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                61000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 908.977 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 908.977 ; gain = 2.547
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 908.977 ; gain = 2.547
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: CPUDownload
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1322.395 ; gain = 97.613
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'CPUDownload' [D:/CodeTry/CODExperiment/Lab4/cpuDownload.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pdu' [D:/CodeTry/CODExperiment/Lab4/PDU-v0.1_0410.v:1]
+	Parameter STOP bound to: 2'b00 
+	Parameter STEP bound to: 2'b01 
+	Parameter RUN bound to: 2'b10 
+INFO: [Synth 8-226] default block is never used [D:/CodeTry/CODExperiment/Lab4/PDU-v0.1_0410.v:326]
+INFO: [Synth 8-226] default block is never used [D:/CodeTry/CODExperiment/Lab4/PDU-v0.1_0410.v:364]
+INFO: [Synth 8-6155] done synthesizing module 'pdu' (1#1) [D:/CodeTry/CODExperiment/Lab4/PDU-v0.1_0410.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [D:/CodeTry/CODExperiment/Lab4/cpu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [D:/CodeTry/CODExperiment/Lab4/ImmGen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (2#1) [D:/CodeTry/CODExperiment/Lab4/ImmGen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/CodeTry/CODExperiment/Lab4/ALU.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/CodeTry/CODExperiment/Lab4/ALU.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (3#1) [D:/CodeTry/CODExperiment/Lab4/ALU.v:1]
+WARNING: [Synth 8-689] width (4) of port connection 's' does not match port width (3) of module 'alu' [D:/CodeTry/CODExperiment/Lab4/cpu.v:111]
+INFO: [Synth 8-6157] synthesizing module 'InstMem' [D:/CodeTry/CODExperiment/Lab4/project_1/.Xil/Vivado-47420-Yun/realtime/InstMem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'InstMem' (4#1) [D:/CodeTry/CODExperiment/Lab4/project_1/.Xil/Vivado-47420-Yun/realtime/InstMem_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'a' does not match port width (8) of module 'InstMem' [D:/CodeTry/CODExperiment/Lab4/cpu.v:112]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/CodeTry/CODExperiment/Lab4/register_32_32.v:1]
+	Parameter AW bound to: 5 - type: integer 
+	Parameter DW bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (5#1) [D:/CodeTry/CODExperiment/Lab4/register_32_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DataMem' [D:/CodeTry/CODExperiment/Lab4/project_1/.Xil/Vivado-47420-Yun/realtime/DataMem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataMem' (6#1) [D:/CodeTry/CODExperiment/Lab4/project_1/.Xil/Vivado-47420-Yun/realtime/DataMem_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'a' does not match port width (8) of module 'DataMem' [D:/CodeTry/CODExperiment/Lab4/cpu.v:118]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/CodeTry/CODExperiment/Lab4/cpu.v:106]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (7#1) [D:/CodeTry/CODExperiment/Lab4/cpu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CPUDownload' (8#1) [D:/CodeTry/CODExperiment/Lab4/cpuDownload.v:1]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[19]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[18]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[17]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[16]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[15]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[14]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[13]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[12]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[1]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[0]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[11]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[10]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[9]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1367.902 ; gain = 143.121
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1367.902 ; gain = 143.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1367.902 ; gain = 143.121
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.dcp' for cell 'cpu/InstMem'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem.dcp' for cell 'cpu/DataMem'
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/CodeTry/CODExperiment/Lab4/Nexys4DDR.xdc]
+Finished Parsing XDC File [D:/CodeTry/CODExperiment/Lab4/Nexys4DDR.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1522.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 64 instances were transformed.
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 64 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1545.746 ; gain = 320.965
+28 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 1545.746 ; gain = 559.551
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:141]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:142]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:148]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                31000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                61000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:02:48 ; elapsed = 00:02:28 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:02:51 ; elapsed = 00:02:30 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:02:52 ; elapsed = 00:02:34 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:141]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:142]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:148]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                31000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                61000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:06:17 ; elapsed = 00:05:28 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:06:20 ; elapsed = 00:05:30 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:06:21 ; elapsed = 00:05:35 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:147]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:148]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:154]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                31000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                61000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v: file does not exist.
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1551.094 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:147]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:148]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:154]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                 9000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                39000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                59000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                77000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1814.270 ; gain = 2.125
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1814.270 ; gain = 2.125
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:146]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:152]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 1000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                31000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                61000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v: file does not exist.
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:146]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:152]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 3000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                33000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                53000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                63000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                71000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:146]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:152]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                 3000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                33000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                53000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                63000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                71000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:146]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:152]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:146]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:152]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:47 ; elapsed = 00:00:46 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:49 ; elapsed = 00:00:48 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                13000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 19 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1814.270 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                13000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 19 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1814.270 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                13000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 19 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1814.270 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                13000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 19 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1814.270 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                13000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 19 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1814.270 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                13000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 19 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1814.270 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                13000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 19 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1814.270 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                13000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 19 ns  Iteration: 10000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1814.270 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:02:16 ; elapsed = 00:02:14 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:02:18 ; elapsed = 00:02:16 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:02:19 ; elapsed = 00:02:23 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:39 ; elapsed = 00:00:33 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:39 ; elapsed = 00:00:38 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1814.270 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Sim_behav xil_defaultlib.Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:144]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:145]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sim_1/new/Sim.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab4/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Sim_behav -key {Behavioral:sim_1:Functional:Sim} -tclbatch {Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in Sim.DataMem.inst at time                51000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time                69000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time               559000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+WARNING in Sim.DataMem.inst at time               577000 ns: 
+Reading from out-of-range address. Max address in Sim.DataMem.inst is         255
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1814.270 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue Apr 12 23:48:28 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/synth_1/runme.log
+[Tue Apr 12 23:48:28 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue Apr 12 23:51:40 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/synth_1/runme.log
+[Tue Apr 12 23:51:40 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+open_hw_target: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2822.445 ; gain = 1008.176
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 13 00:20:58 2022...

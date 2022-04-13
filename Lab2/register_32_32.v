@@ -1,18 +1,25 @@
 module  register_file  #(
-    parameter AW = 5,		//地址宽度
-    parameter DW = 32		//数据宽度
+    parameter AW = 5,		
+    parameter DW = 32		
 )(
-    input  clk,			//时钟
-    input [AW-1:0]  ra0, ra1,	//读地址
-    output [DW-1:0]  rd0, rd1,	//读数据
-    input [AW-1:0]  wa,		//写地址
-    input [DW-1:0]  wd,		//写数据
-    input we			//写使能
+    input  clk,			
+    input [AW-1:0]  ra0, ra1,	
+    output [DW-1:0]  rd0, rd1,	
+    input [AW-1:0]  wa,		
+    input [DW-1:0]  wd,		
+    input we,			
+    input [AW-1:0]  raout,
+    output [DW-1:0]  rdout
 );
-reg [DW-1:0]  rf [0: (1<<AW)-1]; 	//寄存器堆
-assign rd0 =(we==1&&ra0==wa)?wd: rf[ra0], rd1 =(we==1&&ra1==wa)?wd: rf[ra1];	//读操作
+reg [DW-1:0]  rf [(1<<AW)-1:0]; 	
+assign rd0=((ra0==wa)&&we)?wd:rf[ra0];
+assign rd1=((ra1==wa)&&we)?wd:rf[ra1];
+assign rdout=((raout==wa)&&we)?wd:rf[raout];
+
+initial rf[0]=0;
+always @(posedge  clk)
+    rf[0]<=0;
 always  @(posedge  clk)begin
-    if (we)  rf[wa]  =  wd;		//写操作
-    rf[0]=0;
+    if (we&(wa!=0))  rf[wa]  <=  wd;		
 end
 endmodule
