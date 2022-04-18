@@ -55,9 +55,6 @@
 COMPONENT InstMemoryTest
   PORT (
     a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    d : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    clk : IN STD_LOGIC;
-    we : IN STD_LOGIC;
     spo : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
@@ -70,9 +67,6 @@ END COMPONENT;
 your_instance_name : InstMemoryTest
   PORT MAP (
     a => a,
-    d => d,
-    clk => clk,
-    we => we,
     spo => spo
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------

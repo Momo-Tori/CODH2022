@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sun Apr 10 23:49:54 2022
+// Date        : Sun Apr 17 22:10:39 2022
 // Host        : Yun running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.v
+//               D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.v
 // Design      : InstMemoryTest
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,44 +16,37 @@
 (* NotValidForBitStream *)
 module InstMemoryTest
    (a,
-    d,
-    clk,
-    we,
     spo);
   input [7:0]a;
-  input [31:0]d;
-  input clk;
-  input we;
   output [31:0]spo;
 
   wire [7:0]a;
-  wire clk;
-  wire [31:0]d;
   wire [31:0]spo;
-  wire we;
   wire [31:0]NLW_U0_dpo_UNCONNECTED;
   wire [31:0]NLW_U0_qdpo_UNCONNECTED;
   wire [31:0]NLW_U0_qspo_UNCONNECTED;
 
   (* C_FAMILY = "artix7" *) 
-  (* C_HAS_CLK = "1" *) 
-  (* C_HAS_D = "1" *) 
+  (* C_HAS_D = "0" *) 
   (* C_HAS_DPO = "0" *) 
   (* C_HAS_DPRA = "0" *) 
+  (* C_HAS_I_CE = "0" *) 
   (* C_HAS_QDPO = "0" *) 
   (* C_HAS_QDPO_CE = "0" *) 
   (* C_HAS_QDPO_CLK = "0" *) 
   (* C_HAS_QDPO_RST = "0" *) 
   (* C_HAS_QDPO_SRST = "0" *) 
-  (* C_HAS_WE = "1" *) 
-  (* C_MEM_TYPE = "1" *) 
+  (* C_HAS_WE = "0" *) 
+  (* C_MEM_TYPE = "0" *) 
+  (* C_PIPELINE_STAGES = "0" *) 
   (* C_QCE_JOINED = "0" *) 
+  (* C_QUALIFY_WE = "0" *) 
   (* C_REG_DPRA_INPUT = "0" *) 
   (* c_addr_width = "8" *) 
   (* c_default_data = "0" *) 
   (* c_depth = "256" *) 
   (* c_elaboration_dir = "./" *) 
-  (* c_has_i_ce = "0" *) 
+  (* c_has_clk = "0" *) 
   (* c_has_qspo = "0" *) 
   (* c_has_qspo_ce = "0" *) 
   (* c_has_qspo_rst = "0" *) 
@@ -61,16 +54,14 @@ module InstMemoryTest
   (* c_has_spo = "1" *) 
   (* c_mem_init_file = "InstMemoryTest.mif" *) 
   (* c_parser_type = "1" *) 
-  (* c_pipeline_stages = "0" *) 
-  (* c_qualify_we = "0" *) 
   (* c_read_mif = "1" *) 
   (* c_reg_a_d_inputs = "0" *) 
   (* c_sync_enable = "1" *) 
   (* c_width = "32" *) 
   InstMemoryTest_dist_mem_gen_v8_0_13 U0
        (.a(a),
-        .clk(clk),
-        .d(d),
+        .clk(1'b0),
+        .d({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .dpo(NLW_U0_dpo_UNCONNECTED[31:0]),
         .dpra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .i_ce(1'b1),
@@ -84,17 +75,17 @@ module InstMemoryTest
         .qspo_rst(1'b0),
         .qspo_srst(1'b0),
         .spo(spo),
-        .we(we));
+        .we(1'b0));
 endmodule
 
 (* C_ADDR_WIDTH = "8" *) (* C_DEFAULT_DATA = "0" *) (* C_DEPTH = "256" *) 
-(* C_ELABORATION_DIR = "./" *) (* C_FAMILY = "artix7" *) (* C_HAS_CLK = "1" *) 
-(* C_HAS_D = "1" *) (* C_HAS_DPO = "0" *) (* C_HAS_DPRA = "0" *) 
+(* C_ELABORATION_DIR = "./" *) (* C_FAMILY = "artix7" *) (* C_HAS_CLK = "0" *) 
+(* C_HAS_D = "0" *) (* C_HAS_DPO = "0" *) (* C_HAS_DPRA = "0" *) 
 (* C_HAS_I_CE = "0" *) (* C_HAS_QDPO = "0" *) (* C_HAS_QDPO_CE = "0" *) 
 (* C_HAS_QDPO_CLK = "0" *) (* C_HAS_QDPO_RST = "0" *) (* C_HAS_QDPO_SRST = "0" *) 
 (* C_HAS_QSPO = "0" *) (* C_HAS_QSPO_CE = "0" *) (* C_HAS_QSPO_RST = "0" *) 
-(* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "1" *) (* C_HAS_WE = "1" *) 
-(* C_MEM_INIT_FILE = "InstMemoryTest.mif" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
+(* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "1" *) (* C_HAS_WE = "0" *) 
+(* C_MEM_INIT_FILE = "InstMemoryTest.mif" *) (* C_MEM_TYPE = "0" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
 (* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
@@ -136,10 +127,7 @@ module InstMemoryTest_dist_mem_gen_v8_0_13
 
   wire \<const0> ;
   wire [7:0]a;
-  wire clk;
-  wire [31:0]d;
-  wire [31:0]spo;
-  wire we;
+  wire [31:0]\^spo ;
 
   assign dpo[31] = \<const0> ;
   assign dpo[30] = \<const0> ;
@@ -237,639 +225,515 @@ module InstMemoryTest_dist_mem_gen_v8_0_13
   assign qspo[2] = \<const0> ;
   assign qspo[1] = \<const0> ;
   assign qspo[0] = \<const0> ;
+  assign spo[31] = \^spo [31];
+  assign spo[30] = \^spo [27];
+  assign spo[29] = \^spo [27];
+  assign spo[28] = \^spo [27];
+  assign spo[27:20] = \^spo [27:20];
+  assign spo[19] = \^spo [18];
+  assign spo[18:13] = \^spo [18:13];
+  assign spo[12] = \^spo [2];
+  assign spo[11:4] = \^spo [11:4];
+  assign spo[3] = \<const0> ;
+  assign spo[2] = \^spo [2];
+  assign spo[1] = \^spo [0];
+  assign spo[0] = \^spo [0];
   GND GND
        (.G(\<const0> ));
   InstMemoryTest_dist_mem_gen_v8_0_13_synth \synth_options.dist_mem_inst 
        (.a(a),
-        .clk(clk),
-        .d(d),
-        .spo(spo),
-        .we(we));
+        .spo({\^spo [31],\^spo [27:20],\^spo [18:13],\^spo [2],\^spo [11:4],\^spo [0]}));
 endmodule
 
 (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13_synth" *) 
 module InstMemoryTest_dist_mem_gen_v8_0_13_synth
    (spo,
-    clk,
-    d,
-    we,
     a);
-  output [31:0]spo;
-  input clk;
-  input [31:0]d;
-  input we;
+  output [24:0]spo;
   input [7:0]a;
 
   wire [7:0]a;
-  wire clk;
-  wire [31:0]d;
-  wire [31:0]spo;
-  wire we;
+  wire [24:0]spo;
 
-  InstMemoryTest_spram \gen_sp_ram.spram_inst 
+  InstMemoryTest_rom \gen_rom.rom_inst 
        (.a(a),
-        .clk(clk),
-        .d(d),
-        .spo(spo),
-        .we(we));
+        .spo(spo));
 endmodule
 
-(* ORIG_REF_NAME = "spram" *) 
-module InstMemoryTest_spram
+(* ORIG_REF_NAME = "rom" *) 
+module InstMemoryTest_rom
    (spo,
-    clk,
-    d,
-    we,
     a);
-  output [31:0]spo;
-  input clk;
-  input [31:0]d;
-  input we;
+  output [24:0]spo;
   input [7:0]a;
 
   wire [7:0]a;
-  wire clk;
-  wire [31:0]d;
-  (* RTL_KEEP = "true" *) wire [31:0]qspo_int;
-  wire [31:0]spo;
-  wire we;
+  wire [24:0]spo;
+  wire \spo[10]_INST_0_i_1_n_0 ;
+  wire \spo[11]_INST_0_i_1_n_0 ;
+  wire \spo[13]_INST_0_i_1_n_0 ;
+  wire \spo[14]_INST_0_i_1_n_0 ;
+  wire \spo[15]_INST_0_i_1_n_0 ;
+  wire \spo[16]_INST_0_i_1_n_0 ;
+  wire \spo[17]_INST_0_i_1_n_0 ;
+  wire \spo[18]_INST_0_i_1_n_0 ;
+  wire \spo[20]_INST_0_i_1_n_0 ;
+  wire \spo[21]_INST_0_i_1_n_0 ;
+  wire \spo[22]_INST_0_i_1_n_0 ;
+  wire \spo[23]_INST_0_i_1_n_0 ;
+  wire \spo[24]_INST_0_i_1_n_0 ;
+  wire \spo[25]_INST_0_i_1_n_0 ;
+  wire \spo[26]_INST_0_i_1_n_0 ;
+  wire \spo[27]_INST_0_i_1_n_0 ;
+  wire \spo[2]_INST_0_i_1_n_0 ;
+  wire \spo[31]_INST_0_i_1_n_0 ;
+  wire \spo[4]_INST_0_i_1_n_0 ;
+  wire \spo[5]_INST_0_i_1_n_0 ;
+  wire \spo[6]_INST_0_i_1_n_0 ;
+  wire \spo[7]_INST_0_i_1_n_0 ;
+  wire \spo[8]_INST_0_i_1_n_0 ;
+  wire \spo[9]_INST_0_i_1_n_0 ;
 
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[0]),
-        .Q(qspo_int[0]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[10] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[10]),
-        .Q(qspo_int[10]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[11] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[11]),
-        .Q(qspo_int[11]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[12] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[12]),
-        .Q(qspo_int[12]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[13] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[13]),
-        .Q(qspo_int[13]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[14] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[14]),
-        .Q(qspo_int[14]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[15] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[15]),
-        .Q(qspo_int[15]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[16] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[16]),
-        .Q(qspo_int[16]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[17] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[17]),
-        .Q(qspo_int[17]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[18] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[18]),
-        .Q(qspo_int[18]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[19] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[19]),
-        .Q(qspo_int[19]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[1]),
-        .Q(qspo_int[1]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[20] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[20]),
-        .Q(qspo_int[20]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[21] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[21]),
-        .Q(qspo_int[21]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[22] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[22]),
-        .Q(qspo_int[22]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[23] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[23]),
-        .Q(qspo_int[23]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[24] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[24]),
-        .Q(qspo_int[24]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[25] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[25]),
-        .Q(qspo_int[25]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[26] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[26]),
-        .Q(qspo_int[26]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[27] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[27]),
-        .Q(qspo_int[27]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[28] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[28]),
-        .Q(qspo_int[28]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[29] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[29]),
-        .Q(qspo_int[29]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[2] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[2]),
-        .Q(qspo_int[2]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[30] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[30]),
-        .Q(qspo_int[30]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[31] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[31]),
-        .Q(qspo_int[31]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[3] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[3]),
-        .Q(qspo_int[3]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[4] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[4]),
-        .Q(qspo_int[4]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[5] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[5]),
-        .Q(qspo_int[5]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[6] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[6]),
-        .Q(qspo_int[6]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[7] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[7]),
-        .Q(qspo_int[7]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[8] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[8]),
-        .Q(qspo_int[8]),
-        .R(1'b0));
-  (* KEEP = "yes" *) 
-  (* equivalent_register_removal = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \qspo_int_reg[9] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(spo[9]),
-        .Q(qspo_int[9]),
-        .R(1'b0));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000007FFFFFFFFFFF)) 
-    ram_reg_0_255_0_0
-       (.A(a),
-        .D(d[0]),
-        .O(spo[0]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000000FC001224000)) 
-    ram_reg_0_255_10_10
-       (.A(a),
-        .D(d[10]),
-        .O(spo[10]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h000000000000000000000000000000000000000000000000000007C000000000)) 
-    ram_reg_0_255_11_11
-       (.A(a),
-        .D(d[11]),
-        .O(spo[11]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000001000000000)) 
-    ram_reg_0_255_12_12
-       (.A(a),
-        .D(d[12]),
-        .O(spo[12]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000500AAA54AB1D)) 
-    ram_reg_0_255_13_13
-       (.A(a),
-        .D(d[13]),
-        .O(spo[13]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000001200000)) 
-    ram_reg_0_255_14_14
-       (.A(a),
-        .D(d[14]),
-        .O(spo[14]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000141024480)) 
-    ram_reg_0_255_15_15
-       (.A(a),
-        .D(d[15]),
-        .O(spo[15]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000002004042A1000)) 
-    ram_reg_0_255_16_16
-       (.A(a),
-        .D(d[16]),
-        .O(spo[16]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000002F84052A5480)) 
-    ram_reg_0_255_17_17
-       (.A(a),
-        .D(d[17]),
-        .O(spo[17]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000000F8000000000)) 
-    ram_reg_0_255_18_18
-       (.A(a),
-        .D(d[18]),
-        .O(spo[18]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000000F8000000000)) 
-    ram_reg_0_255_19_19
-       (.A(a),
-        .D(d[19]),
-        .O(spo[19]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000007FFFFFFFFFFF)) 
-    ram_reg_0_255_1_1
-       (.A(a),
-        .D(d[1]),
-        .O(spo[1]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000003A06846C1976)) 
-    ram_reg_0_255_20_20
-       (.A(a),
-        .D(d[20]),
-        .O(spo[20]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000004808099366A2)) 
-    ram_reg_0_255_21_21
-       (.A(a),
-        .D(d[21]),
-        .O(spo[21]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000005DAA99F76FBE)) 
-    ram_reg_0_255_22_22
-       (.A(a),
-        .D(d[22]),
-        .O(spo[22]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000058010000022)) 
-    ram_reg_0_255_23_23
-       (.A(a),
-        .D(d[23]),
-        .O(spo[23]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000058000000022)) 
-    ram_reg_0_255_24_24
-       (.A(a),
-        .D(d[24]),
-        .O(spo[24]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000040000000022)) 
-    ram_reg_0_255_25_25
-       (.A(a),
-        .D(d[25]),
-        .O(spo[25]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000040000000022)) 
-    ram_reg_0_255_26_26
-       (.A(a),
-        .D(d[26]),
-        .O(spo[26]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000040000000022)) 
-    ram_reg_0_255_27_27
-       (.A(a),
-        .D(d[27]),
-        .O(spo[27]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000044000000022)) 
-    ram_reg_0_255_28_28
-       (.A(a),
-        .D(d[28]),
-        .O(spo[28]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000044000000022)) 
-    ram_reg_0_255_29_29
-       (.A(a),
-        .D(d[29]),
-        .O(spo[29]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000003150000000)) 
-    ram_reg_0_255_2_2
-       (.A(a),
-        .D(d[2]),
-        .O(spo[2]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000044000000422)) 
-    ram_reg_0_255_30_30
-       (.A(a),
-        .D(d[30]),
-        .O(spo[30]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000040000000022)) 
-    ram_reg_0_255_31_31
-       (.A(a),
-        .D(d[31]),
-        .O(spo[31]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000002010000000)) 
-    ram_reg_0_255_3_3
-       (.A(a),
-        .D(d[3]),
-        .O(spo[3]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h000000000000000000000000000000000000000000000000000027D4048914E2)) 
-    ram_reg_0_255_4_4
-       (.A(a),
-        .D(d[4]),
-        .O(spo[4]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000005BABFBF7EF95)) 
-    ram_reg_0_255_5_5
-       (.A(a),
-        .D(d[5]),
-        .O(spo[5]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000082151224000)) 
-    ram_reg_0_255_6_6
-       (.A(a),
-        .D(d[6]),
-        .O(spo[6]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000000031108104AA)) 
-    ram_reg_0_255_7_7
-       (.A(a),
-        .D(d[7]),
-        .O(spo[7]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000201404891040)) 
-    ram_reg_0_255_8_8
-       (.A(a),
-        .D(d[8]),
-        .O(spo[8]),
-        .WCLK(clk),
-        .WE(we));
-  RAM256X1S #(
-    .INIT(256'h000000000000000000000000000000000000000000000000000027D4048914EA)) 
-    ram_reg_0_255_9_9
-       (.A(a),
-        .D(d[9]),
-        .O(spo[9]),
-        .WCLK(clk),
-        .WE(we));
+  LUT6 #(
+    .INIT(64'h0000000005551555)) 
+    \spo[0]_INST_0 
+       (.I0(a[6]),
+        .I1(a[3]),
+        .I2(a[5]),
+        .I3(a[4]),
+        .I4(a[2]),
+        .I5(a[7]),
+        .O(spo[0]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[10]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[10]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[7]));
+  LUT6 #(
+    .INIT(64'h0011B2A810899D33)) 
+    \spo[10]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[0]),
+        .I4(a[5]),
+        .I5(a[4]),
+        .O(\spo[10]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[11]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[11]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[8]));
+  LUT6 #(
+    .INIT(64'h00AA0080141D8933)) 
+    \spo[11]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[5]),
+        .I4(a[0]),
+        .I5(a[4]),
+        .O(\spo[11]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[13]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[13]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[10]));
+  LUT6 #(
+    .INIT(64'h00C020640194302D)) 
+    \spo[13]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[0]),
+        .I3(a[4]),
+        .I4(a[5]),
+        .I5(a[1]),
+        .O(\spo[13]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[14]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[14]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[11]));
+  LUT6 #(
+    .INIT(64'h0008020000000801)) 
+    \spo[14]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[1]),
+        .I2(a[5]),
+        .I3(a[4]),
+        .I4(a[0]),
+        .I5(a[2]),
+        .O(\spo[14]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[15]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[15]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[12]));
+  LUT6 #(
+    .INIT(64'h000154722A282375)) 
+    \spo[15]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[0]),
+        .I4(a[5]),
+        .I5(a[4]),
+        .O(\spo[15]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[16]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[16]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[13]));
+  LUT6 #(
+    .INIT(64'h01E9636F013E62FE)) 
+    \spo[16]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[4]),
+        .I4(a[5]),
+        .I5(a[0]),
+        .O(\spo[16]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[17]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[17]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[14]));
+  LUT6 #(
+    .INIT(64'h01EB776F013E7AFE)) 
+    \spo[17]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[4]),
+        .I4(a[5]),
+        .I5(a[0]),
+        .O(\spo[17]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[18]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[18]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[15]));
+  LUT6 #(
+    .INIT(64'h0001000808006B5E)) 
+    \spo[18]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[0]),
+        .I4(a[5]),
+        .I5(a[4]),
+        .O(\spo[18]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[20]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[20]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[16]));
+  LUT6 #(
+    .INIT(64'h0001C45803A00088)) 
+    \spo[20]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[0]),
+        .I4(a[5]),
+        .I5(a[4]),
+        .O(\spo[20]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[21]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[21]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[17]));
+  LUT6 #(
+    .INIT(64'h002044C000297288)) 
+    \spo[21]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[4]),
+        .I4(a[5]),
+        .I5(a[0]),
+        .O(\spo[21]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[22]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[22]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[18]));
+  LUT6 #(
+    .INIT(64'h020B131FEEFC48EA)) 
+    \spo[22]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[4]),
+        .I3(a[0]),
+        .I4(a[1]),
+        .I5(a[5]),
+        .O(\spo[22]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[23]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[23]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[19]));
+  LUT6 #(
+    .INIT(64'h0000894800950800)) 
+    \spo[23]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[0]),
+        .I3(a[1]),
+        .I4(a[5]),
+        .I5(a[4]),
+        .O(\spo[23]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[24]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[24]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[20]));
+  LUT6 #(
+    .INIT(64'h0000894800152C24)) 
+    \spo[24]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[0]),
+        .I3(a[1]),
+        .I4(a[5]),
+        .I5(a[4]),
+        .O(\spo[24]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[25]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[25]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[21]));
+  LUT6 #(
+    .INIT(64'h000720A210005000)) 
+    \spo[25]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[5]),
+        .I2(a[2]),
+        .I3(a[0]),
+        .I4(a[4]),
+        .I5(a[1]),
+        .O(\spo[25]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[26]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[26]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[22]));
+  LUT6 #(
+    .INIT(64'h0118181A00004400)) 
+    \spo[26]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[4]),
+        .I3(a[0]),
+        .I4(a[5]),
+        .I5(a[1]),
+        .O(\spo[26]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[27]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[27]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[23]));
+  LUT6 #(
+    .INIT(64'h00041485101080B0)) 
+    \spo[27]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[5]),
+        .I4(a[4]),
+        .I5(a[0]),
+        .O(\spo[27]_INST_0_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000010)) 
+    \spo[2]_INST_0 
+       (.I0(a[6]),
+        .I1(a[2]),
+        .I2(\spo[2]_INST_0_i_1_n_0 ),
+        .I3(a[1]),
+        .I4(a[3]),
+        .I5(a[7]),
+        .O(spo[9]));
+  LUT3 #(
+    .INIT(8'h01)) 
+    \spo[2]_INST_0_i_1 
+       (.I0(a[5]),
+        .I1(a[4]),
+        .I2(a[0]),
+        .O(\spo[2]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[31]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[31]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[24]));
+  LUT6 #(
+    .INIT(64'h0118081A04004400)) 
+    \spo[31]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[4]),
+        .I3(a[0]),
+        .I4(a[5]),
+        .I5(a[1]),
+        .O(\spo[31]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[4]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[4]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[1]));
+  LUT6 #(
+    .INIT(64'h05000A4FD0D72587)) 
+    \spo[4]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[1]),
+        .I2(a[2]),
+        .I3(a[0]),
+        .I4(a[4]),
+        .I5(a[5]),
+        .O(\spo[4]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[5]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[5]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[2]));
+  LUT6 #(
+    .INIT(64'h003711ADD8C4EA28)) 
+    \spo[5]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[4]),
+        .I4(a[0]),
+        .I5(a[5]),
+        .O(\spo[5]_INST_0_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[6]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[6]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[3]));
+  LUT6 #(
+    .INIT(64'h0118182204840880)) 
+    \spo[6]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[4]),
+        .I3(a[5]),
+        .I4(a[0]),
+        .I5(a[1]),
+        .O(\spo[6]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[7]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[7]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[4]));
+  LUT6 #(
+    .INIT(64'h00651052FEA7A131)) 
+    \spo[7]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[5]),
+        .I4(a[0]),
+        .I5(a[4]),
+        .O(\spo[7]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[8]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[8]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[5]));
+  LUT6 #(
+    .INIT(64'h01220072443BC7D7)) 
+    \spo[8]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[4]),
+        .I4(a[0]),
+        .I5(a[5]),
+        .O(\spo[8]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \spo[9]_INST_0 
+       (.I0(a[6]),
+        .I1(\spo[9]_INST_0_i_1_n_0 ),
+        .I2(a[7]),
+        .O(spo[6]));
+  LUT6 #(
+    .INIT(64'h01F7FE3F01D7FBF7)) 
+    \spo[9]_INST_0_i_1 
+       (.I0(a[3]),
+        .I1(a[2]),
+        .I2(a[1]),
+        .I3(a[5]),
+        .I4(a[4]),
+        .I5(a[0]),
+        .O(\spo[9]_INST_0_i_1_n_0 ));
 endmodule
 `ifndef GLBL
 `define GLBL

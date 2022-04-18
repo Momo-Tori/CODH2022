@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a100tcsg324-1
@@ -31,7 +32,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/CodeTry/CODExperiment/Lab4/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci
+read_ip -quiet D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci
 set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -87,32 +88,32 @@ write_checkpoint -force -noxdef InstMemoryTest.dcp
 create_report "InstMemoryTest_synth_1_synth_report_utilization_0" "report_utilization -file InstMemoryTest_utilization_synth.rpt -pb InstMemoryTest_utilization_synth.pb"
 
 if { [catch {
-  file copy -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest.dcp d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.dcp
+  file copy -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest.dcp D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.v
+  write_verilog -force -mode synth_stub D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.vhdl
+  write_vhdl -force -mode synth_stub D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.v
+  write_verilog -force -mode funcsim D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -122,32 +123,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest.dcp d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.dcp
+  file copy -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest.dcp D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest_stub.v d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.v
+  file rename -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest_stub.v D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest_stub.vhdl d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.vhdl
+  file rename -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest_stub.vhdl D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest_sim_netlist.v d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.v
+  file rename -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest_sim_netlist.v D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest_sim_netlist.vhdl d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.vhdl
+  file rename -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest_sim_netlist.vhdl D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -156,13 +157,13 @@ if { [catch {
 
 if {[file isdir D:/CodeTry/CODExperiment/Lab4/project_1/project_1.ip_user_files/ip/InstMemoryTest]} {
   catch { 
-    file copy -force d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.v D:/CodeTry/CODExperiment/Lab4/project_1/project_1.ip_user_files/ip/InstMemoryTest
+    file copy -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.v D:/CodeTry/CODExperiment/Lab4/project_1/project_1.ip_user_files/ip/InstMemoryTest
   }
 }
 
 if {[file isdir D:/CodeTry/CODExperiment/Lab4/project_1/project_1.ip_user_files/ip/InstMemoryTest]} {
   catch { 
-    file copy -force d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.vhdl D:/CodeTry/CODExperiment/Lab4/project_1/project_1.ip_user_files/ip/InstMemoryTest
+    file copy -force D:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_stub.vhdl D:/CodeTry/CODExperiment/Lab4/project_1/project_1.ip_user_files/ip/InstMemoryTest
   }
 }
 file delete __synthesis_is_running__

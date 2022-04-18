@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1649778700">
-  <File Type="PA-TCL" Name="CPUDownload.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="CPUDownload_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="CPUDownload_reports.tcl"/>
-  <File Type="RDS-RDS" Name="CPUDownload.vds"/>
-  <File Type="RDS-UTIL" Name="CPUDownload_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="CPUDownload_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="CPUDownload.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="CPUDownload_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="CPUDownload_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1650204668">
+  <File Type="PA-TCL" Name="CPUSort.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="CPUSort_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="CPUSort_reports.tcl"/>
+  <File Type="RDS-RDS" Name="CPUSort.vds"/>
+  <File Type="RDS-UTIL" Name="CPUSort_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="CPUSort_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="CPUSort.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CPUSort_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="CPUSort_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../ALU.v">
@@ -32,13 +32,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../cpu.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../register_32_32.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -46,8 +39,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../cpuSort.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../cpu.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../cpuDownload.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -59,10 +68,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../coe/sort.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="CPUDownload"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="CPUSort"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -88,5 +102,5 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="DataMem"/>
-  <BlockFileSet Type="BlockSrcs" Name="InstMem"/>
+  <BlockFileSet Type="BlockSrcs" Name="InstMemoryTest"/>
 </GenRun>

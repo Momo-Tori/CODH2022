@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Apr 12 23:52:42 2022
-# Process ID: 51868
+# Start of session at: Sun Apr 17 22:12:03 2022
+# Process ID: 14284
 # Current directory: D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1
-# Command line: vivado.exe -log CPUDownload.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CPUDownload.tcl -notrace
-# Log file: D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1/CPUDownload.vdi
+# Command line: vivado.exe -log CPUSort.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CPUSort.tcl -notrace
+# Log file: D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1/CPUSort.vdi
 # Journal file: D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source CPUDownload.tcl -notrace
+source CPUSort.tcl -notrace

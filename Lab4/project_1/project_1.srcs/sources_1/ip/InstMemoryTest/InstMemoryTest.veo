@@ -56,9 +56,6 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 InstMemoryTest your_instance_name (
   .a(a),      // input wire [7 : 0] a
-  .d(d),      // input wire [31 : 0] d
-  .clk(clk),  // input wire clk
-  .we(we),    // input wire we
   .spo(spo)  // output wire [31 : 0] spo
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

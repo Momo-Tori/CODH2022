@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="InstMem_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1649644029">
+<GenRun Id="InstMem_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1650169428">
   <File Type="PA-TCL" Name="InstMem.tcl"/>
   <File Type="REPORTS-TCL" Name="InstMem_reports.tcl"/>
   <File Type="RDS-RDS" Name="InstMem.vds"/>
-  <File Type="RDS-UTIL" Name="InstMem_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="InstMem_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="InstMem.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/InstMem">
     <File Path="$PSRCDIR/sources_1/ip/InstMem/InstMem.xci">

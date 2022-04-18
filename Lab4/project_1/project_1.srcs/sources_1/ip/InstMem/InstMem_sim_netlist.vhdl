@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Mon Apr 11 10:27:46 2022
 -- Host        : Yun running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/CodeTry/CODExperiment/Lab4/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top InstMem -prefix
+--               InstMem_ InstMem_sim_netlist.vhdl
 -- Design      : InstMem
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity InstMem_rom is
     spo : out STD_LOGIC_VECTOR ( 25 downto 0 );
     a : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of InstMem_rom : entity is "rom";
 end InstMem_rom;
 
 architecture STRUCTURE of InstMem_rom is
@@ -684,8 +682,6 @@ entity InstMem_dist_mem_gen_v8_0_13_synth is
     spo : out STD_LOGIC_VECTOR ( 25 downto 0 );
     a : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of InstMem_dist_mem_gen_v8_0_13_synth : entity is "dist_mem_gen_v8_0_13_synth";
 end InstMem_dist_mem_gen_v8_0_13_synth;
 
 architecture STRUCTURE of InstMem_dist_mem_gen_v8_0_13_synth is
@@ -784,8 +780,6 @@ entity InstMem_dist_mem_gen_v8_0_13 is
   attribute C_SYNC_ENABLE of InstMem_dist_mem_gen_v8_0_13 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of InstMem_dist_mem_gen_v8_0_13 : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of InstMem_dist_mem_gen_v8_0_13 : entity is "dist_mem_gen_v8_0_13";
 end InstMem_dist_mem_gen_v8_0_13;
 
 architecture STRUCTURE of InstMem_dist_mem_gen_v8_0_13 is
