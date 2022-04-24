@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Apr 20 19:51:00 2022
-# Process ID: 42440
+# Start of session at: Mon Apr 18 11:00:38 2022
+# Process ID: 21708
 # Current directory: D:/CodeTry/CODExperiment/Lab4/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22848 D:\CodeTry\CODExperiment\Lab4\project_1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16424 D:\CodeTry\CODExperiment\Lab4\project_1\project_1.xpr
 # Log file: D:/CodeTry/CODExperiment/Lab4/project_1/vivado.log
 # Journal file: D:/CodeTry/CODExperiment/Lab4/project_1\vivado.jou
 #-----------------------------------------------------------
@@ -16,7 +16,6 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 699.727 ; gain = 75.906
 update_compile_order -fileset sources_1
 open_hw
 connect_hw_server
@@ -31,10 +30,17 @@ INFO: [Labtools 27-2221] Launch Output:
 
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
-set_property PROGRAM.FILE {D:\CodeTry\CODExperiment\Lab4\bits\CPUSort.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab4/project_1/project_1.runs/impl_1/CPUSort.bit} [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab4/bits/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab4/bits/CPUSort.bit} [get_hw_devices xc7a100t_0]
@@ -44,4 +50,4 @@ refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF974A
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 20 20:13:18 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 18 11:03:24 2022...
