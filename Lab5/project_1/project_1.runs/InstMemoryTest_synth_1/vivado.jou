@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon May  2 15:42:17 2022
+# Process ID: 59572
+# Current directory: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/InstMemoryTest_synth_1
+# Command line: vivado.exe -log InstMemoryTest.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source InstMemoryTest.tcl
+# Log file: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/InstMemoryTest_synth_1/InstMemoryTest.vds
+# Journal file: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/InstMemoryTest_synth_1\vivado.jou
+#-----------------------------------------------------------
+source InstMemoryTest.tcl -notrace

@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log InstMemoryTest.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source InstMemoryTest.tcl
+

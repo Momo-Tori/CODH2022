@@ -12,9 +12,10 @@ module  register_file  #(
     output [DW-1:0]  rdout
 );
 reg [DW-1:0]  rf [(1<<AW)-1:0]; 	
-assign rd0=rf[ra0];
-assign rd1=rf[ra1];
-assign rdout=rf[raout];
+assign rd0=((ra0==wa)&&we)?wd:rf[ra0];
+assign rd1=((ra1==wa)&&we)?wd:rf[ra1];
+assign rdout=((raout==wa)&&we)?wd:rf[raout];
+
 
 initial rf[0]=0;
 always  @(posedge  clk)begin

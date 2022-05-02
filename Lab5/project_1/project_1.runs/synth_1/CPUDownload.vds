@@ -1,0 +1,524 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon May  2 15:42:24 2022
+# Process ID: 84820
+# Current directory: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log CPUDownload.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPUDownload.tcl
+# Log file: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/CPUDownload.vds
+# Journal file: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CPUDownload.tcl -notrace
+Command: synth_design -top CPUDownload -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 81556 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 700.152 ; gain = 177.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'CPUDownload' [D:/CodeTry/CODExperiment/Lab5/cpuDownload.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pdu' [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:1]
+	Parameter STOP bound to: 2'b00 
+	Parameter STEP bound to: 2'b01 
+	Parameter RUN bound to: 2'b10 
+INFO: [Synth 8-226] default block is never used [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:407]
+INFO: [Synth 8-226] default block is never used [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:446]
+WARNING: [Synth 8-5788] Register x_db_r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:132]
+WARNING: [Synth 8-5788] Register x_db_1r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:133]
+WARNING: [Synth 8-5788] Register btn_db_r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:165]
+WARNING: [Synth 8-5788] Register btn_db_1r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:89]
+WARNING: [Synth 8-5788] Register swx_data_r_reg in module pdu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'pdu' (1#1) [D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [D:/CodeTry/CODExperiment/Lab5/cpu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [D:/CodeTry/CODExperiment/Lab5/ImmGen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (2#1) [D:/CodeTry/CODExperiment/Lab5/ImmGen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/CodeTry/CODExperiment/Lab5/ALU.v:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/CodeTry/CODExperiment/Lab5/ALU.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (3#1) [D:/CodeTry/CODExperiment/Lab5/ALU.v:1]
+WARNING: [Synth 8-689] width (4) of port connection 's' does not match port width (3) of module 'alu' [D:/CodeTry/CODExperiment/Lab5/cpu.v:237]
+INFO: [Synth 8-6157] synthesizing module 'InstMem' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/.Xil/Vivado-84820-Yun/realtime/InstMem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'InstMem' (4#1) [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/.Xil/Vivado-84820-Yun/realtime/InstMem_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'a' does not match port width (8) of module 'InstMem' [D:/CodeTry/CODExperiment/Lab5/cpu.v:238]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/CodeTry/CODExperiment/Lab5/register_32_32.v:1]
+	Parameter AW bound to: 5 - type: integer 
+	Parameter DW bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (5#1) [D:/CodeTry/CODExperiment/Lab5/register_32_32.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'wa' does not match port width (5) of module 'register_file' [D:/CodeTry/CODExperiment/Lab5/cpu.v:239]
+INFO: [Synth 8-6157] synthesizing module 'DataMem' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/.Xil/Vivado-84820-Yun/realtime/DataMem_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataMem' (6#1) [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/.Xil/Vivado-84820-Yun/realtime/DataMem_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'a' does not match port width (8) of module 'DataMem' [D:/CodeTry/CODExperiment/Lab5/cpu.v:244]
+WARNING: [Synth 8-6014] Unused sequential element IR_MEM_r_reg was removed.  [D:/CodeTry/CODExperiment/Lab5/cpu.v:66]
+WARNING: [Synth 8-6014] Unused sequential element IR_WB_r_reg was removed.  [D:/CodeTry/CODExperiment/Lab5/cpu.v:67]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/CodeTry/CODExperiment/Lab5/cpu.v:232]
+WARNING: [Synth 8-5788] Register ALUOp_r_reg in module cpu is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CodeTry/CODExperiment/Lab5/cpu.v:105]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (7#1) [D:/CodeTry/CODExperiment/Lab5/cpu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CPUDownload' (8#1) [D:/CodeTry/CODExperiment/Lab5/cpuDownload.v:1]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[19]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[18]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[17]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[16]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[15]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[14]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[13]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[12]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[1]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port Ins[0]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[11]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[10]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[9]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 764.363 ; gain = 241.859
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 767.176 ; gain = 244.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 767.176 ; gain = 244.672
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem/DataMem_in_context.xdc] for cell 'cpu/DataMem'
+Finished Parsing XDC File [d:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem/DataMem_in_context.xdc] for cell 'cpu/DataMem'
+Parsing XDC File [d:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem/InstMem_in_context.xdc] for cell 'cpu/InstMem'
+Finished Parsing XDC File [d:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem/InstMem_in_context.xdc] for cell 'cpu/InstMem'
+Parsing XDC File [D:/CodeTry/CODExperiment/Lab5/Nexys4DDR.xdc]
+Finished Parsing XDC File [D:/CodeTry/CODExperiment/Lab5/Nexys4DDR.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/CodeTry/CODExperiment/Lab5/Nexys4DDR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CPUDownload_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CPUDownload_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 902.484 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 902.484 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 902.484 ; gain = 379.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 902.484 ; gain = 379.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for cpu/DataMem. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cpu/InstMem. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 902.484 ; gain = 379.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'pdu'
+INFO: [Synth 8-5546] ROM "x_hd_t" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/CodeTry/CODExperiment/Lab5/ALU.v:11]
+INFO: [Synth 8-4471] merging register 'MemRead_r_EX_reg' into 'MemtoReg_r_EX_reg' [D:/CodeTry/CODExperiment/Lab5/cpu.v:100]
+INFO: [Synth 8-4471] merging register 'MemRead_r_MEM_reg' into 'MemtoReg_r_MEM_reg' [D:/CodeTry/CODExperiment/Lab5/cpu.v:123]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/CodeTry/CODExperiment/Lab5/cpu.v:216]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    STOP |                              001 |                               00
+                    STEP |                              010 |                               01
+                     RUN |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'pdu'
+WARNING: [Synth 8-327] inferring latch for variable 'chk_data_reg' [D:/CodeTry/CODExperiment/Lab5/cpu.v:158]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 902.484 ; gain = 379.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               32 Bit    Registers := 51    
+	               16 Bit    Registers := 5     
+	                5 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 19    
+	   4 Input     32 Bit        Muxes := 3     
+	   8 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 44    
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pdu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---XORs : 
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 5     
+	                5 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 2     
+Module ImmGen 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 3     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module register_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 31    
+Module cpu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 15    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "pdu/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pdu/x_hd_t" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[11]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[10]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[9]
+WARNING: [Synth 8-3331] design cpu has unconnected port chk_addr[8]
+INFO: [Synth 8-3886] merging instance 'cpu/Rd_r_reg[3]' (FDC) to 'cpu/IR_EX_r_reg[10]'
+INFO: [Synth 8-3886] merging instance 'cpu/Rd_r_reg[4]' (FDC) to 'cpu/IR_EX_r_reg[11]'
+INFO: [Synth 8-3886] merging instance 'cpu/Rd_r_reg[0]' (FDC) to 'cpu/IR_EX_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'cpu/Rd_r_reg[1]' (FDC) to 'cpu/IR_EX_r_reg[8]'
+INFO: [Synth 8-3886] merging instance 'cpu/Rd_r_reg[2]' (FDC) to 'cpu/IR_EX_r_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/register_file/\rf_reg[0][3] )
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[5]' (FDC) to 'cpu/IR_EX_r_reg[25]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[6]' (FDC) to 'cpu/IR_EX_r_reg[26]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[7]' (FDC) to 'cpu/IR_EX_r_reg[27]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[8]' (FDC) to 'cpu/IR_EX_r_reg[28]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[9]' (FDC) to 'cpu/IR_EX_r_reg[29]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[10]' (FDC) to 'cpu/IR_EX_r_reg[30]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[11]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[12]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[13]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[14]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[15]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[16]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[17]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[18]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[19]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[20]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[21]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[22]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[23]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[24]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[25]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[26]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[27]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[28]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[29]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/Imm_r_reg[30]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/IR_EX_r_reg[31]' (FDC) to 'cpu/Imm_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'cpu/ALUOp_r_reg[1]' (FDE) to 'cpu/ALUOp_r_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/\ALUOp_r_reg[2] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 902.484 ; gain = 379.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 902.484 ; gain = 379.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.625 ; gain = 413.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 946.367 ; gain = 423.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 950.902 ; gain = 428.398
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 950.902 ; gain = 428.398
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 950.902 ; gain = 428.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 950.902 ; gain = 428.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 950.902 ; gain = 428.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 950.902 ; gain = 428.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |InstMem       |         1|
+|2     |DataMem       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DataMem |     1|
+|2     |InstMem |     1|
+|3     |BUFG    |     5|
+|4     |CARRY4  |    52|
+|5     |LUT1    |     6|
+|6     |LUT2    |    73|
+|7     |LUT3    |   105|
+|8     |LUT4    |    99|
+|9     |LUT5    |   346|
+|10    |LUT6    |  1112|
+|11    |MUXF7   |   385|
+|12    |MUXF8   |   192|
+|13    |FDCE    |   595|
+|14    |FDPE    |    91|
+|15    |FDRE    |  1025|
+|16    |LD      |    32|
+|17    |LDC     |    21|
+|18    |IBUF    |    23|
+|19    |OBUF    |    35|
++------+--------+------+
+
+Report Instance Areas: 
++------+------------------+--------------+------+
+|      |Instance          |Module        |Cells |
++------+------------------+--------------+------+
+|1     |top               |              |  4293|
+|2     |  cpu             |cpu           |  3316|
+|3     |    register_file |register_file |  2458|
+|4     |  pdu             |pdu           |   909|
++------+------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 950.902 ; gain = 428.398
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 950.902 ; gain = 293.090
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 950.902 ; gain = 428.398
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 682 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 966.691 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 53 instances were transformed.
+  LD => LDCE: 32 instances
+  LDC => LDCE: 21 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+106 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 966.691 ; gain = 675.453
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 966.691 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/CPUDownload.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CPUDownload_utilization_synth.rpt -pb CPUDownload_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May  2 15:43:09 2022...
