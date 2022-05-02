@@ -12,8 +12,11 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ImmGe
 INFO: [VRFC 10-311] analyzing module ImmGen
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu
-INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:192]
-INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:195]
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:263]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:266]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:70]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:76]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:115]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpuDownload.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CPUDownload
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/register_32_32.v" into library xil_defaultlib
@@ -22,5 +25,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/pdu-v
 INFO: [VRFC 10-311] analyzing module pdu
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test
-INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:226]
-INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:229]
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:303]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:306]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:110]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:116]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:155]

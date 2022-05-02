@@ -67,8 +67,18 @@ always @(posedge clk or negedge rstn) begin
   IR_WB_r<=32'h00000013;
   end
   else begin
-  PCD_r<=pc;
-  IR_r<=Ins;
+  if(LD_R_Hazard)begin
+    PCD_r<=PCD_r;
+    IR_r<=IR_r;
+  end
+  else begin
+    PCD_r<=pc;
+    if(B_Hazard)
+      IR_r<=32'h00000013;
+    else
+      IR_r<=Ins;
+  end
+  
   PCE_r<=PCD_r;
   A_r<=Reg1Data;
   B_r<=Reg2Data;
@@ -102,14 +112,25 @@ always @(posedge clk or negedge rstn) begin
   AUIPC_r_EX<=0;
   end
   else begin
+  if(LD_R_Hazard|B_Hazard)
+  begin
+    MemtoReg_r_EX<=0;
+    MemWrite_r_EX<=0;
+    RegWrite_r_EX<=0;
+    MemRead_r_EX<=0;
+    PCChange_r_EX<=0;
+  end
+  else
+  begin
+    MemtoReg_r_EX<=MemtoReg;
+    MemWrite_r_EX<=MemWrite;
+    RegWrite_r_EX<=RegWrite;
+    MemRead_r_EX<=MemRead;
+    PCChange_r_EX<=PCChange;
+  end
   ALUOp_r<=ALUOp;
 
-  MemtoReg_r_EX<=MemtoReg;
-  MemWrite_r_EX<=MemWrite;
   ALUSrc_r_EX<=ALUSrc;
-  RegWrite_r_EX<=RegWrite;
-  MemRead_r_EX<=MemRead;
-  PCChange_r_EX<=PCChange;
   AUIPC_r_EX<=AUIPC;
   end
 end
@@ -142,8 +163,42 @@ always @(posedge clk or negedge rstn) begin
   end
 end
 
-//
+//forwarding unit
+//EX指令是否有SR1或SR2
+wire SR1,SR2;
+assign SR1=~((IR_EX_r[6:2]==5'b11011)|AUIPC_r_EX);
+assign SR2=(IR_EX_r[3:2]==2'b00&IR_EX_r[5]);
+//是否需要Wb to Ex或Mem to Ex
+wire Wb2Ex_sr1,Wb2Ex_sr2,Mem2Ex_sr1,Mem2Ex_sr2;
+assign Wb2Ex_sr1=(RdW_r==IR_EX_r[19:15]) & SR1 & RegWrite_r_WB;
+assign Wb2Ex_sr2=(RdW_r==IR_EX_r[24:20]) & SR2 & RegWrite_r_WB;
+assign Mem2Ex_sr1=(RdM_r==IR_EX_r[19:15]) & SR1 & RegWrite_r_MEM;
+assign Mem2Ex_sr2=(RdM_r==IR_EX_r[24:20]) & SR2 & RegWrite_r_MEM;
 
+//回传ALU的描述在Contorl部分
+
+
+
+//Load-Use Hazard部分
+//对于LD-R类型编排的指令必须有Load-Use Hazard
+//若LD_R_Hazard为真则阻塞EX段的输入，反而输入EX为一个NOP
+
+//判断是否有数据冲突
+wire SR1_ID,SR2_ID,isLWHazard;
+assign SR1_ID=~((IR_r[6:2]==5'b11011)|AUIPC_r_EX);
+assign SR2_ID=(IR_r[3:2]==2'b00&IR_r[5]);
+assign isLWHazard=( (Rd_r==IR_r[19:15]) & SR1_ID ) | ( Rd_r==IR_r[24:20] & SR2_ID );
+
+//LD_R_Hazard=EX为LW且ID需要Mem读出的数据
+wire LD_R_Hazard;
+//其中MemtoReg_r_EX=LW_EX为EX段是否是LW命令
+assign LD_R_Hazard=MemtoReg_r_EX&isLWHazard;
+
+
+//Branch Hazard部分
+//跳转成功时将已经进入流水线的两个指令清除为NOP
+wire B_Hazard;
+assign B_Hazard=PCChange&IR_EX_r[3:2]==2'b00&zero;
 
 
 
@@ -185,11 +240,24 @@ end
 
 always @(*) begin
   if((PCChange_r_EX&(IR_EX_r[2]))|AUIPC_r_EX) ALU1=PCE_r;
-  else ALU1=A_r;
+  else case({Mem2Ex_sr1,Wb2Ex_sr1})
+  2'b00:ALU1=A_r;
+  2'b01:ALU1=WriteData;
+  2'b10:ALU1=Y_r;
+  2'b11:ALU1=Y_r;
+  default:ALU1=32'hxxxxxxxx;
+  endcase
 
   if(PCChange_r_EX&(IR_EX_r[2])) ALU2=4;
   else if(AUIPC_r_EX) ALU2={IR_EX_r[31:12],{12{1'b0}}};
-  else ALU2=ALUSrc_r_EX?Imm_r:B_r;
+  else if(ALUSrc_r_EX) ALU2=Imm_r;
+  else case({Mem2Ex_sr2,Wb2Ex_sr2})
+  2'b00:ALU2=B_r;
+  2'b01:ALU2=WriteData;
+  2'b10:ALU2=Y_r;
+  2'b11:ALU2=Y_r;
+  default:ALU2=32'hxxxxxxxx;
+  endcase
 end
 
 assign LW=IR_r[6:2]==5'b00000;
@@ -217,7 +285,7 @@ always @(*) begin
 end
 always @(*) begin
   case (pcMUX)
-  2'b00:pcn=PCE_r+( (zero)?( {{20{IR_EX_r[31]}},IR_EX_r[7],IR_EX_r[30:25],IR_EX_r[11:8],1'b0} ):4);//Branch
+  2'b00:pcn= (zero)?( PCE_r+ {{20{IR_EX_r[31]}},IR_EX_r[7],IR_EX_r[30:25],IR_EX_r[11:8],1'b0} ): pc + 4;//Branch
   2'b01:pcn=(A_r + {{20{IR_EX_r[31]}},IR_EX_r[31:20]} )&32'hFFFE;//JALR
   2'b10:pcn=pc+4;//普通周期
   2'b11:pcn=PCE_r + { {12{IR_EX_r[31]}},IR_EX_r[19:12],IR_EX_r[20],IR_EX_r[30:21],1'b0 };//JAL
@@ -228,6 +296,7 @@ end
 
 always @(posedge clk or negedge rstn) begin
   if(~rstn) pc<=0;
+  else if(LD_R_Hazard)pc<=pc;
   else pc<=pcn;
 end
 

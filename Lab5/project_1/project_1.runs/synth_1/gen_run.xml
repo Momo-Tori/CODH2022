@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1651477334">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1651504829">
   <File Type="PA-TCL" Name="CPUDownload.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CPUDownload_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPUDownload_reports.tcl"/>
@@ -72,6 +72,12 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../coe/data.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coe/testWithHazard.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

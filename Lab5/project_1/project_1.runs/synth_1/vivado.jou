@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon May  2 15:42:24 2022
-# Process ID: 84820
+# Start of session at: Mon May  2 23:20:31 2022
+# Process ID: 95124
 # Current directory: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log CPUDownload.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPUDownload.tcl
 # Log file: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/CPUDownload.vds

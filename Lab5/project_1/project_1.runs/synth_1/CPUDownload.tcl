@@ -38,6 +38,7 @@ add_files D:/CodeTry/CODExperiment/Lab5/coe/test.coe
 add_files D:/CodeTry/CODExperiment/Lab5/coe/sort.coe
 add_files D:/CodeTry/CODExperiment/Lab5/coe/testWithoutHazard.coe
 add_files D:/CodeTry/CODExperiment/Lab5/coe/data.coe
+add_files d:/CodeTry/CODExperiment/Lab5/coe/testWithHazard.coe
 read_verilog -library xil_defaultlib {
   D:/CodeTry/CODExperiment/Lab5/ALU.v
   D:/CodeTry/CODExperiment/Lab5/ImmGen.v
