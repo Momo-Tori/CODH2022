@@ -19,9 +19,6 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -38,7 +35,10 @@ add_files D:/CodeTry/CODExperiment/Lab5/coe/test.coe
 add_files D:/CodeTry/CODExperiment/Lab5/coe/sort.coe
 add_files D:/CodeTry/CODExperiment/Lab5/coe/testWithoutHazard.coe
 add_files D:/CodeTry/CODExperiment/Lab5/coe/data.coe
-add_files d:/CodeTry/CODExperiment/Lab5/coe/testWithHazard.coe
+add_files D:/CodeTry/CODExperiment/Lab5/coe/testWithHazard.coe
+add_files D:/CodeTry/CODExperiment/Lab5/coe/simple_test_cpu_pl.coe
+add_files d:/CodeTry/CODExperiment/Lab5/coe/新建文件夹/sort.coe
+add_files d:/CodeTry/CODExperiment/Lab5/coe/新建文件夹/data.coe
 read_verilog -library xil_defaultlib {
   D:/CodeTry/CODExperiment/Lab5/ALU.v
   D:/CodeTry/CODExperiment/Lab5/ImmGen.v
@@ -47,6 +47,9 @@ read_verilog -library xil_defaultlib {
   D:/CodeTry/CODExperiment/Lab5/register_32_32.v
   D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v
 }
+read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci
+set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem_ooc.xdc]
+
 read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem.xci
 set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem_ooc.xdc]
 
@@ -55,9 +58,6 @@ set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperime
 
 read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci
 set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest_ooc.xdc]
-
-read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci
-set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -70,6 +70,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc D:/CodeTry/CODExperiment/Lab5/Nexys4DDR.xdc
 set_property used_in_implementation false [get_files D:/CodeTry/CODExperiment/Lab5/Nexys4DDR.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

@@ -60,9 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -78,10 +75,10 @@ set rc [catch {
   set_property ip_output_repo D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/CPUDownload.dcp
+  read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci
   read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem.xci
   read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/Data_Mem_DualPorts/Data_Mem_DualPorts.xci
   read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci
-  read_ip -quiet D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci
   read_xdc D:/CodeTry/CODExperiment/Lab5/Nexys4DDR.xdc
   link_design -top CPUDownload -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb

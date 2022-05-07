@@ -71,3 +71,6 @@ sw t0,0xc(t6)
 addi 	t1,t1,4
 beq zero,zero,OutLoop
 OutputFin: addi zero,zero,0
+nop
+nop
+nop

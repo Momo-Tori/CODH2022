@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1651504829">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1651921488">
   <File Type="BITSTR-BMM" Name="CPUDownload_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="CPUDownload_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="CPUDownload_timing_summary_init.rpt"/>
@@ -143,6 +143,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../coe/simple_test_cpu_pl.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coe/新建文件夹/sort.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coe/新建文件夹/data.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/InstMem/InstMem.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="CPUDownload"/>
@@ -179,7 +204,6 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="DataMem"/>
-  <BlockFileSet Type="BlockSrcs" Name="InstMem"/>
   <BlockFileSet Type="BlockSrcs" Name="Data_Mem_DualPorts"/>
   <BlockFileSet Type="BlockSrcs" Name="InstMemoryTest"/>
 </GenRun>

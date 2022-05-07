@@ -67,16 +67,19 @@ always @(posedge clk or negedge rstn) begin
   IR_WB_r<=32'h00000013;
   end
   else begin
+
+  if(B_Hazard)
+      IR_r<=32'h00000013;
+  else if(LD_R_Hazard)
+      IR_r<=IR_r;
+  else
+      IR_r<=Ins;
+  
   if(LD_R_Hazard)begin
     PCD_r<=PCD_r;
-    IR_r<=IR_r;
   end
   else begin
     PCD_r<=pc;
-    if(B_Hazard)
-      IR_r<=32'h00000013;
-    else
-      IR_r<=Ins;
   end
   
   PCE_r<=PCD_r;
@@ -85,7 +88,7 @@ always @(posedge clk or negedge rstn) begin
   Imm_r<=Imm;
   Rd_r<=IR_r[11:7];
   Y_r<=ALUResult;
-  MDW_r<=B_r;
+  MDW_r<=B_r_fixed;
   RdM_r<=Rd_r;
   MDR_r<=ReadData;
   YW_r<=Y_r;
@@ -185,9 +188,9 @@ assign Mem2Ex_sr2=(RdM_r==IR_EX_r[24:20]) & SR2 & RegWrite_r_MEM;
 
 //判断是否有数据冲突
 wire SR1_ID,SR2_ID,isLWHazard;
-assign SR1_ID=~((IR_r[6:2]==5'b11011)|AUIPC_r_EX);
+assign SR1_ID=~((IR_r[6:2]==5'b11011)|AUIPC);
 assign SR2_ID=(IR_r[3:2]==2'b00&IR_r[5]);
-assign isLWHazard=( (Rd_r==IR_r[19:15]) & SR1_ID ) | ( Rd_r==IR_r[24:20] & SR2_ID );
+assign isLWHazard=( (Rd_r==IR_r[19:15]) & SR1_ID & (| IR_r[19:15]) ) | ( Rd_r==IR_r[24:20] & SR2_ID &(|IR_r[24:20]) );
 
 //LD_R_Hazard=EX为LW且ID需要Mem读出的数据
 wire LD_R_Hazard;
@@ -198,7 +201,7 @@ assign LD_R_Hazard=MemtoReg_r_EX&isLWHazard;
 //Branch Hazard部分
 //跳转成功时将已经进入流水线的两个指令清除为NOP
 wire B_Hazard;
-assign B_Hazard=PCChange&IR_EX_r[3:2]==2'b00&zero;
+assign B_Hazard=PCChange_r_EX&(((IR_EX_r[3:2]==2'b00)&zero)|IR_EX_r[2]);
 
 
 
@@ -212,16 +215,28 @@ assign DebugMemAddr=chk_addr[7:0];
 
 always @(*) begin
     if(chk_addr[15:12]==4'b0000)
-    case (chk_addr[3:0])
-        4'b0000:chk_data=pcn;
-        4'b0001:chk_data=pc;
-        4'b0010:chk_data=Ins;
-        4'b0011:chk_data={MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite,ALUOp};
-        4'b0100:chk_data=Reg1Data;
-        4'b0101:chk_data=Reg2Data;
-        4'b0110:chk_data=Imm;
-        4'b0111:chk_data=ALUResult;
-        4'b1000:chk_data=ReadData;
+    case (chk_addr[4:0])
+        5'h0:chk_data=pcn;
+        5'h1:chk_data=pc;
+        5'h2:chk_data=PCD_r;
+        5'h3:chk_data=IR_r;
+        5'h4:chk_data={Mem2Ex_sr1,Wb2Ex_sr1,Mem2Ex_sr2,
+        Wb2Ex_sr2,B_Hazard,isLWHazard,MemtoReg_r_EX,
+        MemWrite_r_EX,ALUSrc_r_EX,
+        RegWrite_r_EX,MemRead_r_EX,PCChange_r_EX,AUIPC_r_EX};
+        5'h5:chk_data=PCE_r;
+        5'h6:chk_data=A_r;
+        5'h7:chk_data=B_r;
+        5'h8:chk_data=Imm_r;
+        5'h9:chk_data=IR_EX_r;
+        5'hA:chk_data={MemtoReg_r_MEM,MemWrite_r_MEM,RegWrite_r_MEM,MemRead_r_MEM};
+        5'hB:chk_data=Y_r;
+        5'hC:chk_data=MDW_r;
+        5'hD:chk_data=IR_MEM_r;
+        5'hE:chk_data={MemtoReg_r_WB,RegWrite_r_WB};
+        5'hF:chk_data=MDR_r;
+        5'h10:chk_data=YW_r;
+        5'h11:chk_data=IR_WB_r;
         default:chk_data=0;
     endcase
     else if(chk_addr[15:12]==4'b0001)
@@ -233,6 +248,27 @@ end
 
 //Control模块
 
+reg [31:0] A_r_fixed;
+reg [31:0] B_r_fixed;
+
+always @(*) begin
+  case({Mem2Ex_sr1,Wb2Ex_sr1})
+  2'b00:A_r_fixed=A_r;
+  2'b01:A_r_fixed=WriteData;
+  2'b10:A_r_fixed=Y_r;
+  2'b11:A_r_fixed=Y_r;
+  default:A_r_fixed=32'hxxxxxxxx;
+  endcase
+
+  case({Mem2Ex_sr2,Wb2Ex_sr2})
+  2'b00:B_r_fixed=B_r;
+  2'b01:B_r_fixed=WriteData;
+  2'b10:B_r_fixed=Y_r;
+  2'b11:B_r_fixed=Y_r;
+  default:B_r_fixed=32'hxxxxxxxx;
+  endcase
+end
+
 always @(*) begin
   if(MemtoReg_r_WB)WriteData=MDR_r;
   else WriteData=YW_r;
@@ -240,24 +276,12 @@ end
 
 always @(*) begin
   if((PCChange_r_EX&(IR_EX_r[2]))|AUIPC_r_EX) ALU1=PCE_r;
-  else case({Mem2Ex_sr1,Wb2Ex_sr1})
-  2'b00:ALU1=A_r;
-  2'b01:ALU1=WriteData;
-  2'b10:ALU1=Y_r;
-  2'b11:ALU1=Y_r;
-  default:ALU1=32'hxxxxxxxx;
-  endcase
+  else ALU1=A_r_fixed;
 
   if(PCChange_r_EX&(IR_EX_r[2])) ALU2=4;
   else if(AUIPC_r_EX) ALU2={IR_EX_r[31:12],{12{1'b0}}};
   else if(ALUSrc_r_EX) ALU2=Imm_r;
-  else case({Mem2Ex_sr2,Wb2Ex_sr2})
-  2'b00:ALU2=B_r;
-  2'b01:ALU2=WriteData;
-  2'b10:ALU2=Y_r;
-  2'b11:ALU2=Y_r;
-  default:ALU2=32'hxxxxxxxx;
-  endcase
+  else ALU2=B_r_fixed;
 end
 
 assign LW=IR_r[6:2]==5'b00000;
