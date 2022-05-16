@@ -47,7 +47,21 @@ reg [31:0]cnt;
 
 //pipeline
 
-//看看ppt
+/* 
+PCD_r IF-ID段pc
+IR_r  IF-ID段IR
+PCE_r ID-EX段pc
+A_r   ID-EX段从寄存器堆中读出来的第一个寄存器
+B_r   第二个
+Imm_r ID-EX段立即数
+Rd_r  ID-EX段目标寄存器
+Y_r   EX-MEM段Alu结果
+MDW_r EX-MEM段Mem要写回的地址
+RdM_r EX-MEM段目标寄存器
+MDR_r MEM-WB段从Mem读出的数据
+YW_r  MEM-WB段Alu结果
+RdW_r MEM-WB段目标寄存器
+ */
 reg [31:0] PCD_r, IR_r, PCE_r, A_r, B_r, Imm_r, Rd_r, Y_r, MDW_r, RdM_r, MDR_r, YW_r, RdW_r;
 
 //传递IR到流水线后面
