@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May 17 10:16:15 2022
+# Process ID: 65176
+# Current directory: D:/CodeTry/CODExperiment/Lab6/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent67132 D:\CodeTry\CODExperiment\Lab6\project_1\project_1.xpr
+# Log file: D:/CodeTry/CODExperiment/Lab6/project_1/vivado.log
+# Journal file: D:/CodeTry/CODExperiment/Lab6/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/CodeTry/CODExperiment/Lab6/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 704.090 ; gain = 93.461
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 17 10:18:56 2022...
