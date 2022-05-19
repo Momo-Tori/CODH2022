@@ -19,12 +19,7 @@ always @(*) begin
     3'b100:rtemp=a^b;
     3'b101:rtemp=a>>b;
     3'b110:rtemp=a<<b;
-    3'b111:begin
-        if(b<WIDTH)
-            rtemp={{(WIDTH){a[WIDTH-1]}},a}>>b;
-        else
-            rtemp={(WIDTH){a[WIDTH-1]}};
-    end
+    3'b111:rtemp={{(WIDTH){a[WIDTH-1]}},a}>>b;
     default :rtemp<=0;
     endcase
 end

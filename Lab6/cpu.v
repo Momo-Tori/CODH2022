@@ -9,14 +9,14 @@ module  cpu (
   output  io_rd, 		//从外设输入数据时的读使能信号
   input [31:0]  io_din, 	//来自外设输入的数据
 
-  //Debug_BUS
+  //Debug_BUSs
   output reg [31:0] pc,  	//当前执行指令地址
   input [15:0] chk_addr, 	//数据通路状态的编码地址
   output reg [31:0] chk_data    //数据通路状态的数据
  );
 //De段生成信号
-wire MemtoReg, MemWrite, ALUSrc, RegWrite, MemRead, PCChange, AUIPC;
-wire [3:0]ALUOp;
+wire MemtoReg, MemWrite, ALUSrc, RegWrite, MemRead, PCChange, UI;
+reg [3:0]ALUOp;
 
 //ALU的两个输入
 reg [31:0]ALU1, ALU2;//MUX
@@ -32,10 +32,12 @@ wire [31:0]Ins;
 wire [31:0]Reg1Data, Reg2Data;
 //ALU的输出
 wire [31:0]ALUResult;
+//最终给Y_r的值
+reg [31:0] Y;
 //ALU的f输出
 wire [2:0]f;
 //Br指令是否跳转的信号
-wire zero;
+reg zero;
 //处理的立即数
 wire [31:0]Imm;
 //结合MMIO之后最终LD读出来的数据
@@ -71,7 +73,7 @@ reg [31:0] IR_EX_r, IR_MEM_r, IR_WB_r;
 reg [3:0] ALUOp_r;
 
 //下面是信号各个阶段的传递
-reg MemtoReg_r_EX, MemWrite_r_EX, ALUSrc_r_EX, RegWrite_r_EX, MemRead_r_EX, PCChange_r_EX, AUIPC_r_EX;
+reg MemtoReg_r_EX, MemWrite_r_EX, ALUSrc_r_EX, RegWrite_r_EX, MemRead_r_EX, PCChange_r_EX, UI_r_EX;
 
 reg MemtoReg_r_MEM, MemWrite_r_MEM, RegWrite_r_MEM, MemRead_r_MEM;
 
@@ -120,7 +122,7 @@ always @( posedge clk or negedge rstn ) begin
   B_r <= Reg2Data;
   Imm_r <= Imm;
   Rd_r <= IR_r[11:7];
-  Y_r <= ALUResult;
+  Y_r <= Y;
   MDW_r <= B_r_fixed;
   RdM_r <= Rd_r;
   MDR_r <= ReadData;
@@ -145,7 +147,7 @@ always @( posedge clk or negedge rstn ) begin
   RegWrite_r_EX <= 0;
   MemRead_r_EX <= 0;
   PCChange_r_EX <= 0;
-  AUIPC_r_EX <= 0;
+  UI_r_EX <= 0;
   end
   else begin
   if( LD_R_Hazard|B_Hazard )
@@ -167,7 +169,7 @@ always @( posedge clk or negedge rstn ) begin
   ALUOp_r <= ALUOp;
 
   ALUSrc_r_EX <= ALUSrc;
-  AUIPC_r_EX <= AUIPC;
+  UI_r_EX <= UI;
   end
 end
 
@@ -202,7 +204,7 @@ end
 //forwarding unit
 //EX指令是否要取寄存器SR1或SR2
 wire SR1, SR2;
-assign SR1 = ~( ( IR_EX_r[6:2] == 5'b11011 )|AUIPC_r_EX );
+assign SR1 = ~( ( IR_EX_r[6:2] == 5'b11011 )|UI_r_EX );
 assign SR2 = ( IR_EX_r[3:2] == 2'b00&IR_EX_r[5] );
 //是否需要Wb to Ex或Mem to Ex
 wire Wb2Ex_sr1, Wb2Ex_sr2, Mem2Ex_sr1, Mem2Ex_sr2;
@@ -221,7 +223,7 @@ assign Mem2Ex_sr2 = ( RdM_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_MEM;
 
 //判断是否有数据冲突
 wire SR1_ID, SR2_ID, isLWHazard;
-assign SR1_ID = ~( ( IR_r[6:2] == 5'b11011 )|AUIPC );
+assign SR1_ID = ~( ( IR_r[6:2] == 5'b11011 )|UI );
 assign SR2_ID = ( IR_r[3:2] == 2'b00&IR_r[5] );
 assign isLWHazard = (  ( Rd_r == IR_r[19:15] ) & SR1_ID & ( | IR_r[19:15] )  ) | (  Rd_r == IR_r[24:20] & SR2_ID &( |IR_r[24:20] )  );
 
@@ -256,7 +258,7 @@ always @( * ) begin
         5'h4:chk_data = {Mem2Ex_sr1, Wb2Ex_sr1, Mem2Ex_sr2, 
         Wb2Ex_sr2, B_Hazard, isLWHazard, MemtoReg_r_EX, 
         MemWrite_r_EX, ALUSrc_r_EX, 
-        RegWrite_r_EX, MemRead_r_EX, PCChange_r_EX, AUIPC_r_EX};
+        RegWrite_r_EX, MemRead_r_EX, PCChange_r_EX, UI_r_EX};
         5'h5:chk_data = PCE_r;
         5'h6:chk_data = A_r;
         5'h7:chk_data = B_r;
@@ -303,20 +305,33 @@ always @( * ) begin
   endcase
 end
 
+//ALU输出的MUX
+always @( * ) begin
+  if((IR_EX_r[4:2]==4'b100)&IR_EX_r[14:13]==2'b01)
+    if(IR_r[12])Y=f[2];
+    else Y=f[1]; //SLT相关指令
+  else
+    Y=ALUResult;
+end
+
+
 //写入Mem的MUX
 always @( * ) begin
   if( MemtoReg_r_WB )WriteData = MDR_r;
   else WriteData = YW_r;
 end
 
+wire JAL_Ex;
+assign JAL_Ex=PCChange_r_EX&( IR_EX_r[2]);
 
 //这里是ALU两个输入数据的选择
 always @( * ) begin
-  if( ( PCChange_r_EX&( IR_EX_r[2] ) )|AUIPC_r_EX ) ALU1 = PCE_r;
+  if( JAL_Ex |(UI_r_EX & ( ~IR_EX_r[5] ))) ALU1 = PCE_r;
+  else if(UI_r_EX & IR_EX_r[5] ) ALU1 = 0;
   else ALU1 = A_r_fixed;
 
-  if( PCChange_r_EX&( IR_EX_r[2] ) ) ALU2 = 4;
-  else if( AUIPC_r_EX ) ALU2 = {IR_EX_r[31:12], {12{1'b0}}};
+  if( JAL_Ex ) ALU2 = 4;
+  else if( UI_r_EX ) ALU2 = {IR_EX_r[31:12], {12{1'b0}}};
   else if( ALUSrc_r_EX ) ALU2 = Imm_r;
   else ALU2 = B_r_fixed;
 end
@@ -328,15 +343,42 @@ assign MemtoReg = LW;//LW
 assign MemRead = LW;//LW
 assign SW = IR_r[6:2] == 5'b01000;
 assign MemWrite = SW;//SW
-assign ALUSrc = ( IR_r[5] == 0 )|( SW );
-assign RegWrite = ( IR_r[5:2]!=4'b1000 );
-wire sub;
-assign sub = ( IR_r[30] == 1&&IR_r[6:2] == 5'b01100 )||( IR_r[6:2] == 5'b11000 );
-assign ALUOp = {2'b00, ~sub};
+assign ALUSrc = ( ~IR_r[5] )|( SW );
+assign RegWrite = ~( IR_r[5]& ~( |IR_r[4:2]) );
 assign PCChange = IR_r[6:4] == 3'b110;//改变PC的那几条指令初步判断
-assign AUIPC = IR_r[6:2] == 5'b00101;
+//UI指指令为LUI或AUIPC
+assign UI = IR_r[4:2] == 3'b101;
 
-assign zero = IR_EX_r[14]?f[1]:f[0];
+wire op=~(|IR_r[14:12]);
+wire sub;
+assign sub= (~IR_r[2])&(IR_r[6]|(IR_r[4]&
+          ((IR_r[14:13]==2'b01)|(op & IR_r[30]))));
+wire add;
+assign add= LW|SW|IR_r[2]|(IR_r[4] & op);
+always @( * ) begin
+  if(sub) ALUOp=3'b000;
+  else if(add) ALUOp=3'b001;
+  else case (IR_r[14:12])
+    3'b001: ALUOp=6;
+    3'b100: ALUOp=4;
+    3'b101: if(IR_r[30])ALUOp=7;
+            else        ALUOp=5;
+    3'b110: ALUOp=3;
+    3'b111: ALUOp=2;
+    default: ALUOp=0;
+  endcase
+end
+always @( * ) begin
+  case (IR_r[14:12])
+    3'b000: zero=f[0];
+    3'b001: zero=~f[0];
+    3'b100: zero=f[1];
+    3'b101: zero=~f[1];
+    3'b110: zero=f[2];
+    3'b111: zero=~f[2];
+    default: zero=0;
+  endcase
+end
 
 //pcn
 always @( * ) begin
