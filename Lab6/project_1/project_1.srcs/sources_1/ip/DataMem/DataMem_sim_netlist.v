@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue May 17 09:51:31 2022
+// Date        : Fri May 20 23:37:29 2022
 // Host        : Yun running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem_sim_netlist.v
+//               D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem_sim_netlist.v
 // Design      : DataMem
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -62,12 +62,12 @@ module DataMem
   (* c_has_qspo_rst = "0" *) 
   (* c_has_qspo_srst = "0" *) 
   (* c_has_spo = "1" *) 
-  (* c_mem_init_file = "no_coe_file_loaded" *) 
+  (* c_mem_init_file = "DataMem.mif" *) 
   (* c_parser_type = "1" *) 
   (* c_pipeline_stages = "0" *) 
   (* c_qce_joined = "0" *) 
   (* c_qualify_we = "0" *) 
-  (* c_read_mif = "0" *) 
+  (* c_read_mif = "1" *) 
   (* c_reg_a_d_inputs = "0" *) 
   (* c_reg_dpra_input = "0" *) 
   (* c_sync_enable = "1" *) 
@@ -99,9 +99,9 @@ endmodule
 (* C_HAS_QDPO_CLK = "0" *) (* C_HAS_QDPO_RST = "0" *) (* C_HAS_QDPO_SRST = "0" *) 
 (* C_HAS_QSPO = "0" *) (* C_HAS_QSPO_CE = "0" *) (* C_HAS_QSPO_RST = "0" *) 
 (* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "1" *) (* C_HAS_WE = "1" *) 
-(* C_MEM_INIT_FILE = "no_coe_file_loaded" *) (* C_MEM_TYPE = "2" *) (* C_PARSER_TYPE = "1" *) 
+(* C_MEM_INIT_FILE = "DataMem.mif" *) (* C_MEM_TYPE = "2" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
-(* C_READ_MIF = "0" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
+(* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
 (* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
 module DataMem_dist_mem_gen_v8_0_13
    (a,
@@ -1319,7 +1319,7 @@ module DataMem_dpram
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "0" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_0_0
        (.A(a[6:0]),
         .D(d[0]),
@@ -1341,7 +1341,7 @@ module DataMem_dpram
   (* ram_slice_begin = "10" *) 
   (* ram_slice_end = "10" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_10_10
        (.A(a[6:0]),
         .D(d[10]),
@@ -1357,7 +1357,7 @@ module DataMem_dpram
   (* ram_slice_begin = "11" *) 
   (* ram_slice_end = "11" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_11_11
        (.A(a[6:0]),
         .D(d[11]),
@@ -1373,7 +1373,7 @@ module DataMem_dpram
   (* ram_slice_begin = "12" *) 
   (* ram_slice_end = "12" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_12_12
        (.A(a[6:0]),
         .D(d[12]),
@@ -1389,7 +1389,7 @@ module DataMem_dpram
   (* ram_slice_begin = "13" *) 
   (* ram_slice_end = "13" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_13_13
        (.A(a[6:0]),
         .D(d[13]),
@@ -1421,7 +1421,7 @@ module DataMem_dpram
   (* ram_slice_begin = "15" *) 
   (* ram_slice_end = "15" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_15_15
        (.A(a[6:0]),
         .D(d[15]),
@@ -1437,7 +1437,7 @@ module DataMem_dpram
   (* ram_slice_begin = "16" *) 
   (* ram_slice_end = "16" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_16_16
        (.A(a[6:0]),
         .D(d[16]),
@@ -1469,7 +1469,7 @@ module DataMem_dpram
   (* ram_slice_begin = "18" *) 
   (* ram_slice_end = "18" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_18_18
        (.A(a[6:0]),
         .D(d[18]),
@@ -1485,7 +1485,7 @@ module DataMem_dpram
   (* ram_slice_begin = "19" *) 
   (* ram_slice_end = "19" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_19_19
        (.A(a[6:0]),
         .D(d[19]),
@@ -1501,7 +1501,7 @@ module DataMem_dpram
   (* ram_slice_begin = "1" *) 
   (* ram_slice_end = "1" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_1_1
        (.A(a[6:0]),
         .D(d[1]),
@@ -1533,7 +1533,7 @@ module DataMem_dpram
   (* ram_slice_begin = "21" *) 
   (* ram_slice_end = "21" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_21_21
        (.A(a[6:0]),
         .D(d[21]),
@@ -1565,7 +1565,7 @@ module DataMem_dpram
   (* ram_slice_begin = "23" *) 
   (* ram_slice_end = "23" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_23_23
        (.A(a[6:0]),
         .D(d[23]),
@@ -1597,7 +1597,7 @@ module DataMem_dpram
   (* ram_slice_begin = "25" *) 
   (* ram_slice_end = "25" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_25_25
        (.A(a[6:0]),
         .D(d[25]),
@@ -1613,7 +1613,7 @@ module DataMem_dpram
   (* ram_slice_begin = "26" *) 
   (* ram_slice_end = "26" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_26_26
        (.A(a[6:0]),
         .D(d[26]),
@@ -1629,7 +1629,7 @@ module DataMem_dpram
   (* ram_slice_begin = "27" *) 
   (* ram_slice_end = "27" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_27_27
        (.A(a[6:0]),
         .D(d[27]),
@@ -1645,7 +1645,7 @@ module DataMem_dpram
   (* ram_slice_begin = "28" *) 
   (* ram_slice_end = "28" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_28_28
        (.A(a[6:0]),
         .D(d[28]),
@@ -1677,7 +1677,7 @@ module DataMem_dpram
   (* ram_slice_begin = "2" *) 
   (* ram_slice_end = "2" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_2_2
        (.A(a[6:0]),
         .D(d[2]),
@@ -1693,7 +1693,7 @@ module DataMem_dpram
   (* ram_slice_begin = "30" *) 
   (* ram_slice_end = "30" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_30_30
        (.A(a[6:0]),
         .D(d[30]),
@@ -1709,7 +1709,7 @@ module DataMem_dpram
   (* ram_slice_begin = "31" *) 
   (* ram_slice_end = "31" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_31_31
        (.A(a[6:0]),
         .D(d[31]),
@@ -1725,7 +1725,7 @@ module DataMem_dpram
   (* ram_slice_begin = "3" *) 
   (* ram_slice_end = "3" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000003)) 
     ram_reg_0_127_3_3
        (.A(a[6:0]),
         .D(d[3]),
@@ -1757,7 +1757,7 @@ module DataMem_dpram
   (* ram_slice_begin = "5" *) 
   (* ram_slice_end = "5" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_5_5
        (.A(a[6:0]),
         .D(d[5]),
@@ -1773,7 +1773,7 @@ module DataMem_dpram
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "6" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_6_6
        (.A(a[6:0]),
         .D(d[6]),
@@ -1789,7 +1789,7 @@ module DataMem_dpram
   (* ram_slice_begin = "7" *) 
   (* ram_slice_end = "7" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_7_7
        (.A(a[6:0]),
         .D(d[7]),
@@ -1821,7 +1821,7 @@ module DataMem_dpram
   (* ram_slice_begin = "9" *) 
   (* ram_slice_end = "9" *) 
   RAM128X1D #(
-    .INIT(128'h00000000000000000000000000000000)) 
+    .INIT(128'h00000000000000000000000000000001)) 
     ram_reg_0_127_9_9
        (.A(a[6:0]),
         .D(d[9]),

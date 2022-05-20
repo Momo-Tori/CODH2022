@@ -1,0 +1,19 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:382]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:385]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:147]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:149]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:154]
+WARNING: [VRFC 10-3380] identifier 'B_r_fixed' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:167]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:194]

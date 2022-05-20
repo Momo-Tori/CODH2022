@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue May 17 09:50:43 2022
+-- Date        : Sat May 21 00:21:30 2022
 -- Host        : Yun running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               d:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem_stub.vhdl
+--               D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem_stub.vhdl
 -- Design      : InstMem
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

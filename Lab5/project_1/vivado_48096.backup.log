@@ -1,0 +1,1167 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat May  7 16:27:09 2022
+# Process ID: 48096
+# Current directory: D:/CodeTry/CODExperiment/Lab5/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent54456 D:\CodeTry\CODExperiment\Lab5\project_1\project_1.xpr
+# Log file: D:/CodeTry/CODExperiment/Lab5/project_1/vivado.log
+# Journal file: D:/CodeTry/CODExperiment/Lab5/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/CodeTry/CODExperiment/Lab5/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 693.496 ; gain = 83.996
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/sort.coe}] [get_ips InstMemoryTest]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/sort.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/sort.coe'
+generate_target all [get_files  D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'InstMemoryTest'...
+catch { config_ip_cache -export [get_ips -all InstMemoryTest] }
+export_ip_user_files -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci] -no_script -sync -force -quiet
+reset_run InstMemoryTest_synth_1
+launch_runs -jobs 6 InstMemoryTest_synth_1
+[Sat May  7 16:28:00 2022] Launched InstMemoryTest_synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/InstMemoryTest_synth_1/runme.log
+export_simulation -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci] -directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files -ipstatic_source_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+[Sat May  7 16:28:58 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 16:28:58 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:\CodeTry\CODExperiment\Lab5\bits\testWithHazard.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/sort.coe}] [get_ips InstMemoryTest]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/sort.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/sort.coe'
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+[Sat May  7 16:34:09 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/sort.coe}] [get_ips InstMemoryTest]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/sort.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/sort.coe'
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/data.coe}] [get_ips InstMemoryTest]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/data.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/data.coe'
+generate_target all [get_files  D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'InstMemoryTest'...
+catch { config_ip_cache -export [get_ips -all InstMemoryTest] }
+export_ip_user_files -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci] -no_script -sync -force -quiet
+reset_run InstMemoryTest_synth_1
+launch_runs -jobs 6 InstMemoryTest_synth_1
+[Sat May  7 16:40:29 2022] Launched InstMemoryTest_synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/InstMemoryTest_synth_1/runme.log
+export_simulation -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci] -directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files -ipstatic_source_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/sort.coe}] [get_ips InstMemoryTest]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/sort.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/sort.coe'
+generate_target all [get_files  D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'InstMemoryTest'...
+catch { config_ip_cache -export [get_ips -all InstMemoryTest] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP InstMemoryTest, cache-ID = 5b03498686600ffa; cache size = 1.900 MB.
+catch { [ delete_ip_run [get_ips -all InstMemoryTest] ] }
+INFO: [Project 1-386] Moving file 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci' from fileset 'InstMemoryTest' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci'
+export_simulation -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci] -directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files -ipstatic_source_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci' is already up-to-date
+[Sat May  7 16:41:51 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 16:41:51 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci' is already up-to-date
+[Sat May  7 17:14:32 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 17:14:32 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/sort.coe}] [get_ips InstMem]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/sort.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/sort.coe'
+generate_target all [get_files  D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'InstMem'...
+catch { config_ip_cache -export [get_ips -all InstMem] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP InstMem, cache-ID = e8d29e078637a2c0; cache size = 1.900 MB.
+export_ip_user_files -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci'
+export_simulation -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci] -directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files -ipstatic_source_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'InstMemoryTest'...
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP InstMemoryTest, cache-ID = e8d29e078637a2c0; cache size = 1.900 MB.
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci' is already up-to-date
+[Sat May  7 17:21:43 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 17:21:43 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/bits/testWithHazard.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/bits/simple_test_cpu_pl.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/InstMemoryTest.xci' is already up-to-date
+[Sat May  7 17:28:53 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/新建文件夹/sort.coe}] [get_ips InstMem]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/新建文件夹/sort.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/新建文件夹/sort.coe'
+generate_target all [get_files  D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'InstMem'...
+catch { config_ip_cache -export [get_ips -all InstMem] }
+export_ip_user_files -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci]
+launch_runs -jobs 6 InstMem_synth_1
+[Sat May  7 17:44:22 2022] Launched InstMem_synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/InstMem_synth_1/runme.log
+export_simulation -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci] -directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files -ipstatic_source_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/新建文件夹/data.coe}] [get_ips DataMem]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/新建文件夹/data.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/新建文件夹/data.coe'
+generate_target all [get_files  D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'DataMem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'DataMem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DataMem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'DataMem'...
+catch { config_ip_cache -export [get_ips -all DataMem] }
+export_ip_user_files -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem.xci] -no_script -sync -force -quiet
+reset_run DataMem_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/DataMem_synth_1
+
+launch_runs -jobs 6 DataMem_synth_1
+[Sat May  7 17:44:47 2022] Launched DataMem_synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/DataMem_synth_1/runme.log
+export_simulation -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem.xci] -directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files -ipstatic_source_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'InstMemoryTest'...
+[Sat May  7 17:45:42 2022] Launched InstMemoryTest_synth_1, synth_1...
+Run output will be captured here:
+InstMemoryTest_synth_1: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/InstMemoryTest_synth_1/runme.log
+synth_1: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 17:45:42 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/DataMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/sort.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/sort.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/testWithoutHazard.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/testWithHazard.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/simple_test_cpu_pl.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/Data_Mem_DualPorts/sim/Data_Mem_DualPorts.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem_DualPorts
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/sim/InstMemoryTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMemoryTest
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:275]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:278]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:70]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:76]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:115]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpuDownload.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPUDownload
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:303]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:306]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:110]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:116]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:349]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:350]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'wa' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:351]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:356]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat May  7 17:46:45 2022. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 94.426 ; gain = 2.812
+INFO: [Common 17-206] Exiting Webtalk at Sat May  7 17:46:45 2022...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 2026.812 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2084.730 ; gain = 57.918
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2128.039 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/DataMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/sort.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/sort.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/testWithoutHazard.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/testWithHazard.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/simple_test_cpu_pl.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/Data_Mem_DualPorts/sim/Data_Mem_DualPorts.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem_DualPorts
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/sim/InstMemoryTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMemoryTest
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:275]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:278]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:70]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:76]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:115]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpuDownload.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPUDownload
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:303]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:306]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:110]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:116]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:349]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:350]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'wa' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:351]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:356]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2128.039 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/DataMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/sort.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/sort.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/testWithoutHazard.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/testWithHazard.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/simple_test_cpu_pl.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/Data_Mem_DualPorts/sim/Data_Mem_DualPorts.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem_DualPorts
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/sim/InstMemoryTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMemoryTest
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:275]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:278]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:70]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:76]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:115]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpuDownload.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPUDownload
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:316]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:319]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:111]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:117]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:156]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:362]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:363]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'wa' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:364]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:369]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2493.598 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/DataMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/InstMem.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/sort.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/InstMemoryTest.mif'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/sort.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/test.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/testWithoutHazard.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/data.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/testWithHazard.coe'
+INFO: [SIM-utils-43] Exported 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim/simple_test_cpu_pl.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/DataMem/sim/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/Data_Mem_DualPorts/sim/Data_Mem_DualPorts.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Mem_DualPorts
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMemoryTest/sim/InstMemoryTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMemoryTest
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:275]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/cpu.v:278]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:70]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:76]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/cpu.v:115]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/cpuDownload.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPUDownload
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/pdu-v1.1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:315]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:318]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:110]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:116]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:155]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e054a24c6f094f6aa22a2c85a526433d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:361]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:362]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'wa' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:363]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sim_1/new/test.v:368]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ImmGen
+Compiling module xil_defaultlib.alu
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.register_file
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in test.DataMem.inst at time                 5100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                 7300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                 9500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                11700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                13900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                16100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                18300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                20500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                22700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                24900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                27100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                29300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                31500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                33700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                35900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                40700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                42900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                45100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                47300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                49500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                51700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                53900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                56100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                58300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                60500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                62700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                64900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                67100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                69300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                74100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                76300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                78500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                80700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                82900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                85100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                87300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                89500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                91700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                93900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                96100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time                98300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               100500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               105300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               107500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               109700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               111900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               114100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               116300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               118500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               120700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               122900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               125100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               127300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               129500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               134300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               136500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               138700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               140900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               143100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               145300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               147500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               149700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               151900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               154100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               156300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               161100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               163300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               165500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               167700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               169900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               172100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               174300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               176500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               178700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               180900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               185700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               187900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               190100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               192300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               194500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               196700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               198900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               201100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               203300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               208100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               210300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               212500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               214700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               216900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               219100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               221300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               223500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               228300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               230500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               232700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               234900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               237100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               239300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               241500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               246300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               248500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               250700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               252900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               255100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               257300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               262100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               264300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               266500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               268700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               270900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               275700 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               277900 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               280100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               282300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               287100 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               289300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               291500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               296300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               298500 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+WARNING in test.DataMem.inst at time               303300 ns: 
+Reading from out-of-range address. Max address in test.DataMem.inst is         255
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3348.895 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sat May  7 18:11:46 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 18:11:46 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property -dict [list CONFIG.coefficient_file {D:/CodeTry/CODExperiment/Lab5/coe/sort.coe}] [get_ips InstMem]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/CodeTry/CODExperiment/Lab5/coe/sort.coe' provided. It will be converted relative to IP Instance files '../../../../../coe/sort.coe'
+generate_target all [get_files  D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'InstMem'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'InstMem'...
+catch { config_ip_cache -export [get_ips -all InstMem] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP InstMem, cache-ID = 7d1908bf50b60eaa; cache size = 2.304 MB.
+catch { [ delete_ip_run [get_ips -all InstMem] ] }
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/InstMem_synth_1
+
+INFO: [Project 1-386] Moving file 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' from fileset 'InstMem' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci'
+export_simulation -of_objects [get_files D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci] -directory D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files -ipstatic_source_dir D:/CodeTry/CODExperiment/Lab5/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/CodeTry/CODExperiment/Lab5/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+[Sat May  7 18:12:32 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 18:12:32 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+[Sat May  7 18:26:48 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 18:26:48 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+[Sat May  7 18:54:57 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 18:54:57 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CodeTry/CODExperiment/Lab5/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci' is already up-to-date
+[Sat May  7 19:04:48 2022] Launched synth_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/synth_1/runme.log
+[Sat May  7 19:04:48 2022] Launched impl_1...
+Run output will be captured here: D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/CodeTry/CODExperiment/Lab5/project_1/project_1.runs/impl_1/CPUDownload.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF974A
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May  7 19:16:10 2022...

@@ -14,6 +14,7 @@ module  cpu (
   input [15:0] chk_addr, 	//数据通路状态的编码地址
   output reg [31:0] chk_data    //数据通路状态的数据
  );
+
 //De段生成信号
 wire MemtoReg, MemWrite, ALUSrc, RegWrite, MemRead, PCChange, UI;
 reg [3:0]ALUOp;
@@ -307,9 +308,9 @@ end
 
 //ALU输出的MUX
 always @( * ) begin
-  if((IR_EX_r[4:2]==4'b100)&IR_EX_r[14:13]==2'b01)
-    if(IR_r[12])Y=f[2];
-    else Y=f[1]; //SLT相关指令
+  if((IR_EX_r[4:2]==4'b100)&IR_EX_r[14:13]==2'b01)//SLT相关指令
+    if(IR_EX_r[12])Y=f[2];
+    else Y=f[1]; 
   else
     Y=ALUResult;
 end
@@ -352,7 +353,7 @@ assign UI = IR_r[4:2] == 3'b101;
 wire op=~(|IR_r[14:12]);
 wire sub;
 assign sub= (~IR_r[2])&(IR_r[6]|(IR_r[4]&
-          ((IR_r[14:13]==2'b01)|(op & IR_r[30]))));
+          ((IR_r[14:13]==2'b01)|(op & IR_r[30] & IR_r[5]))));
 wire add;
 assign add= LW|SW|IR_r[2]|(IR_r[4] & op);
 always @( * ) begin
@@ -369,7 +370,7 @@ always @( * ) begin
   endcase
 end
 always @( * ) begin
-  case (IR_r[14:12])
+  case (IR_EX_r[14:12])
     3'b000: zero=f[0];
     3'b001: zero=~f[0];
     3'b100: zero=f[1];
