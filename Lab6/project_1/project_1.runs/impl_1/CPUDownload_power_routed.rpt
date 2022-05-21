@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Fri May 20 23:34:04 2022
+| Date             : Sat May 21 10:54:40 2022
 | Host             : Yun running 64-bit major release  (build 9200)
 | Command          : report_power -file CPUDownload_power_routed.rpt -pb CPUDownload_power_summary_routed.pb -rpx CPUDownload_power_routed.rpx
 | Design           : CPUDownload
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.145        |
+| Total On-Chip Power (W)  | 0.150        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.048        |
+| Dynamic (W)              | 0.053        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.3         |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.014 |     5704 |       --- |             --- |
-|   LUT as Logic           |     0.012 |     2601 |     63400 |            4.10 |
+| Clocks                   |    <0.001 |        3 |       --- |             --- |
+| Slice Logic              |     0.016 |     5646 |       --- |             --- |
+|   LUT as Logic           |     0.014 |     2565 |     63400 |            4.05 |
 |   LUT as Distributed RAM |    <0.001 |      256 |     19000 |            1.35 |
+|   Register               |    <0.001 |     1839 |    126800 |            1.45 |
 |   CARRY4                 |    <0.001 |       70 |     15850 |            0.44 |
-|   Register               |    <0.001 |     1837 |    126800 |            1.45 |
-|   F7/F8 Muxes            |    <0.001 |      690 |     63400 |            1.09 |
+|   F7/F8 Muxes            |    <0.001 |      729 |     63400 |            1.15 |
 |   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
 |   Others                 |     0.000 |        8 |       --- |             --- |
-| Signals                  |     0.019 |     4058 |       --- |             --- |
+| Signals                  |     0.022 |     3922 |       --- |             --- |
 | I/O                      |     0.014 |       58 |       210 |           27.62 |
 | Static Power             |     0.097 |          |           |                 |
-| Total                    |     0.145 |          |           |                 |
+| Total                    |     0.150 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.049 |       0.034 |      0.015 |
+| Vccint    |       1.000 |     0.054 |       0.039 |      0.015 |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
 | Vcco33    |       3.300 |     0.008 |       0.004 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,12 +143,12 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| CPUDownload       |     0.048 |
-|   cpu             |     0.030 |
+| CPUDownload       |     0.053 |
+|   cpu             |     0.034 |
 |     DataMem       |     0.002 |
 |       U0          |     0.002 |
-|     register_file |     0.005 |
-|   pdu             |     0.003 |
+|     register_file |     0.006 |
+|   pdu             |     0.004 |
 +-------------------+-----------+
 
 
