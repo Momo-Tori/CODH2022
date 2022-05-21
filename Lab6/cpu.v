@@ -418,8 +418,17 @@ register_file register_file( clk, IR_r[19:15], IR_r[24:20], Reg1Data, Reg2Data, 
 
 
 //DataMem&MMIO
-DataMem DataMem( Y_r[10:2], MDW_r, DebugMemAddr, clk, MemWrite_r_MEM, ReadMemData, DebugMemData );//DataMem
-
+//DataMem DataMem( Y_r[10:2], MDW_r, DebugMemAddr, clk, MemWrite_r_MEM, ReadMemData, DebugMemData );//DataMem
+MEM_CACHE DataMem(
+  .Address(Y_r[10:2]),
+  .WriteData(MDW_r),
+  .DebugAddr(DebugMemAddr),
+  .clk(clk),
+  .we(MemWrite_r_MEM),
+  .rstn(rstn),
+  .ReadData(ReadMemData),
+  .DebugData(DebugMemData)
+  );
 wire MMIO;
 assign MMIO = Y_r >= 32'hFF00;
 
