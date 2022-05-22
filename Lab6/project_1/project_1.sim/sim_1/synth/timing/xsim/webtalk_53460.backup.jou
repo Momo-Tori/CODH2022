@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun May 22 23:40:25 2022
+# Process ID: 53460
+# Current directory: D:/CodeTry/CODExperiment/Lab6/project_1/project_1.sim/sim_1/synth/timing/xsim
+# Command line: wbtcv.exe -mode batch -source D:/CodeTry/CODExperiment/Lab6/project_1/project_1.sim/sim_1/synth/timing/xsim/xsim.dir/test_time_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/CodeTry/CODExperiment/Lab6/project_1/project_1.sim/sim_1/synth/timing/xsim/webtalk.log
+# Journal file: D:/CodeTry/CODExperiment/Lab6/project_1/project_1.sim/sim_1/synth/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/CodeTry/CODExperiment/Lab6/project_1/project_1.sim/sim_1/synth/timing/xsim/xsim.dir/test_time_synth/webtalk/xsim_webtalk.tcl -notrace

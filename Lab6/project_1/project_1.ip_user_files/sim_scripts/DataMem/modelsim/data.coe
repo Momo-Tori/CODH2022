@@ -1,4 +1,0 @@
-memory_initialization_radix  = 16;
-memory_initialization_vector =
-deadbeef
-00000008

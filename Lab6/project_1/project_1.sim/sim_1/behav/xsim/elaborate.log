@@ -4,26 +4,10 @@ Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c7d8f2f68f
 Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-3091] actual bit length 40 differs from formal bit length 16 for port 'in' [D:/CodeTry/CODExperiment/Lab6/InsCache.v:52]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:591]
-WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:592]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'wa' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:593]
-WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:598]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:632]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:633]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'wa' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:634]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:639]
 WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [D:/CodeTry/CODExperiment/Lab6/InsCache.v:52]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.decoder_4t16
-Compiling module xil_defaultlib.saturatingCounter
-Compiling module xil_defaultlib.encoder_16bits
-Compiling module xil_defaultlib.InsCache
-Compiling module xil_defaultlib.ImmGen
-Compiling module xil_defaultlib.alu
-Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
-Compiling module xil_defaultlib.InstMem
-Compiling module xil_defaultlib.register_file
-Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
-Compiling module xil_defaultlib.DataMem
-Compiling module xil_defaultlib.test
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot test_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
