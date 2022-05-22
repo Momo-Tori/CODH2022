@@ -116,6 +116,8 @@ always @( posedge clk or negedge rstn ) begin
   if( LD_R_Hazard )begin
     PCD_r <= PCD_r;
   end
+  else if(predictJ)
+    PCD_r <= PredictPC;
   else begin
     PCD_r <= pc;
   end
@@ -282,9 +284,9 @@ always @(*) begin
 end
 
 //4bits 全局历史寄存器，对应16个PHT
-reg GHR[3:0];
+reg[3:0] GHR;
 
-always @(*) begin
+always @(posedge clk or negedge rstn) begin
   if(~rstn) GHR=4'b0101;
   else if(Branch)
         GHR={GHR[2:0],zero};
@@ -316,7 +318,7 @@ endgenerate
 
 
 wire InsCacheRead;//JAR或BR预测成功
-assign InsCacheRead = ( (Branch & SCout[x][y_id]) | ( PCChange &(&IR_r[3:2])) );
+assign InsCacheRead = ( (Branch & SCout[x][y_id]) | ( PCChange & ( &IR_r[3:2] ) ) );
 
 wire[31:0] nextBranch;
 wire hit;
@@ -348,7 +350,7 @@ always @(posedge clk or negedge rstn) begin
   end
 end
 
-InsCache InsCache(clk,PCD_r,nextBranch,hit,
+InsCache InsCache(clk,PredictPC,nextBranch,hit,
                   AddressReady&InsCacheNeed,InsCacheAdd,InsCacheData);
 
 
@@ -385,6 +387,8 @@ always @( * ) begin
         5'hF:chk_data = MDR_r;
         5'h10:chk_data = YW_r;
         5'h11:chk_data = IR_WB_r;
+
+        5'h1f:chk_data = cnt;
         default:chk_data = 0;
     endcase
     else if( chk_addr[15:12] == 4'b0001 )

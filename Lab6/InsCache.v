@@ -17,13 +17,16 @@ reg [29:0] tag[WIDTH-1:0];//用[31:2]来确定tag
 reg [31:0] cacheData[WIDTH-1:0];//对应的地址
 
 reg[WIDTH_CNT-1:0] cnt=0;
+
+wire w;
+assign w=memWE&~(|(eqW&valid));
 always @(posedge clk) begin
-    if(memWE)
+    if(w)
     if(cnt==WIDTH-1) cnt=0;
     else cnt=cnt+1;
 end
 always @(posedge clk) begin
-    if(memWE) 
+    if(w) 
     begin
         valid[cnt]<=1;
         tag[cnt]<=memAdd[31:2];
@@ -32,11 +35,14 @@ always @(posedge clk) begin
 end
 
 
-reg[WIDTH-1:0] eq;
+reg[WIDTH-1:0] eq,eqW;
 integer i;
 always @(*) begin
     for(i=0; i<WIDTH; i=i+1)
+    begin
     eq[i]=(address[31:2]==tag[i]);
+    eqW[i]=(memAdd[31:2]==tag[i]);
+    end
 end
 
 wire [WIDTH-1:0] sig;

@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -33,20 +35,25 @@ add_files D:/CodeTry/CODExperiment/Lab6/coe/testWithHazard.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/testWithoutHazard.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/data.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/simple_test_cpu_pl.coe
-add_files d:/CodeTry/CODExperiment/Lab6/coe/leftInsTest.coe
+add_files D:/CodeTry/CODExperiment/Lab6/coe/leftInsTest.coe
+add_files d:/CodeTry/CODExperiment/Lab6/coe/sort.coe
 read_verilog -library xil_defaultlib {
   D:/CodeTry/CODExperiment/Lab6/ALU.v
   D:/CodeTry/CODExperiment/Lab6/ImmGen.v
+  D:/CodeTry/CODExperiment/Lab6/InsCache.v
   D:/CodeTry/CODExperiment/Lab6/cpu.v
+  D:/CodeTry/CODExperiment/Lab6/decoder.v
+  D:/CodeTry/CODExperiment/Lab6/encoder.v
   D:/CodeTry/CODExperiment/Lab6/pdu-v1.1.v
   D:/CodeTry/CODExperiment/Lab6/register_32_32.v
+  D:/CodeTry/CODExperiment/Lab6/saturatingCounter.v
   D:/CodeTry/CODExperiment/Lab6/cpuDownload.v
 }
-read_ip -quiet D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci
-set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem_ooc.xdc]
-
 read_ip -quiet D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem.xci
 set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem_ooc.xdc]
+
+read_ip -quiet D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem.xci
+set_property used_in_implementation false [get_files -all d:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

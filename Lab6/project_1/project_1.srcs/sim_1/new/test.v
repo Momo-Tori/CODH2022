@@ -53,9 +53,7 @@ module test(
   
   
   
-  
-
-//De段生成信号
+  //De段生成信号
 wire MemtoReg, MemWrite, ALUSrc, RegWrite, MemRead, PCChange, UI;
 reg [3:0]ALUOp;
 
@@ -148,12 +146,16 @@ always @( posedge clk or negedge rstn ) begin
       IR_r <= 32'h00000013;
   else if( LD_R_Hazard )//Load hazard，stall一个周期
       IR_r <= IR_r;
+  else if(predictJ)
+      IR_r <= nextBranch;
   else
       IR_r <= Ins;
   
   if( LD_R_Hazard )begin
     PCD_r <= PCD_r;
   end
+  else if(predictJ)
+    PCD_r <= PredictPC;
   else begin
     PCD_r <= pc;
   end
@@ -182,6 +184,7 @@ end
 always @( posedge clk or negedge rstn ) begin
   if( ~rstn )
   begin
+  predictJ_r_Ex<=0;
   MemtoReg_r_EX <= 0;
   MemWrite_r_EX <= 0;
   ALUSrc_r_EX <= 0;
@@ -193,6 +196,7 @@ always @( posedge clk or negedge rstn ) begin
   else begin
   if( LD_R_Hazard|B_Hazard )
   begin
+    predictJ_r_Ex<=0;
     MemtoReg_r_EX <= 0;
     MemWrite_r_EX <= 0;
     RegWrite_r_EX <= 0;
@@ -201,6 +205,7 @@ always @( posedge clk or negedge rstn ) begin
   end
   else
   begin
+    predictJ_r_Ex<=predictJ;
     MemtoReg_r_EX <= MemtoReg;
     MemWrite_r_EX <= MemWrite;
     RegWrite_r_EX <= RegWrite;
@@ -275,9 +280,116 @@ assign LD_R_Hazard = MemtoReg_r_EX&isLWHazard;
 
 
 //Branch Hazard部分
-//跳转成功时将已经进入流水线的两个指令清除为NOP
+//JARR和预测失败时将已经进入流水线的两个指令清除为NOP
 wire B_Hazard;
-assign B_Hazard = PCChange_r_EX&( ( ( IR_EX_r[3:2] == 2'b00 )&zero )|IR_EX_r[2] );
+wire JARR;
+assign JARR=PCChange_r_EX&(IR_EX_r[2]&~IR_EX_r[3]);
+assign B_Hazard = predictJ_r_Ex^ifJ;
+
+
+
+
+
+//动态预测部分
+
+//预测是跳转还是不跳转，若为1则预测为跳转
+wire predictJ;
+reg predictJ_r_Ex;
+//若原预测为Branch预测跳转或JAR必定跳转 且cache命中时，跳转
+//否则最终预测为不跳转
+//JARR默认不跳转，因为寄存器的值未知
+assign predictJ = InsCacheRead & hit;
+
+
+//分支结果判明，改变饱和寄存器的使能，只有Br才改变饱和寄存器
+wire Branch ;
+assign Branch = PCChange_r_EX & ~(IR_EX_r[3] | IR_EX_r[2]);
+wire SCwe;
+assign SCwe = Branch;
+
+//是否跳转
+reg ifJ;
+always @(*) begin
+  if(PCChange_r_EX)
+    begin
+      if(IR_EX_r[2])//JAR&JARR
+        ifJ=1;
+      else if(~(IR_EX_r[3]|IR_EX_r[2]))//Branch
+        ifJ=zero;
+      else ifJ=0;
+    end
+  else ifJ=0;
+end
+
+//4bits 全局历史寄存器，对应16个PHT
+reg[3:0] GHR;
+
+always @(posedge clk or negedge rstn) begin
+  if(~rstn) GHR=4'b0101;
+  else if(Branch)
+        GHR={GHR[2:0],zero};
+end
+
+wire [15:0]x;
+decoder_4t16 decoder_x(GHR,x);
+
+//一个PHT由PCD_r[5:2]确定，即一个PHT有16个saturatingCounter
+
+wire [15:0]y_id;
+decoder_4t16 decoder_y_id(PCD_r[5:2],y_id);
+
+wire [15:0]y_ex;
+decoder_4t16 decoder_y_ex(PCE_r[5:2],y_ex);
+
+wire [15:0]SCout[15:0];
+
+genvar i;
+genvar j;
+generate
+    for(i=0; i<16; i=i+1)
+      for(j=0;j<16;j=j+1)
+      begin
+        saturatingCounter SC(clk,rstn,SCwe&x[i]&y_ex[i],
+                            zero,SCout[i][j]);
+      end
+endgenerate
+
+
+wire InsCacheRead;//JAR或BR预测成功
+assign InsCacheRead = ( (Branch & SCout[x][y_id]) | ( PCChange &(&IR_r[3:2])) );
+
+wire[31:0] nextBranch;
+wire hit;
+
+wire AddressReady;
+assign AddressReady=InsCacheAdd==pc;
+reg InsCacheNeed;//需要更新值
+reg [31:0]InsCacheAdd;
+wire [31:0] InsCacheData;
+assign InsCacheData=Ins;
+
+always @(posedge clk or negedge rstn) begin
+  if(~rstn) 
+  begin
+    InsCacheAdd<=0;
+    InsCacheNeed<=0;
+  end
+  else begin
+    if(InsCacheRead&~hit)
+    begin
+      InsCacheNeed<=1;
+      InsCacheAdd<=PredictPC;
+    end
+    else
+      if(AddressReady)
+        begin
+          InsCacheNeed<=0;
+        end
+  end
+end
+
+InsCache InsCache(clk,PredictPC,nextBranch,hit,
+                  AddressReady&InsCacheNeed,InsCacheAdd,InsCacheData);
 
 
 
@@ -421,24 +533,48 @@ always @( * ) begin
   endcase
 end
 
+
+//预测的pc计算中间值
+reg [31:0]PredictPC;
+
+always @(*) begin
+  case ( IR_r[3:2] )
+      2'b00:PredictPC = PCD_r+ {{20{IR_r[31]}}, IR_r[7], IR_r[30:25], IR_r[11:8], 1'b0}  ;//Branch
+      2'b11:PredictPC = PCD_r + { {12{IR_r[31]}}, IR_r[19:12], IR_r[20], IR_r[30:21], 1'b0 }  ;//JAL
+      default:PredictPC = pc;
+  endcase
+end
+
 //pcn
 always @( * ) begin
   if( PCChange_r_EX )
     pcMUX = IR_EX_r[3:2];
     //pcMUX = 00-11分别为B, JALR, 其他指令, JAL
   else
-    pcMUX = 2'b10;
+    pcMUX = 2'b10;  
 end
 always @( * ) begin
-  case ( pcMUX )
-  2'b00:pcn =  ( zero )?(  PCE_r+ {{20{IR_EX_r[31]}}, IR_EX_r[7], IR_EX_r[30:25], IR_EX_r[11:8], 1'b0}  ): pc + 4;//Branch
-  2'b01:pcn = ( A_r + {{20{IR_EX_r[31]}}, IR_EX_r[31:20]}  )&32'hFFFE;//JALR
-  2'b10:pcn = pc+4;//普通周期
-  2'b11:pcn = PCE_r + { {12{IR_EX_r[31]}}, IR_EX_r[19:12], IR_EX_r[20], IR_EX_r[30:21], 1'b0 };//JAL
-  default:pcn = 4'bxxxx;
-  endcase
+  if(B_Hazard)
+    begin
+    if(predictJ_r_Ex)
+      pcn=PCE_r+4;
+    else 
+    case ( pcMUX )
+    2'b00:pcn =  ( zero )?(  PCE_r+ {{20{IR_EX_r[31]}}, IR_EX_r[7], IR_EX_r[30:25], IR_EX_r[11:8], 1'b0}  ): pc + 4;//Branch
+    2'b01:pcn = ( A_r_fixed + {{20{IR_EX_r[31]}}, IR_EX_r[31:20]}  )&32'hFFFE;//JALR
+    2'b10:pcn = pc+4;//普通周期
+    2'b11:pcn = PCE_r + { {12{IR_EX_r[31]}}, IR_EX_r[19:12], IR_EX_r[20], IR_EX_r[30:21], 1'b0 };//JAL
+    default:pcn = 4'bxxxx;
+    endcase
+    end
+  else
+    if(predictJ)
+    begin
+      pcn=PredictPC+4;
+    end
+    else
+    pcn=pc+4;
 end
-
 
 always @( posedge clk or negedge rstn ) begin
   if( ~rstn ) pc <= 0;
@@ -469,5 +605,8 @@ assign io_rd = MemRead_r_MEM&MMIO;
 assign io_addr = Y_r[7:0];
 assign io_dout = MDW_r;
 assign ReadData = MMIO?io_din:ReadMemData;
+
+
+
 
   endmodule
