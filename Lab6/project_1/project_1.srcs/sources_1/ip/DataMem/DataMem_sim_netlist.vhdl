@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Sun May 22 21:21:50 2022
 -- Host        : Yun running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top DataMem -prefix
+--               DataMem_ DataMem_sim_netlist.vhdl
 -- Design      : DataMem
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,8 +24,6 @@ entity DataMem_dpram is
     d : in STD_LOGIC_VECTOR ( 31 downto 0 );
     dpra : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DataMem_dpram : entity is "dpram";
 end DataMem_dpram;
 
 architecture STRUCTURE of DataMem_dpram is
@@ -2963,8 +2961,6 @@ entity DataMem_dist_mem_gen_v8_0_13_synth is
     d : in STD_LOGIC_VECTOR ( 31 downto 0 );
     dpra : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DataMem_dist_mem_gen_v8_0_13_synth : entity is "dist_mem_gen_v8_0_13_synth";
 end DataMem_dist_mem_gen_v8_0_13_synth;
 
 architecture STRUCTURE of DataMem_dist_mem_gen_v8_0_13_synth is
@@ -3068,8 +3064,6 @@ entity DataMem_dist_mem_gen_v8_0_13 is
   attribute C_SYNC_ENABLE of DataMem_dist_mem_gen_v8_0_13 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of DataMem_dist_mem_gen_v8_0_13 : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DataMem_dist_mem_gen_v8_0_13 : entity is "dist_mem_gen_v8_0_13";
 end DataMem_dist_mem_gen_v8_0_13;
 
 architecture STRUCTURE of DataMem_dist_mem_gen_v8_0_13 is

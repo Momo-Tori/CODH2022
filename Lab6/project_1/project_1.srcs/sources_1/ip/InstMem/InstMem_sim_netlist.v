@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Sun May 22 22:09:58 2022
 // Host        : Yun running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/InstMem/InstMem_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top InstMem -prefix
+//               InstMem_ InstMem_sim_netlist.v
 // Design      : InstMem
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -88,7 +88,7 @@ endmodule
 (* C_MEM_INIT_FILE = "InstMem.mif" *) (* C_MEM_TYPE = "0" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) 
 module InstMem_dist_mem_gen_v8_0_13
    (a,
     d,
@@ -245,7 +245,6 @@ module InstMem_dist_mem_gen_v8_0_13
         .spo({\^spo [27:25],\^spo [23:20],\^spo [18:4],\^spo [2],\^spo [0]}));
 endmodule
 
-(* ORIG_REF_NAME = "dist_mem_gen_v8_0_13_synth" *) 
 module InstMem_dist_mem_gen_v8_0_13_synth
    (spo,
     a);
@@ -260,7 +259,6 @@ module InstMem_dist_mem_gen_v8_0_13_synth
         .spo(spo));
 endmodule
 
-(* ORIG_REF_NAME = "rom" *) 
 module InstMem_rom
    (spo,
     a);
