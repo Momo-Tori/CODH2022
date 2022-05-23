@@ -55,7 +55,7 @@ memory memory0(
 
 reg hit;
 integer i,j;
-always @(posedge clk) begin
+always @(*) begin
   //处理hit
   hit = 1'b0;
   for(i = 0;i < way_cnt;i = i + 1)begin
@@ -67,33 +67,42 @@ always @(posedge clk) begin
 end
 
 integer free = 0;//标识是否还有空闲块
-always @(posedge clk)begin
-  if(~hit)begin
-    //选出冲突时换出的块
-    for(i = 0;i < way_cnt;i = i + 1)begin
-      if(FIFO[index][i] == 0)begin//FIFO从1开始升序到way_cnt也就是组相联度
-      //0表示还没开始 其实相当于valid位
-        outway = i;
-        free = 1;
+always @(posedge clk or negedge rstn)begin
+  if(~rstn)begin
+    for(i = 0;i < 8;i = i + 1)begin
+      for(j = 0;j < way_cnt; j = j + 1)begin
+        FIFO[i][j] = 0;
       end
     end
-    if(free == 0)begin
-      for(i = 0;i < way_cnt;i = i +1)begin
-        if(FIFO[index][i] == way_cnt)begin//最大值说明是最早进去的
-        //最好是能break 但是应该也不会有多个通道都是最大值
-          outway = i;
-          FIFO[index][i] =0;
-        end
-      end
-    end
-    if(FIFO[index][outway] == 0)begin
+  end
+  else begin
+    if(~hit)begin
+      //选出冲突时换出的块
       for(i = 0;i < way_cnt;i = i + 1)begin
-        if(FIFO[index][i]!=0)begin
-          FIFO[index][i] = FIFO[index][i] + 1;
+        if(FIFO[index][i] == 0)begin//FIFO从1开始升序到way_cnt也就是组相联度
+        //0表示还没开始 其实相当于valid位
+          outway = i;
+          free = 1;
         end
       end
+      if(free == 0)begin
+        for(i = 0;i < way_cnt;i = i +1)begin
+          if(FIFO[index][i] == way_cnt)begin//最大值说明是最早进去的
+          //最好是能break 但是应该也不会有多个通道都是最大值
+            outway = i;
+            FIFO[index][i] =0;
+          end
+        end
+      end
+      if(FIFO[index][outway] == 0)begin
+        for(i = 0;i < way_cnt;i = i + 1)begin
+          if(FIFO[index][i]!=0)begin
+            FIFO[index][i] = FIFO[index][i] + 1;
+          end
+        end
+      end
+      FIFO[index][outway] = 1;//新数据会被换入到这里 所以可以先赋值为1
     end
-    FIFO[index][outway] = 1;//新数据会被换入到这里 所以可以先赋值为1
   end
 end
 
@@ -104,7 +113,6 @@ always@(posedge clk or negedge rstn)begin
         valid[i][j] = 1'b0;
         cache[i][j] = 0;
         tag[i][j] = 0;
-        FIFO[i][j] = 0;
       end
     end
   end
