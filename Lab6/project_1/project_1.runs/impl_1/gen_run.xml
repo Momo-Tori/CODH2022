@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1653186997">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1653274786">
   <File Type="BITSTR-BMM" Name="CPUDownload_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="CPUDownload_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="CPUDownload_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="CPUDownload_power_routed.rpt"/>
   <File Type="PA-TCL" Name="CPUDownload.tcl"/>
+  <File Type="OPT-TIMING" Name="CPUDownload_timing_summary_opted.rpt"/>
   <File Type="OPT-DCP" Name="CPUDownload_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="CPUDownload_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="CPUDownload_reports.tcl"/>
   <File Type="OPT-DRC" Name="CPUDownload_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="CPUDownload.hwdef"/>
   <File Type="PWROPT-DCP" Name="CPUDownload_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="CPUDownload_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="CPUDownload_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="CPUDownload_placed.dcp"/>
   <File Type="PLACE-IO" Name="CPUDownload_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="CPUDownload_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="CPUDownload_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="CPUDownload_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="CPUDownload_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="CPUDownload_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="CPUDownload_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="CPUDownload.bgn"/>
+  <File Type="PLACE-TIMING" Name="CPUDownload_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="CPUDownload_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="CPUDownload.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="CPUDownload_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="CPUDownload_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="CPUDownload_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="CPUDownload.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="CPUDownload_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="CPUDownload_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="CPUDownload_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="CPUDownload_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="CPUDownload_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="CPUDownload_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="CPUDownload.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="CPUDownload_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="CPUDownload.mmi"/>
@@ -38,17 +50,24 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="CPUDownload_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="CPUDownload_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="CPUDownload_timing_summary_routed.rpx"/>
-  <File Type="RDI-RDI" Name="CPUDownload.vdi"/>
+  <File Type="ROUTE-SIMILARITY" Name="CPUDownload_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="CPUDownload_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="CPUDownload_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="CPUDownload_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="CPUDownload_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="CPUDownload_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CPUDownload_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="CPUDownload_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="CPUDownload_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CPUDownload_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CPUDownload_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CPUDownload_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="CPUDownload.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CPUDownload_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="CPUDownload.rbt"/>
   <File Type="BITSTR-NKY" Name="CPUDownload.nky"/>
   <File Type="BG-DRC" Name="CPUDownload.drc"/>
+  <File Type="RDI-RDI" Name="CPUDownload.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -153,6 +172,18 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../coe/sort.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coe/CH2sort.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../coe/CH2data.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

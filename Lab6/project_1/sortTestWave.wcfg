@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="225724334fs"></ZoomStartTime>
+      <ZoomEndTime time="227978335fs"></ZoomEndTime>
+      <Cursor1Time time="227200000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="145"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="368" />
+   <wvobject fp_name="/test/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/io_addr" type="array">
+      <obj_property name="ElementShortName">io_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">io_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/io_dout" type="array">
+      <obj_property name="ElementShortName">io_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">io_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/io_we" type="logic">
+      <obj_property name="ElementShortName">io_we</obj_property>
+      <obj_property name="ObjectShortName">io_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/io_rd" type="logic">
+      <obj_property name="ElementShortName">io_rd</obj_property>
+      <obj_property name="ObjectShortName">io_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/io_din" type="array">
+      <obj_property name="ElementShortName">io_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">io_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/pc" type="array">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/chk_addr" type="array">
+      <obj_property name="ElementShortName">chk_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">chk_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/chk_data" type="array">
+      <obj_property name="ElementShortName">chk_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">chk_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemtoReg" type="logic">
+      <obj_property name="ElementShortName">MemtoReg</obj_property>
+      <obj_property name="ObjectShortName">MemtoReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemWrite" type="logic">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ALUSrc" type="logic">
+      <obj_property name="ElementShortName">ALUSrc</obj_property>
+      <obj_property name="ObjectShortName">ALUSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/RegWrite" type="logic">
+      <obj_property name="ElementShortName">RegWrite</obj_property>
+      <obj_property name="ObjectShortName">RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemRead" type="logic">
+      <obj_property name="ElementShortName">MemRead</obj_property>
+      <obj_property name="ObjectShortName">MemRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/PCChange" type="logic">
+      <obj_property name="ElementShortName">PCChange</obj_property>
+      <obj_property name="ObjectShortName">PCChange</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/UI" type="logic">
+      <obj_property name="ElementShortName">UI</obj_property>
+      <obj_property name="ObjectShortName">UI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ALUOp" type="array">
+      <obj_property name="ElementShortName">ALUOp[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUOp[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ALU1" type="array">
+      <obj_property name="ElementShortName">ALU1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ALU2" type="array">
+      <obj_property name="ElementShortName">ALU2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/WriteData" type="array">
+      <obj_property name="ElementShortName">WriteData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WriteData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/pcn" type="array">
+      <obj_property name="ElementShortName">pcn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcn[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/pcMUX" type="array">
+      <obj_property name="ElementShortName">pcMUX[2:0]</obj_property>
+      <obj_property name="ObjectShortName">pcMUX[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Ins" type="array">
+      <obj_property name="ElementShortName">Ins[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Ins[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Reg1Data" type="array">
+      <obj_property name="ElementShortName">Reg1Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg1Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Reg2Data" type="array">
+      <obj_property name="ElementShortName">Reg2Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg2Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ALUResult" type="array">
+      <obj_property name="ElementShortName">ALUResult[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Y" type="array">
+      <obj_property name="ElementShortName">Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/f" type="array">
+      <obj_property name="ElementShortName">f[2:0]</obj_property>
+      <obj_property name="ObjectShortName">f[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Imm" type="array">
+      <obj_property name="ElementShortName">Imm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Imm[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ReadData" type="array">
+      <obj_property name="ElementShortName">ReadData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ReadMemData" type="array">
+      <obj_property name="ElementShortName">ReadMemData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadMemData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/cnt" type="array">
+      <obj_property name="ElementShortName">cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/JmpCnt" type="array">
+      <obj_property name="ElementShortName">JmpCnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">JmpCnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/PCChangeInsCnt" type="array">
+      <obj_property name="ElementShortName">PCChangeInsCnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCChangeInsCnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/PredHitCnt" type="array">
+      <obj_property name="ElementShortName">PredHitCnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PredHitCnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/PCD_r" type="array">
+      <obj_property name="ElementShortName">PCD_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCD_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/IR_r" type="array">
+      <obj_property name="ElementShortName">IR_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/PCE_r" type="array">
+      <obj_property name="ElementShortName">PCE_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCE_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/A_r" type="array">
+      <obj_property name="ElementShortName">A_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/B_r" type="array">
+      <obj_property name="ElementShortName">B_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Imm_r" type="array">
+      <obj_property name="ElementShortName">Imm_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Imm_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Rd_r" type="array">
+      <obj_property name="ElementShortName">Rd_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Rd_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Y_r" type="array">
+      <obj_property name="ElementShortName">Y_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Y_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MDW_r" type="array">
+      <obj_property name="ElementShortName">MDW_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MDW_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/RdM_r" type="array">
+      <obj_property name="ElementShortName">RdM_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RdM_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MDR_r" type="array">
+      <obj_property name="ElementShortName">MDR_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MDR_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/YW_r" type="array">
+      <obj_property name="ElementShortName">YW_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">YW_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/RdW_r" type="array">
+      <obj_property name="ElementShortName">RdW_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RdW_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/IR_EX_r" type="array">
+      <obj_property name="ElementShortName">IR_EX_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR_EX_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/IR_MEM_r" type="array">
+      <obj_property name="ElementShortName">IR_MEM_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR_MEM_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/IR_WB_r" type="array">
+      <obj_property name="ElementShortName">IR_WB_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR_WB_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ALUOp_r" type="array">
+      <obj_property name="ElementShortName">ALUOp_r[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUOp_r[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemtoReg_r_EX" type="logic">
+      <obj_property name="ElementShortName">MemtoReg_r_EX</obj_property>
+      <obj_property name="ObjectShortName">MemtoReg_r_EX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemWrite_r_EX" type="logic">
+      <obj_property name="ElementShortName">MemWrite_r_EX</obj_property>
+      <obj_property name="ObjectShortName">MemWrite_r_EX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ALUSrc_r_EX" type="logic">
+      <obj_property name="ElementShortName">ALUSrc_r_EX</obj_property>
+      <obj_property name="ObjectShortName">ALUSrc_r_EX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/RegWrite_r_EX" type="logic">
+      <obj_property name="ElementShortName">RegWrite_r_EX</obj_property>
+      <obj_property name="ObjectShortName">RegWrite_r_EX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemRead_r_EX" type="logic">
+      <obj_property name="ElementShortName">MemRead_r_EX</obj_property>
+      <obj_property name="ObjectShortName">MemRead_r_EX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/PCChange_r_EX" type="logic">
+      <obj_property name="ElementShortName">PCChange_r_EX</obj_property>
+      <obj_property name="ObjectShortName">PCChange_r_EX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/UI_r_EX" type="logic">
+      <obj_property name="ElementShortName">UI_r_EX</obj_property>
+      <obj_property name="ObjectShortName">UI_r_EX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemtoReg_r_MEM" type="logic">
+      <obj_property name="ElementShortName">MemtoReg_r_MEM</obj_property>
+      <obj_property name="ObjectShortName">MemtoReg_r_MEM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemWrite_r_MEM" type="logic">
+      <obj_property name="ElementShortName">MemWrite_r_MEM</obj_property>
+      <obj_property name="ObjectShortName">MemWrite_r_MEM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/RegWrite_r_MEM" type="logic">
+      <obj_property name="ElementShortName">RegWrite_r_MEM</obj_property>
+      <obj_property name="ObjectShortName">RegWrite_r_MEM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemRead_r_MEM" type="logic">
+      <obj_property name="ElementShortName">MemRead_r_MEM</obj_property>
+      <obj_property name="ObjectShortName">MemRead_r_MEM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MemtoReg_r_WB" type="logic">
+      <obj_property name="ElementShortName">MemtoReg_r_WB</obj_property>
+      <obj_property name="ObjectShortName">MemtoReg_r_WB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/RegWrite_r_WB" type="logic">
+      <obj_property name="ElementShortName">RegWrite_r_WB</obj_property>
+      <obj_property name="ObjectShortName">RegWrite_r_WB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/SR1" type="logic">
+      <obj_property name="ElementShortName">SR1</obj_property>
+      <obj_property name="ObjectShortName">SR1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/SR2" type="logic">
+      <obj_property name="ElementShortName">SR2</obj_property>
+      <obj_property name="ObjectShortName">SR2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Wb2Ex_sr1" type="logic">
+      <obj_property name="ElementShortName">Wb2Ex_sr1</obj_property>
+      <obj_property name="ObjectShortName">Wb2Ex_sr1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Wb2Ex_sr2" type="logic">
+      <obj_property name="ElementShortName">Wb2Ex_sr2</obj_property>
+      <obj_property name="ObjectShortName">Wb2Ex_sr2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Mem2Ex_sr1" type="logic">
+      <obj_property name="ElementShortName">Mem2Ex_sr1</obj_property>
+      <obj_property name="ObjectShortName">Mem2Ex_sr1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Mem2Ex_sr2" type="logic">
+      <obj_property name="ElementShortName">Mem2Ex_sr2</obj_property>
+      <obj_property name="ObjectShortName">Mem2Ex_sr2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/nonzeroRdW_r" type="logic">
+      <obj_property name="ElementShortName">nonzeroRdW_r</obj_property>
+      <obj_property name="ObjectShortName">nonzeroRdW_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/nonzeroRdM_r" type="logic">
+      <obj_property name="ElementShortName">nonzeroRdM_r</obj_property>
+      <obj_property name="ObjectShortName">nonzeroRdM_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/SR1_ID" type="logic">
+      <obj_property name="ElementShortName">SR1_ID</obj_property>
+      <obj_property name="ObjectShortName">SR1_ID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/SR2_ID" type="logic">
+      <obj_property name="ElementShortName">SR2_ID</obj_property>
+      <obj_property name="ObjectShortName">SR2_ID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/isLWHazard" type="logic">
+      <obj_property name="ElementShortName">isLWHazard</obj_property>
+      <obj_property name="ObjectShortName">isLWHazard</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/LD_R_Hazard" type="logic">
+      <obj_property name="ElementShortName">LD_R_Hazard</obj_property>
+      <obj_property name="ObjectShortName">LD_R_Hazard</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/B_Hazard" type="logic">
+      <obj_property name="ElementShortName">B_Hazard</obj_property>
+      <obj_property name="ObjectShortName">B_Hazard</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/JARR" type="logic">
+      <obj_property name="ElementShortName">JARR</obj_property>
+      <obj_property name="ObjectShortName">JARR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/predictJ" type="logic">
+      <obj_property name="ElementShortName">predictJ</obj_property>
+      <obj_property name="ObjectShortName">predictJ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/predictJ_r_Ex" type="logic">
+      <obj_property name="ElementShortName">predictJ_r_Ex</obj_property>
+      <obj_property name="ObjectShortName">predictJ_r_Ex</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/Branch_Ex" type="logic">
+      <obj_property name="ElementShortName">Branch_Ex</obj_property>
+      <obj_property name="ObjectShortName">Branch_Ex</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/SCwe" type="logic">
+      <obj_property name="ElementShortName">SCwe</obj_property>
+      <obj_property name="ObjectShortName">SCwe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/ifJ" type="logic">
+      <obj_property name="ElementShortName">ifJ</obj_property>
+      <obj_property name="ObjectShortName">ifJ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/GHR" type="array">
+      <obj_property name="ElementShortName">GHR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">GHR[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/x" type="array">
+      <obj_property name="ElementShortName">x[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/y_ex" type="array">
+      <obj_property name="ElementShortName">y_ex[15:0]</obj_property>
+      <obj_property name="ObjectShortName">y_ex[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/SCout" type="array">
+      <obj_property name="ElementShortName">SCout[15:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">SCout[15:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[0].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[0].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[0].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[1].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[1].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[1].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[2].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[2].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[2].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[3].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[3].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[3].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[4].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[4].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[4].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[5].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[5].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[5].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[6].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[6].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[6].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[7].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[7].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[7].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[8].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[8].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[8].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[9].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[9].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[9].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[10].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[10].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[10].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[11].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[11].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[11].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[12].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[12].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[12].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[13].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[13].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[13].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[14].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[14].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[14].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[0].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[0].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[0].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[1].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[1].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[1].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[2].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[2].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[2].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[3].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[3].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[3].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[4].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[4].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[4].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[5].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[5].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[5].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[6].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[6].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[6].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[7].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[7].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[7].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[8].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[8].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[8].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[9].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[9].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[9].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[10].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[10].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[10].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[11].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[11].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[11].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[12].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[12].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[12].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[13].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[13].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[13].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[14].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[14].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[14].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/\genblk1[15].genblk1[15].out " type="logic">
+      <obj_property name="ElementShortName">\genblk1[15].genblk1[15].out </obj_property>
+      <obj_property name="ObjectShortName">\genblk1[15].genblk1[15].out </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/branchTrue" type="logic">
+      <obj_property name="ElementShortName">branchTrue</obj_property>
+      <obj_property name="ObjectShortName">branchTrue</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/InsCacheRead" type="logic">
+      <obj_property name="ElementShortName">InsCacheRead</obj_property>
+      <obj_property name="ObjectShortName">InsCacheRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/nextBranch" type="array">
+      <obj_property name="ElementShortName">nextBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/hit" type="logic">
+      <obj_property name="ElementShortName">hit</obj_property>
+      <obj_property name="ObjectShortName">hit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/AddressReady" type="logic">
+      <obj_property name="ElementShortName">AddressReady</obj_property>
+      <obj_property name="ObjectShortName">AddressReady</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/InsCacheNeed" type="logic">
+      <obj_property name="ElementShortName">InsCacheNeed</obj_property>
+      <obj_property name="ObjectShortName">InsCacheNeed</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/InsCacheAdd" type="array">
+      <obj_property name="ElementShortName">InsCacheAdd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">InsCacheAdd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/InsCacheData" type="array">
+      <obj_property name="ElementShortName">InsCacheData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">InsCacheData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DebugRegAddr" type="array">
+      <obj_property name="ElementShortName">DebugRegAddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">DebugRegAddr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DebugRegData" type="array">
+      <obj_property name="ElementShortName">DebugRegData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DebugRegData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DebugMemAddr" type="array">
+      <obj_property name="ElementShortName">DebugMemAddr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DebugMemAddr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DebugMemData" type="array">
+      <obj_property name="ElementShortName">DebugMemData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DebugMemData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/A_r_fixed" type="array">
+      <obj_property name="ElementShortName">A_r_fixed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A_r_fixed[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/B_r_fixed" type="array">
+      <obj_property name="ElementShortName">B_r_fixed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B_r_fixed[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/JAL_Ex" type="logic">
+      <obj_property name="ElementShortName">JAL_Ex</obj_property>
+      <obj_property name="ObjectShortName">JAL_Ex</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/op" type="logic">
+      <obj_property name="ElementShortName">op</obj_property>
+      <obj_property name="ObjectShortName">op</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/sub" type="logic">
+      <obj_property name="ElementShortName">sub</obj_property>
+      <obj_property name="ObjectShortName">sub</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/add" type="logic">
+      <obj_property name="ElementShortName">add</obj_property>
+      <obj_property name="ObjectShortName">add</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/PredictPC" type="array">
+      <obj_property name="ElementShortName">PredictPC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PredictPC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/MMIO" type="logic">
+      <obj_property name="ElementShortName">MMIO</obj_property>
+      <obj_property name="ObjectShortName">MMIO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/LW" type="logic">
+      <obj_property name="ElementShortName">LW</obj_property>
+      <obj_property name="ObjectShortName">LW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/SW" type="logic">
+      <obj_property name="ElementShortName">SW</obj_property>
+      <obj_property name="ObjectShortName">SW</obj_property>
+   </wvobject>
+</wave_config>

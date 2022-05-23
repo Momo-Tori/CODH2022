@@ -256,7 +256,7 @@ assign LD_R_Hazard = MemtoReg_r_EX&isLWHazard;
 wire B_Hazard;
 wire JARR;
 assign JARR=PCChange_r_EX&(IR_EX_r[2]&~IR_EX_r[3]);
-assign B_Hazard = predictJ_r_Ex^ifJ;
+assign B_Hazard = predictJ_r_Ex ^ ifJ;
 
 
 

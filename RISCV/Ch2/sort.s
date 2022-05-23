@@ -25,5 +25,8 @@ main:
         LOOP2FIN:
         j LOOP1
     FIN:
-    li a7, 10                       # Exit program
-    ecall     
+	nop
+	nop	
+	nop
+	nop
+	nop

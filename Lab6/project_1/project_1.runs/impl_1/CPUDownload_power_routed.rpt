@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun May 22 10:39:21 2022
+| Date             : Mon May 23 11:02:30 2022
 | Host             : Yun running 64-bit major release  (build 9200)
 | Command          : report_power -file CPUDownload_power_routed.rpt -pb CPUDownload_power_summary_routed.pb -rpx CPUDownload_power_routed.rpx
 | Design           : CPUDownload
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.149        |
+| Total On-Chip Power (W)  | 0.141        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.052        |
+| Dynamic (W)              | 0.044        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.3         |
-| Junction Temperature (C) | 25.7         |
+| Max Ambient (C)          | 84.4         |
+| Junction Temperature (C) | 25.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.015 |     6630 |       --- |             --- |
-|   LUT as Logic           |     0.014 |     3005 |     63400 |            4.74 |
+| Clocks                   |     0.001 |        3 |       --- |             --- |
+| Slice Logic              |     0.012 |     6754 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     3049 |     63400 |            4.81 |
 |   LUT as Distributed RAM |    <0.001 |      280 |     19000 |            1.47 |
-|   CARRY4                 |    <0.001 |      153 |     15850 |            0.97 |
-|   Register               |    <0.001 |     2190 |    126800 |            1.73 |
-|   F7/F8 Muxes            |    <0.001 |      739 |     63400 |            1.17 |
+|   CARRY4                 |    <0.001 |      177 |     15850 |            1.12 |
+|   Register               |    <0.001 |     2287 |    126800 |            1.80 |
+|   F7/F8 Muxes            |    <0.001 |      704 |     63400 |            1.11 |
 |   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
-|   Others                 |     0.000 |       28 |       --- |             --- |
-| Signals                  |     0.022 |     4628 |       --- |             --- |
+|   Others                 |     0.000 |       27 |       --- |             --- |
+| Signals                  |     0.017 |     4797 |       --- |             --- |
 | I/O                      |     0.014 |       58 |       210 |           27.62 |
 | Static Power             |     0.097 |          |           |                 |
-| Total                    |     0.149 |          |           |                 |
+| Total                    |     0.141 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.053 |       0.038 |      0.015 |
+| Vccint    |       1.000 |     0.045 |       0.030 |      0.015 |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
 | Vcco33    |       3.300 |     0.008 |       0.004 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,12 +143,13 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| CPUDownload                  |     0.052 |
-|   cpu                        |     0.033 |
+| CPUDownload                  |     0.044 |
+|   cpu                        |     0.026 |
 |     DataMem                  |     0.001 |
 |       U0                     |     0.001 |
-|     genblk1[2].genblk1[0].SC |     0.010 |
-|     register_file            |     0.005 |
+|     InsCache                 |     0.001 |
+|     genblk1[0].genblk1[0].SC |     0.007 |
+|     register_file            |     0.004 |
 |   pdu                        |     0.004 |
 +------------------------------+-----------+
 

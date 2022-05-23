@@ -12,6 +12,8 @@
 
 ### 基于全局历史的分支预测
 
+实现了对`branch`的支持
+
 ![](pic/2.jpg)
 
 
@@ -21,6 +23,8 @@
 https://www.cnblogs.com/nevercode/p/15201279.html
 
 ### 跳转指令cache
+
+实现了对`branch`和`jar`的支持，对于`jarr`因为其依赖于寄存器而不好进行处理故不支持
 
 全相连、FIFO
 

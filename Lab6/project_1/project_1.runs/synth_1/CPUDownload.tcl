@@ -36,7 +36,9 @@ add_files D:/CodeTry/CODExperiment/Lab6/coe/testWithoutHazard.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/data.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/simple_test_cpu_pl.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/leftInsTest.coe
-add_files d:/CodeTry/CODExperiment/Lab6/coe/sort.coe
+add_files D:/CodeTry/CODExperiment/Lab6/coe/sort.coe
+add_files D:/CodeTry/CODExperiment/Lab6/coe/CH2sort.coe
+add_files D:/CodeTry/CODExperiment/Lab6/coe/CH2data.coe
 read_verilog -library xil_defaultlib {
   D:/CodeTry/CODExperiment/Lab6/ALU.v
   D:/CodeTry/CODExperiment/Lab6/ImmGen.v

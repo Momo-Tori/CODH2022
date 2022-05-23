@@ -260,10 +260,14 @@ assign SR1 = ~( ( IR_EX_r[6:2] == 5'b11011 )|UI_r_EX );
 assign SR2 = ( IR_EX_r[3:2] == 2'b00&IR_EX_r[5] );
 //是否需要 Wb to Ex 或 Mem to Ex
 wire Wb2Ex_sr1, Wb2Ex_sr2, Mem2Ex_sr1, Mem2Ex_sr2;
-assign Wb2Ex_sr1 = ( RdW_r == IR_EX_r[19:15] ) & SR1 & RegWrite_r_WB;
-assign Wb2Ex_sr2 = ( RdW_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_WB;
-assign Mem2Ex_sr1 = ( RdM_r == IR_EX_r[19:15] ) & SR1 & RegWrite_r_MEM;
-assign Mem2Ex_sr2 = ( RdM_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_MEM;
+//非零寄存器
+wire nonzeroRdW_r=|RdW_r;
+wire nonzeroRdM_r=|RdM_r;
+
+assign Wb2Ex_sr1 = ( RdW_r == IR_EX_r[19:15] ) & SR1 & RegWrite_r_WB & nonzeroRdW_r;
+assign Wb2Ex_sr2 = ( RdW_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_WB & nonzeroRdW_r;
+assign Mem2Ex_sr1 = ( RdM_r == IR_EX_r[19:15] ) & SR1 & RegWrite_r_MEM & nonzeroRdM_r;
+assign Mem2Ex_sr2 = ( RdM_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_MEM & nonzeroRdM_r;
 
 //回传 ALU 的描述在 Contorl 部分
 
@@ -290,7 +294,7 @@ assign LD_R_Hazard = MemtoReg_r_EX&isLWHazard;
 wire B_Hazard;
 wire JARR;
 assign JARR=PCChange_r_EX&(IR_EX_r[2]&~IR_EX_r[3]);
-assign B_Hazard = predictJ_r_Ex^ifJ;
+assign B_Hazard = predictJ_r_Ex ^ ifJ;
 
 
 
@@ -358,12 +362,10 @@ generate
       for(j=0;j<16;j=j+1)
       begin
         wire out;
-        saturatingCounter SC(clk,rstn,SCwe&x[i]&y_ex[i],
-                            zero,out);
-        assign SCout[i][j]=out;
+        saturatingCounter SC(clk,rstn,SCwe & (x[i]) & (y_ex[i]),
+                            zero,SCout[i][j]);
       end
 endgenerate
-
 
 wire branchTrue = SCout[GHR][PCD_r[5:2]];
 
