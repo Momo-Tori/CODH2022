@@ -9,8 +9,6 @@ module MEM_CACHE (
   output wire [31:0] DebugData,
   output wire hit_m
 );
-wire _clk;
-assign _clk = ~clk;
 localparam way_cnt = 2;//组相连度
 //cache与主存之间使用全写法和不按写分配法
 //使用块大小为一字（一字四字节）两组 共计8块的直接映射cache  总容量8*2*1=16字
@@ -21,14 +19,15 @@ reg [31:0] cache[7:0][way_cnt - 1:0];
 reg valid[7:0][way_cnt - 1:0];//标记有效位
 reg [4:0] tag[7:0][way_cnt - 1:0];//标签位
 
-reg [way_cnt-1 : 0] way_addr;//记录数据来自哪个通道
+
 reg FIFO[7:0][way_cnt:0];// 实际上就是一个计数器 升满了表示要润了
 reg [way_cnt-1:0] outway;//记录哪个通道的数据要被换出 似乎用不到这么多位宽233
 
 wire [31:0] ip_readdata;
 wire [2:0] index;
 wire [4:0] tag_in;
-
+// reg [way_cnt-1 : 0] way_addr;//记录数据来自哪个通道
+wire [way_cnt-1 : 0] way_addr;//记录数据来自哪个通道
 assign index = Address[2:0];
 assign tag_in = Address[7:3];
 
@@ -53,18 +52,21 @@ memory memory0(
   .dpo(DebugData)//由于使用的全写法和不按写分配法 所以内存中同样也是最新的值 直接读就可以了
 );
 
-reg hit;
+//reg hit;
+wire hit;
+assign hit = (valid[index][0] && tag[index][0] == tag_in) | (valid[index][1] && tag[index][1] == tag_in);
+assign way_addr = (valid[index][0] && tag[index][0] == tag_in) ? 0 : 1;
 integer i,j;
-always @(posedge clk or posedge _clk) begin
-  //处理hit
-  hit = 1'b0;
-  for(i = 0;i < way_cnt;i = i + 1)begin
-    if(valid[index][i] && tag[index][i] == tag_in)begin
-        hit = 1'b1;
-        way_addr = i;
-    end
-  end
-end
+// always @(posedge clk) begin
+//   //处理hit
+//   hit = 1'b0;
+//   for(i = 0;i < way_cnt;i = i + 1)begin
+//     if(valid[index][i] && tag[index][i] == tag_in)begin
+//         hit = 1'b1;
+//         way_addr = i;
+//     end
+//   end
+// end
 
 integer free = 0;//标识是否还有空闲块
 always @(posedge clk or negedge rstn)begin
@@ -129,6 +131,7 @@ always@(posedge clk or negedge rstn)begin
         //不是写的话就是默认的读取模式 读的话需要从内存中载入到缓存 当然为了速度 先直接返回内存读的值
         cache[index][outway] <= ip_readdata;
         valid[index][outway] <= 1'b1;
+        tag[index][outway] <= tag_in;
       end
       //写不命中直接写主存就是了 似乎不需要处理
     end
@@ -136,5 +139,6 @@ always@(posedge clk or negedge rstn)begin
 end
 assign hit_m = hit;
 assign ReadData = (hit == 1) ? cache[index][way_addr] : ip_readdata;
+// assign ReadData = ip_readdata;
 endmodule //Cache
 
