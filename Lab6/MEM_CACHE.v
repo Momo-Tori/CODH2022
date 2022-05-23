@@ -23,7 +23,6 @@ reg [4:0] tag[7:0][way_cnt - 1:0];//标签位
 reg [way_cnt-1 : 0] way_addr;//记录数据来自哪个通道
 reg FIFO[7:0][way_cnt:0];// 实际上就是一个计数器 升满了表示要润了
 reg [way_cnt-1:0] outway;//记录哪个通道的数据要被换出 似乎用不到这么多位宽233
-reg [31:0] ReadData_r;//先在内部缓存一次 目的是方便always内操作
 
 wire [31:0] ip_readdata;
 wire [2:0] index;
@@ -122,15 +121,12 @@ always@(posedge clk or negedge rstn)begin
         cache[index][way_addr] <= WriteData;
         //ip核的话直接写就是了 不需要在这里操作
       end
-      else begin//cache命中 并且是读请求
-        ReadData_r <= cache[index][way_addr];
-      end
+      //读取完全用assign
     end
     else begin
       if(~wr_req)begin
         //不是写的话就是默认的读取模式 读的话需要从内存中载入到缓存 当然为了速度 先直接返回内存读的值
         cache[index][outway] <= ip_readdata;
-        // ReadData_r <= ip_readdata;
         valid[index][outway] <= 1'b1;
       end
       //写不命中直接写主存就是了 似乎不需要处理
