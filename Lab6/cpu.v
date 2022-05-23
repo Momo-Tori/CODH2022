@@ -209,10 +209,14 @@ assign SR1 = ~( ( IR_EX_r[6:2] == 5'b11011 )|UI_r_EX );
 assign SR2 = ( IR_EX_r[3:2] == 2'b00&IR_EX_r[5] );
 //是否需要Wb to Ex或Mem to Ex
 wire Wb2Ex_sr1, Wb2Ex_sr2, Mem2Ex_sr1, Mem2Ex_sr2;
-assign Wb2Ex_sr1 = ( RdW_r == IR_EX_r[19:15] ) & SR1 & RegWrite_r_WB;
-assign Wb2Ex_sr2 = ( RdW_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_WB;
-assign Mem2Ex_sr1 = ( RdM_r == IR_EX_r[19:15] ) & SR1 & RegWrite_r_MEM;
-assign Mem2Ex_sr2 = ( RdM_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_MEM;
+//非零寄存器
+wire nonzeroRdW_r=|RdW_r;
+wire nonzeroRdM_r=|RdM_r;
+
+assign Wb2Ex_sr1 = ( RdW_r == IR_EX_r[19:15] ) & SR1 & RegWrite_r_WB & nonzeroRdW_r;
+assign Wb2Ex_sr2 = ( RdW_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_WB & nonzeroRdW_r;
+assign Mem2Ex_sr1 = ( RdM_r == IR_EX_r[19:15] ) & SR1 & RegWrite_r_MEM & nonzeroRdM_r;
+assign Mem2Ex_sr2 = ( RdM_r == IR_EX_r[24:20] ) & SR2 & RegWrite_r_MEM & nonzeroRdM_r;
 
 //回传ALU的描述在Contorl部分
 
