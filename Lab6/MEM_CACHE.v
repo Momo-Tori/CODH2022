@@ -9,7 +9,8 @@ module MEM_CACHE (
   output wire [31:0] DebugData,
   output wire hit_m
 );
-
+wire _clk;
+assign _clk = ~clk;
 localparam way_cnt = 2;//组相连度
 //cache与主存之间使用全写法和不按写分配法
 //使用块大小为一字（一字四字节）两组 共计8块的直接映射cache  总容量8*2*1=16字
@@ -54,7 +55,7 @@ memory memory0(
 
 reg hit;
 integer i,j;
-always @(*) begin
+always @(posedge clk or posedge _clk) begin
   //处理hit
   hit = 1'b0;
   for(i = 0;i < way_cnt;i = i + 1)begin
