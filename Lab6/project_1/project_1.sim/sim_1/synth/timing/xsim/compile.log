@@ -1,0 +1,145 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/project_1/project_1.sim/sim_1/synth/timing/xsim/test_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM128X1D_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD1
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD10
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD11
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD12
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD13
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD14
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD15
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD16
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD17
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD18
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD19
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD2
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD20
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD21
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD22
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD23
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD24
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD25
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD26
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD27
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD28
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD29
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD3
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD30
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD31
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD32
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD33
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD34
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD35
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD36
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD37
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD38
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD39
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD4
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD40
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD41
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD42
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD43
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD44
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD45
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD46
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD47
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD48
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD49
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD5
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD50
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD51
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD52
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD53
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD54
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD55
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD56
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD57
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD58
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD59
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD6
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD60
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD61
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD62
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD63
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD7
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD8
+INFO: [VRFC 10-311] analyzing module RAM128X1D_HD9
+INFO: [VRFC 10-311] analyzing module RAM32M_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM32M_HD64
+INFO: [VRFC 10-311] analyzing module RAM32M_HD65
+INFO: [VRFC 10-311] analyzing module RAM32M_HD66
+INFO: [VRFC 10-311] analyzing module RAM32M_HD67
+INFO: [VRFC 10-311] analyzing module RAM32M_HD68
+INFO: [VRFC 10-311] analyzing module CPUDownload
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-311] analyzing module InsCache
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-311] analyzing module decoder_4t16
+INFO: [VRFC 10-311] analyzing module decoder_4t16_0
+INFO: [VRFC 10-311] analyzing module pdu
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module saturatingCounter
+INFO: [VRFC 10-311] analyzing module saturatingCounter_1
+INFO: [VRFC 10-311] analyzing module saturatingCounter_10
+INFO: [VRFC 10-311] analyzing module saturatingCounter_11
+INFO: [VRFC 10-311] analyzing module saturatingCounter_12
+INFO: [VRFC 10-311] analyzing module saturatingCounter_13
+INFO: [VRFC 10-311] analyzing module saturatingCounter_14
+INFO: [VRFC 10-311] analyzing module saturatingCounter_15
+INFO: [VRFC 10-311] analyzing module saturatingCounter_2
+INFO: [VRFC 10-311] analyzing module saturatingCounter_3
+INFO: [VRFC 10-311] analyzing module saturatingCounter_4
+INFO: [VRFC 10-311] analyzing module saturatingCounter_5
+INFO: [VRFC 10-311] analyzing module saturatingCounter_6
+INFO: [VRFC 10-311] analyzing module saturatingCounter_7
+INFO: [VRFC 10-311] analyzing module saturatingCounter_8
+INFO: [VRFC 10-311] analyzing module saturatingCounter_9
+INFO: [VRFC 10-311] analyzing module DataMem_dist_mem_gen_v8_0_13
+INFO: [VRFC 10-311] analyzing module DataMem_dist_mem_gen_v8_0_13_synth
+INFO: [VRFC 10-311] analyzing module DataMem_dpram
+INFO: [VRFC 10-311] analyzing module InstMem_dist_mem_gen_v8_0_13
+INFO: [VRFC 10-311] analyzing module InstMem_dist_mem_gen_v8_0_13_synth
+INFO: [VRFC 10-311] analyzing module InstMem_rom
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/InsCache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InsCache
+WARNING: [VRFC 10-3380] identifier 'eqW' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/InsCache.v:22]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'InsCache' [D:/CodeTry/CODExperiment/Lab6/InsCache.v:1]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_4t16
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'decoder_4t16' [D:/CodeTry/CODExperiment/Lab6/decoder.v:1]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder_16bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/register_32_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'register_file' [D:/CodeTry/CODExperiment/Lab6/register_32_32.v:1]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/saturatingCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module saturatingCounter
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'saturatingCounter' [D:/CodeTry/CODExperiment/Lab6/saturatingCounter.v:1]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+WARNING: [VRFC 10-2654] begin/end is required for generate-for in this mode of verilog [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:361]
+INFO: [VRFC 10-2458] undeclared symbol PredictPC, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:412]
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:520]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:523]
+WARNING: [VRFC 10-2938] 'PredictPC' is already implicitly declared on line 412 [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:564]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:151]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:153]
+WARNING: [VRFC 10-3380] identifier 'predictJ' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:155]
+WARNING: [VRFC 10-3380] identifier 'nextBranch' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:156]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:160]
+WARNING: [VRFC 10-3380] identifier 'predictJ' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:163]
+WARNING: [VRFC 10-3380] identifier 'PredictPC' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:164]
+WARNING: [VRFC 10-3380] identifier 'B_r_fixed' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:175]
+WARNING: [VRFC 10-3380] identifier 'predictJ_r_Ex' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:193]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:203]
+WARNING: [VRFC 10-3380] identifier 'predictJ_r_Ex' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:205]
+WARNING: [VRFC 10-3380] identifier 'predictJ_r_Ex' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:214]
+WARNING: [VRFC 10-3380] identifier 'predictJ_r_Ex' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:293]
+WARNING: [VRFC 10-3380] identifier 'InsCacheRead' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:307]
+WARNING: [VRFC 10-3380] identifier 'InsCacheAdd' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:380]
+WARNING: [VRFC 10-3380] identifier 'PredictPC' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:402]

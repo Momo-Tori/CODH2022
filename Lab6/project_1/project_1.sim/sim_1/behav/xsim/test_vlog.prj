@@ -4,7 +4,11 @@ verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/ip/InstMem/sim/InstMem.v" \
 "../../../../../ALU.v" \
 "../../../../../ImmGen.v" \
+"../../../../../InsCache.v" \
+"../../../../../decoder.v" \
+"../../../../../encoder.v" \
 "../../../../../register_32_32.v" \
+"../../../../../saturatingCounter.v" \
 "../../../../project_1.srcs/sim_1/new/test.v" \
 
 # compile glbl module

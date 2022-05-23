@@ -1,0 +1,13 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/CodeTry/CODExperiment/Lab6/ALU.v,1653099979,verilog,,D:/CodeTry/CODExperiment/Lab6/ImmGen.v,,alu,,,,,,,,
+D:/CodeTry/CODExperiment/Lab6/ImmGen.v,1652977523,verilog,,D:/CodeTry/CODExperiment/Lab6/InsCache.v,,ImmGen,,,,,,,,
+D:/CodeTry/CODExperiment/Lab6/InsCache.v,1653191577,verilog,,D:/CodeTry/CODExperiment/Lab6/decoder.v,,InsCache,,,,,,,,
+D:/CodeTry/CODExperiment/Lab6/decoder.v,1653191577,verilog,,D:/CodeTry/CODExperiment/Lab6/encoder.v,,decoder_4t16,,,,,,,,
+D:/CodeTry/CODExperiment/Lab6/encoder.v,1653191577,verilog,,D:/CodeTry/CODExperiment/Lab6/register_32_32.v,,encoder_16bits,,,,,,,,
+D:/CodeTry/CODExperiment/Lab6/project_1/project_1.sim/sim_1/synth/timing/xsim/test_time_synth.v,1653234000,verilog,,D:/CodeTry/CODExperiment/Lab6/ALU.v,,CPUDownload;DataMem;DataMem_dist_mem_gen_v8_0_13;DataMem_dist_mem_gen_v8_0_13_synth;DataMem_dpram;InstMem;InstMem_dist_mem_gen_v8_0_13;InstMem_dist_mem_gen_v8_0_13_synth;InstMem_rom;RAM128X1D_HD1;RAM128X1D_HD10;RAM128X1D_HD11;RAM128X1D_HD12;RAM128X1D_HD13;RAM128X1D_HD14;RAM128X1D_HD15;RAM128X1D_HD16;RAM128X1D_HD17;RAM128X1D_HD18;RAM128X1D_HD19;RAM128X1D_HD2;RAM128X1D_HD20;RAM128X1D_HD21;RAM128X1D_HD22;RAM128X1D_HD23;RAM128X1D_HD24;RAM128X1D_HD25;RAM128X1D_HD26;RAM128X1D_HD27;RAM128X1D_HD28;RAM128X1D_HD29;RAM128X1D_HD3;RAM128X1D_HD30;RAM128X1D_HD31;RAM128X1D_HD32;RAM128X1D_HD33;RAM128X1D_HD34;RAM128X1D_HD35;RAM128X1D_HD36;RAM128X1D_HD37;RAM128X1D_HD38;RAM128X1D_HD39;RAM128X1D_HD4;RAM128X1D_HD40;RAM128X1D_HD41;RAM128X1D_HD42;RAM128X1D_HD43;RAM128X1D_HD44;RAM128X1D_HD45;RAM128X1D_HD46;RAM128X1D_HD47;RAM128X1D_HD48;RAM128X1D_HD49;RAM128X1D_HD5;RAM128X1D_HD50;RAM128X1D_HD51;RAM128X1D_HD52;RAM128X1D_HD53;RAM128X1D_HD54;RAM128X1D_HD55;RAM128X1D_HD56;RAM128X1D_HD57;RAM128X1D_HD58;RAM128X1D_HD59;RAM128X1D_HD6;RAM128X1D_HD60;RAM128X1D_HD61;RAM128X1D_HD62;RAM128X1D_HD63;RAM128X1D_HD7;RAM128X1D_HD8;RAM128X1D_HD9;RAM128X1D_UNIQ_BASE_;RAM32M_HD64;RAM32M_HD65;RAM32M_HD66;RAM32M_HD67;RAM32M_HD68;RAM32M_UNIQ_BASE_;cpu;decoder_4t16_0;glbl;pdu;saturatingCounter_1;saturatingCounter_10;saturatingCounter_11;saturatingCounter_12;saturatingCounter_13;saturatingCounter_14;saturatingCounter_15;saturatingCounter_2;saturatingCounter_3;saturatingCounter_4;saturatingCounter_5;saturatingCounter_6;saturatingCounter_7;saturatingCounter_8;saturatingCounter_9,,,,,,,,
+D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v,1653233575,verilog,,,,test,,,,,,,,
+D:/CodeTry/CODExperiment/Lab6/register_32_32.v,1651477058,verilog,,D:/CodeTry/CODExperiment/Lab6/saturatingCounter.v,,register_file,,,,,,,,
+D:/CodeTry/CODExperiment/Lab6/saturatingCounter.v,1653208663,verilog,,D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v,,saturatingCounter,,,,,,,,
