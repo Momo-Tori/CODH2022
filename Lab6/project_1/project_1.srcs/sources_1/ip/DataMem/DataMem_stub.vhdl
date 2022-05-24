@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri May 20 23:37:29 2022
+-- Date        : Sun May 22 21:21:50 2022
 -- Host        : Yun running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sources_1/ip/DataMem/DataMem_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top DataMem -prefix
+--               DataMem_ DataMem_stub.vhdl
 -- Design      : DataMem
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

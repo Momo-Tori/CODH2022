@@ -6,14 +6,37 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/ALU.v
 INFO: [VRFC 10-311] analyzing module alu
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/ImmGen.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/InsCache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InsCache
+WARNING: [VRFC 10-3380] identifier 'eqW' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/InsCache.v:22]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_4t16
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder_16bits
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/register_32_32.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/saturatingCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module saturatingCounter
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test
-INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:382]
-INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:385]
-WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:147]
-WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:149]
-WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:154]
-WARNING: [VRFC 10-3380] identifier 'B_r_fixed' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:167]
-WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:194]
+WARNING: [VRFC 10-2654] begin/end is required for generate-for in this mode of verilog [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:362]
+INFO: [VRFC 10-2458] undeclared symbol PredictPC, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:412]
+INFO: [VRFC 10-2458] undeclared symbol LW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:520]
+INFO: [VRFC 10-2458] undeclared symbol SW, assumed default net type wire [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:523]
+WARNING: [VRFC 10-2938] 'PredictPC' is already implicitly declared on line 412 [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:564]
+WARNING: [VRFC 10-3380] identifier 'B_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:151]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:153]
+WARNING: [VRFC 10-3380] identifier 'predictJ' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:155]
+WARNING: [VRFC 10-3380] identifier 'nextBranch' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:156]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:160]
+WARNING: [VRFC 10-3380] identifier 'predictJ' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:163]
+WARNING: [VRFC 10-3380] identifier 'PredictPC' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:164]
+WARNING: [VRFC 10-3380] identifier 'B_r_fixed' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:175]
+WARNING: [VRFC 10-3380] identifier 'predictJ_r_Ex' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:193]
+WARNING: [VRFC 10-3380] identifier 'LD_R_Hazard' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:203]
+WARNING: [VRFC 10-3380] identifier 'predictJ_r_Ex' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:205]
+WARNING: [VRFC 10-3380] identifier 'predictJ_r_Ex' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:214]
+WARNING: [VRFC 10-3380] identifier 'predictJ_r_Ex' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:297]
+WARNING: [VRFC 10-3380] identifier 'InsCacheRead' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:311]
+WARNING: [VRFC 10-3380] identifier 'InsCacheAdd' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:380]
+WARNING: [VRFC 10-3380] identifier 'PredictPC' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:402]
