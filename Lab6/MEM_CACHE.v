@@ -4,6 +4,7 @@ module MEM_CACHE (
   input [7:0] DebugAddr,     //chk用 仅可读
   input clk,
   input wr_req,//写请求信号
+  input rd_req,
   input rstn,
   output wire [31:0] ReadData,      //从cache中取出的数据
   output wire [31:0] DebugData,
@@ -78,7 +79,7 @@ always @(posedge clk or negedge rstn)begin
     end
   end
   else begin
-    if(~hit)begin
+    if(~hit && (wr_req | rd_req))begin
       //选出冲突时换出的块
       for(i = 0;i < way_cnt;i = i + 1)begin
         if(FIFO[index][i] == 0)begin//FIFO从1开始升序到way_cnt也就是组相联度
@@ -127,7 +128,8 @@ always@(posedge clk or negedge rstn)begin
       //读取完全用assign
     end
     else begin
-      if(~wr_req)begin
+      if(rd_req)begin
+        //读信号有效时才换入
         //不是写的话就是默认的读取模式 读的话需要从内存中载入到缓存 当然为了速度 先直接返回内存读的值
         cache[index][outway] <= ip_readdata;
         valid[index][outway] <= 1'b1;
