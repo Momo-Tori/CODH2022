@@ -608,6 +608,7 @@ MEM_CACHE DataMem(
   .DebugAddr(DebugMemAddr),
   .clk(clk),
   .wr_req(MemWrite_r_MEM),
+  .rd_req(MemRead_r_MEM),
   .rstn(rstn),
   .ReadData(ReadMemData),
   .DebugData(DebugMemData),

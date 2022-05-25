@@ -34,17 +34,7 @@ assign index = Address[2:0];
 assign tag_in = Address[7:3];
 
 
-// DataMem DataMem(
-//   .a(Address),
-//   .d(WriteData),
-//   .dpra(DebugAddr),
-//   .clk(clk),
-//   .we(wr_req),
-//   .spo(ip_readdata),
-//   .dpo(DebugData)//由于使用的全写法和不按写分配法 所以内存中同样也是最新的值 直接读就可以了
-// );
-
-memory memory0(
+DataMem DataMem(
   .a(Address),
   .d(WriteData),
   .dpra(DebugAddr),
@@ -53,6 +43,16 @@ memory memory0(
   .spo(ip_readdata),
   .dpo(DebugData)//由于使用的全写法和不按写分配法 所以内存中同样也是最新的值 直接读就可以了
 );
+
+/* memory memory0(
+  .a(Address),
+  .d(WriteData),
+  .dpra(DebugAddr),
+  .clk(clk),
+  .we(wr_req),
+  .spo(ip_readdata),
+  .dpo(DebugData)//由于使用的全写法和不按写分配法 所以内存中同样也是最新的值 直接读就可以了
+); */
 
 //reg hit;
 wire hit;
