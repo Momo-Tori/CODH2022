@@ -8,6 +8,7 @@ module MEM_CACHE (
   input rstn,
   output wire [31:0] ReadData,      //从cache中取出的数据
   output wire [31:0] DebugData,
+  //debug
   output wire hit_m
 );
 localparam way_cnt = 2;//组相连度
@@ -58,16 +59,6 @@ wire hit;
 assign hit = (valid[index][0] && tag[index][0] == tag_in) | (valid[index][1] && tag[index][1] == tag_in);
 assign way_addr = (valid[index][0] && tag[index][0] == tag_in) ? 0 : 1;
 integer i,j;
-// always @(posedge clk) begin
-//   //处理hit
-//   hit = 1'b0;
-//   for(i = 0;i < way_cnt;i = i + 1)begin
-//     if(valid[index][i] && tag[index][i] == tag_in)begin
-//         hit = 1'b1;
-//         way_addr = i;
-//     end
-//   end
-// end
 
 integer free = 0;//标识是否还有空闲块
 always @(posedge clk or negedge rstn)begin
