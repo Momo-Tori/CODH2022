@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -38,10 +37,12 @@ add_files D:/CodeTry/CODExperiment/Lab6/coe/leftInsTest.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/sort.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/CH2sort.coe
 add_files D:/CodeTry/CODExperiment/Lab6/coe/CH2data.coe
+add_files d:/CodeTry/CODExperiment/Lab6/coe/sortPythonOut.coe
 read_verilog -library xil_defaultlib {
   D:/CodeTry/CODExperiment/Lab6/ALU.v
   D:/CodeTry/CODExperiment/Lab6/ImmGen.v
   D:/CodeTry/CODExperiment/Lab6/InsCache.v
+  D:/CodeTry/CODExperiment/Lab6/MEM_CACHE.v
   D:/CodeTry/CODExperiment/Lab6/cpu.v
   D:/CodeTry/CODExperiment/Lab6/decoder.v
   D:/CodeTry/CODExperiment/Lab6/encoder.v

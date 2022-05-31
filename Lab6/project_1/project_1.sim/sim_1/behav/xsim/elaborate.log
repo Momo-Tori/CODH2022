@@ -7,7 +7,7 @@ WARNING: [VRFC 10-3091] actual bit length 40 differs from formal bit length 16 f
 WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 's' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:634]
 WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:635]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'wa' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:636]
-WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'a' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:641]
+WARNING: [VRFC 10-3091] actual bit length 9 differs from formal bit length 8 for port 'Address' [D:/CodeTry/CODExperiment/Lab6/project_1/project_1.srcs/sim_1/new/test.v:644]
 WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [D:/CodeTry/CODExperiment/Lab6/InsCache.v:52]
 Completed static elaboration
 Starting simulation data flow analysis
@@ -24,6 +24,7 @@ Compiling module xil_defaultlib.InstMem
 Compiling module xil_defaultlib.register_file
 Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
 Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM_CACHE
 Compiling module xil_defaultlib.test
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot test_behav

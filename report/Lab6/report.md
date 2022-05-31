@@ -2,8 +2,8 @@
  * @Author: MomoTori
  * @Date: 2022-05-19 21:53:10
  * @LastEditors: MomoTori
- * @LastEditTime: 2022-05-29 19:06:55
- * @FilePath: \undefinedd:\CodeTry\CODExperiment\report\Lab6\report.md
+ * @LastEditTime: 2022-05-31 17:41:57
+ * @FilePath: \CODExperiment\report\Lab6\report.md
  * @Description: 
  * Copyright (c) 2022 by MomoTori, All Rights Reserved. 
 -->
@@ -29,7 +29,11 @@
 
 ## 补全指令
 
-最后所有指令如图所示
+最后实现的所有可执行指令如图所示
+
+实现均由原本的实现稍作修改得到，比如`lui`由`auipc`得到，将`auipc`中的[+PC]部分改为[+0]即得
+
+其他指令扩展相同不表
 
 ![](pic/%E6%8C%87%E4%BB%A4%E9%9B%86%E5%90%88.png)
 

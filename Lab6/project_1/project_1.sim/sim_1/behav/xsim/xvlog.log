@@ -9,6 +9,8 @@ INFO: [VRFC 10-311] analyzing module ImmGen
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/InsCache.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InsCache
 WARNING: [VRFC 10-3380] identifier 'eqW' is used before its declaration [D:/CodeTry/CODExperiment/Lab6/InsCache.v:22]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/MEM_CACHE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_CACHE
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/decoder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decoder_4t16
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CodeTry/CODExperiment/Lab6/encoder.v" into library xil_defaultlib

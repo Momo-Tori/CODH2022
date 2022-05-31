@@ -5,6 +5,7 @@ verilog xil_defaultlib  \
 "../../../../../ALU.v" \
 "../../../../../ImmGen.v" \
 "../../../../../InsCache.v" \
+"../../../../../MEM_CACHE.v" \
 "../../../../../decoder.v" \
 "../../../../../encoder.v" \
 "../../../../../register_32_32.v" \
