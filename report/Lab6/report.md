@@ -2,7 +2,7 @@
  * @Author: MomoTori
  * @Date: 2022-05-19 21:53:10
  * @LastEditors: MomoTori
- * @LastEditTime: 2022-05-31 17:41:57
+ * @LastEditTime: 2022-05-31 18:29:03
  * @FilePath: \CODExperiment\report\Lab6\report.md
  * @Description: 
  * Copyright (c) 2022 by MomoTori, All Rights Reserved. 
@@ -18,11 +18,14 @@
 
 - [实验六 综合设计](#实验六-综合设计)
   - [目录](#目录)
+  - [附录文件一览](#附录文件一览)
   - [补全指令](#补全指令)
   - [动态预测](#动态预测)
     - [饱和计数器](#饱和计数器)
     - [基于全局历史的分支预测](#基于全局历史的分支预测)
     - [跳转指令cache](#跳转指令cache)
+    - [具体逻辑设计](#具体逻辑设计)
+    - [测试数据](#测试数据)
   - [数据Cache](#数据cache)
     - [模块接口](#模块接口)
     - [变量的声明](#变量的声明)
@@ -36,13 +39,30 @@
 
 <!-- /code_chunk_output -->
 
+## 附录文件一览
+```bash
+.
+├── ALU.v     #ALU
+├── ImmGen.v   #生成Imm
+├── InsCache.v  #跳转指令cache，BTB
+├── MEM_CACHE.v #内存cache
+├── Nexys4DDR.xdc
+├── cpu.v
+├── cpuDownload.v
+├── decoder.v   #16位译码器
+├── encoder.v   #4位编码器
+├── pdu-v1.1.v
+├── register_32_32.v
+└── saturatingCounter.v
+```
+
 ## 补全指令
 
 最后实现的所有可执行指令如图所示
 
 实现均由原本的实现稍作修改得到，比如`lui`由`auipc`得到，将`auipc`中的[+PC]部分改为[+0]即得
 
-其他指令扩展相同不表
+其他指令扩展类似不表
 
 ![](pic/%E6%8C%87%E4%BB%A4%E9%9B%86%E5%90%88.png)
 
@@ -50,39 +70,165 @@
 
 ### 饱和计数器
 
+有四个状态，编码为`00-11`，则是否跳转取决于`bit[1]`，代码如下
+
 ![](pic/1.png)
+
+```v
+reg [1:0] counter;
+always @(posedge clk or negedge rstn) begin
+    if(~rstn) counter<=1;//弱不跳转
+    else 
+    if(we)
+        if(inIfBranch)
+        begin
+            if(counter==2'b11) counter<=counter;
+            else counter<=counter+1;
+        end
+        else
+        begin
+            if(counter==2'b00) counter<=counter;
+            else counter<=counter-1;
+        end
+end
+assign outIfBranch = counter [1];
+```
+
+<div style="page-break-after: always;"></div>
 
 ### 基于全局历史的分支预测
 
-实现了对`branch`的支持
+![](pic/2.png)
 
-![](pic/2.jpg)
+不同地址的`Branch`指令需要不同的饱和计数器，而不可能将所有的饱和计数器按照地址例化出来，因此我们按照直接映射的方式，将`PC[5:2]`作为key映射一个饱和寄存器，得到一个具有16个饱和寄存器的PHT表
 
-以256个数据排序为例，随机生成多组数据，测试命中率
+并且通过增加一个全局历史寄存器GHR，记录曾经跳转的历史，增加了对更为复杂情况的预判，而GHR为4bits，对应16个PHT表
 
-|预测次数|预测成功次数|命中率|
-|-|-|-|
-|0x60be|0x52dd|$\frac{21,213}{24,766}=0.8565$|
-|0x60be|0x528f|$\frac{21,135}{24,766}=0.8534$|
-|0x60be|0x5284|$\frac{21,124}{24,766}=0.8529$|
-|0x60be|0x5086|$\frac{20,614}{24,766}=0.8324$|
-|0x60be|0x5485|$\frac{21,647}{24,766}=0.8741$|
-|>|平均命中率|$0.8543$|
+综上共花费64B的寄存器资源
 
+每次`branch`发生时，都会读取该表，并且在结果判明后更新该表
 
+```v
+//4bits 全局历史寄存器，对应16个PHT
+reg[3:0] GHR;
+
+always @(posedge clk or negedge rstn) begin
+  if(~rstn) GHR=4'b0101;
+  else if(Branch_Ex)
+        GHR={GHR[2:0],zero};
+end
+```
+```v
+
+//编码器，用于定位饱和计数器 SC
+wire [15:0]x;
+decoder_4t16 decoder_x(GHR,x);
+
+//一个 PHT 由 PCD_r[5:2] 确定，即一个 PHT 有16个 saturatingCounter 即饱和计数器
+
+wire [15:0]y_ex;
+decoder_4t16 decoder_y_ex(PCE_r[5:2],y_ex);
+
+// saturatingCounter 的输出
+wire [15:0]SCout[15:0];
+
+genvar i;
+genvar j;
+generate
+    for(i=0; i<16; i=i+1)
+      for(j=0;j<16;j=j+1)
+      begin
+        wire out;
+        saturatingCounter SC(clk,rstn,SCwe & (x[i]) & (y_ex[i]),
+                            zero,SCout[i][j]);
+      end
+endgenerate
+
+wire branchTrue = SCout[GHR][PCD_r[5:2]];
+```
 
 ### 跳转指令cache
 
-实现了对`branch`和`jar`的支持，对于`jarr`因为其依赖于寄存器而不好进行处理故不支持
+因为在流水线中预测跳转后指令也不能立即取出，故需要一个cache（或BranchTargetBuffer、BTB）来保存预测跳转之后的指令
 
-全相连、FIFO
+因此设计一个全相连、FIFO、不具有自我取指的半cache，其更新cache需要外界设计支持，即当输入`memWE`有效时，判断cache内是否已存在该tag，若无，将`memAdd`和`memData`写入cache；`memWE`，`memAdd`和`memData`需要外界提供
 
+其中单元设置为：`valid`一位，`tag`三十位，`Data`三十二位
 
+其中`tag`存跳转之后的地址，因为地址模四，故只需要取三十位作为`tag`即可
 
+```v
+module InsCache (
+  input clk,
+  input [31:0] address,    //cpu给的地址
+  output [31:0] data,      //从cache中取出的数据
+  output hit,               //是否hit
+
+  input memWE,              //数据准备好的信号
+  input [31:0] memAdd,      //写入数据对应的地址
+  input [31:0] memData      //从主存输入用来更新Cache的Data
+);
+```
+```v
+//全相连，FIFO，共有8个缓存地址
+
+parameter WIDTH=8;
+parameter WIDTH_CNT = 3;
+reg [WIDTH-1:0] valid=0;
+reg [29:0] tag[WIDTH-1:0];//用[31:2]来确定tag
+reg [31:0] cacheData[WIDTH-1:0];//对应的地址
+
+reg[WIDTH_CNT-1:0] cnt=0;//用于FIFO的计数器
+```
+```v
+//FIFO计数器与数据更新
+wire w;
+assign w=memWE &~ (|(eqW & valid));//是否更新=是否写入&&写入数据不在cache内
+always @(posedge clk) begin
+    if(w)
+    if(cnt==WIDTH-1) cnt=0;
+    else cnt=cnt+1;
+end
+always @(posedge clk) begin
+    if(w) 
+    begin
+        valid[cnt]<=1;
+        tag[cnt]<=memAdd[31:2];
+        cacheData[cnt]<=memData;
+    end
+end
+
+```
+```v
+reg[WIDTH-1:0] eq,eqW;
+integer i;
+always @(*) begin
+    for(i=0; i<WIDTH; i=i+1)
+    begin
+    eq[i]=(address[31:2]==tag[i]);//是否相等
+    eqW[i]=(memAdd[31:2]==tag[i]);
+    end
+end
+
+wire [WIDTH-1:0] sig;
+assign sig = eq & valid;
+assign hit = |sig;
+wire [WIDTH_CNT-1:0] sel;
+encoder_16bits encoder_16bits({0,sig},sel);
+assign data=cacheData[sel];
+```
+
+当指令为`branch`和`jar`指令时，cpu会尝试获取cache，而对于`jarr`因为其跳转地址依赖于寄存器故不支持跳转cache
+
+### 具体逻辑设计
+
+由下图所示
 
 ```mermaid
 flowchart TD
     A[取指] --进入译码阶段--> B[分支指令jar,jarr,branch?]
+    A[取指] --若取值地址==cache记录地址--> M[将取出地址存入BTB端口,并将BTB写信号置1]
+    M--进入译码阶段-->B
     B --No--> L[无事发生]
     B -- Yes --> C[查询cache与SCout进行预测]
     C --cache命中且若为branch指令SCout为1--> D[更新下周期pc值为跳转后地址+4,将cache输出传入IR]
@@ -97,6 +243,42 @@ flowchart TD
     F--实际不跳转-->K[无事发生]
     H--实际跳转--> K
 ```
+
+<div style="page-break-after: always;"></div>
+
+### 测试数据
+
+以256个数据排序为例，随机生成多组数据，测试命中率
+
+|预测次数|预测成功次数|命中率|
+|-|-|-|
+|0x60be|0x52dd|$\frac{21,213}{24,766}=0.8565$|
+|0x60be|0x528f|$\frac{21,135}{24,766}=0.8534$|
+|0x60be|0x5284|$\frac{21,124}{24,766}=0.8529$|
+|0x60be|0x5086|$\frac{20,614}{24,766}=0.8324$|
+|0x60be|0x5485|$\frac{21,647}{24,766}=0.8741$|
+|>|**平均命中率**|$0.8543$|
+
+而考察最内层的循环，有
+
+```
+LOOP2:
+blt t2,t1,LOOP2FIN  #跳转概率基本等于1
+lw t4,4(t1)
+bge t3,t4,skip      #跳转概率约0.5
+mv t5,t3
+mv t3,t4
+mv t4,t5
+skip:
+sw t4,0(t1)
+addi t1,t1,4
+j LOOP2             #跳转概率等于1
+LOOP2FIN:
+```
+
+其理论命中率为$66.6\%+33.3\%*0.5=83.25\%$
+
+设计的cpu在该程序中较好地实现了预测，基本达到及超过理论上的命中率
 
 ## 数据Cache
 
